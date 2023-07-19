@@ -1,17 +1,26 @@
-<p style="font-size:70px" align="center"><b>A Personal Arch Installation Guide</b></p>
+# <center> A Personal Arch Installation Guide </center>
+A Personal Arch Installation Guide So If I Ever Lost, This Guide Will Help Me To Remember A Bunch Of Things When Re-Installing [**Arch Linux.**](https://archlinux.org) If You Just Found This Guide From Somewhere, I Recommend You To Read The Official 
+[**Installation Guide.**](https://wiki.archlinux.org/title/Installation_guide)  
 
-This is a personal guide so if you are lost and just found this guide from somewhere, I recommend you to read the official [`wiki`](https://wiki.archlinux.org/index.php/Installation_guide)!  This guide will focus on `systemd-boot`, `UEFI` and a guide if you want to encrypt your partition with `LUKS/LVM`. This guide exists so that I can remember a bunch of things when reinstalling `Arch linux`.
+<br>**Note:** Guide Only Focused On ***'GRUB', 'UEFI',*** And ***'Separate Home Partition'*** With Minimal Installation.
 
-## Pre-installation
-Before Installing, make sure to:
+## Pre-Installation -
+### Before Installing :
++ Read The [Official Guide](https://wiki.archlinux.org/title/Installation_guide).
++ Download Installation Image From [Here](https://www.archlinux.org/download/).
++ Verify Image Signature.
++ Prepare An Installation Medium.
++ Boot The Live Environment.
 
-+ Read the [official wiki](https://wiki.archlinux.org/index.php/installation_guide). It is advisable to read that instead. I wrote this guide for myself.
-+ Acquire an installation image from [here](https://www.archlinux.org/download/).
-+ Verify signature.
-+ Prepare an installation medium.
-+ Boot the live environment.
+### Minimum Requirements :
++ An x86_64 ( i.e. 64 Bit ) Compatible Machine
++ Minimum 512 MB Of RAM ( Recommended 2 GB )
++ Minimum 2 GB Of Free Disk Space ( Recommended 20 GB )
++ An Active Internet Connection
++ Few Knowledge Of The Linux Command Line
 
-## Set the keyboard layout
+## Let's Begin Installation -
+### Set The Keyboard Layout
 
 The default console keymap is US. Available layouts can be listed with:
 
