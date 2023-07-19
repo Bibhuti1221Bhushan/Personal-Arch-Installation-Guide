@@ -1,4 +1,4 @@
-<p style="font-size:30px" align="center"><b>A Personal Arch Installation Guide</b></p>
+<p style="font-size:70px" align="center"><b>A Personal Arch Installation Guide</b></p>
 
 This is a personal guide so if you are lost and just found this guide from somewhere, I recommend you to read the official [`wiki`](https://wiki.archlinux.org/index.php/Installation_guide)!  This guide will focus on `systemd-boot`, `UEFI` and a guide if you want to encrypt your partition with `LUKS/LVM`. This guide exists so that I can remember a bunch of things when reinstalling `Arch linux`.
 
