@@ -1,17 +1,19 @@
-# <center> A Personal Arch Installation Guide </center>
+# A Personal Arch Installation Guide
 
-A Personal Arch Installation Guide So If I Ever Lost, This Guide Will Help Me To Remember A Bunch Of Things When Re-Installing [**Arch Linux.**](https://archlinux.org) If You Just Found This Guide From Somewhere, I Recommend You To Read The Official 
+A Personal Arch Installation Guide So If I Ever Lost, This Guide Will Help Me To Remember A Bunch Of Things While Re-Installing [**Arch Linux.**](https://archlinux.org) If You Just Found This Guide From Somewhere, I Recommend You To First Read The Official 
 [**Installation Guide.**](https://wiki.archlinux.org/title/Installation_guide)  
 
 <br>**Note:** Guide Focused On Minimal Installation With ***'GRUB', 'UEFI', 'Un-Encrypted Partition'*** And ***'Separate Home Partition' .*** 
 
 ## Pre-Installation -
-### Before Installing :
+
+> ### Before Installing :
+
 + Read The [Official Guide](https://wiki.archlinux.org/title/Installation_guide).
 + Download Installation Image From [Here](https://www.archlinux.org/download/).
 + Verify Image Signature.
 + Prepare An Installation Medium.
-+ Boot The Live Environment.
++ Boot In To The Live Environment.
 
 ### Minimum Requirements :
 + An x86_64 ( i.e. 64 Bit ) Compatible Machine
