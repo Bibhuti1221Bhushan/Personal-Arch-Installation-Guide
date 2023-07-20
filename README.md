@@ -2,7 +2,7 @@
 A Personal Arch Installation Guide So If I Ever Lost, This Guide Will Help Me To Remember A Bunch Of Things When Re-Installing [**Arch Linux.**](https://archlinux.org) If You Just Found This Guide From Somewhere, I Recommend You To Read The Official 
 [**Installation Guide.**](https://wiki.archlinux.org/title/Installation_guide)  
 
-<br>**Note:** Guide Only Focused On ***'GRUB', 'UEFI',*** And ***'Separate Home Partition'*** With Minimal Installation.
+<br>**Note:** Guide Focused On Minimal Installation With ***'GRUB', 'UEFI', 'Un-Encrypted Partition'*** And ***'Separate Home Partition' .*** 
 
 ## Pre-Installation -
 ### Before Installing :
@@ -20,39 +20,57 @@ A Personal Arch Installation Guide So If I Ever Lost, This Guide Will Help Me To
 + Few Knowledge Of The Linux Command Line
 
 ## Let's Begin Installation -
-### Set The Keyboard Layout
+### Set The Keyboard Layout :
 
-The default console keymap is US. Available layouts can be listed with:
-
-```
-# ls /usr/share/kbd/keymaps/**/*.map.gz
-```
-
-To modify the layout, append a corresponding file name to loadkeys, omitting path and file extension. For example, to set a US keyboard layout:  
+**Note :** The Default is ***US***. Available Layouts Can Be Listed With :
 
 ```
-# loadkeys us
+ls /usr/share/kbd/keymaps/**/*.map.gz
 ```
 
-## Verify the boot mode
-
-If UEFI mode is enabled on an UEFI motherboard, Archiso will boot Arch Linux accordingly via systemd-boot. To verify this, list the efivars directory:  
+To Modify The Layout, Omitting Path And File Extension. For Example, To Set US Keyboard Layout:  
 
 ```
-# ls /sys/firmware/efi/efivars
+loadkeys us
 ```
 
-If the command shows the directory without error, then the system is booted in UEFI mode. If the directory does not exist, the system may be booted in **BIOS** (or **CSM**) mode.
+### Set Console Font : 
 
-## Connect to the internet
-
-We need to make sure that we are connected to the internet to be able to install Arch Linux `base` and `linux` packages. Let’s see the names of our interfaces.
+Available Console Fonts Can Be Listed With :
 
 ```
-# ip link
+ls /usr/share/kbd/consolefonts/**.gz
 ```
 
-You should see something like this:
+Console Font Can Be Set With ***setfont***.  For Example, To Use One Of The Fonts : 
+
+```
+setfont default8x16
+```
+
+### Verify The Boot Mode :
+
+To Verify The Boot Mode, Check The UEFI Witness :  
+
+```
+cat /sys/firmware/efi/fw_platform_size
+```
+
+If The Command Returns 64, Then Machine is Booted In UEFI Mode And Has A 64-Bit x64 UEFI. 
+If The Command Returns 32, Then Machine is Booted In UEFI Mode And Has A 32-Bit IA32 UEFI, While This is Supported But Limits The Boot Loader Choice To GRUB.  
+If The File Does't Exist, Then The Machine is Booted In ***BIOS*** ( CSM ) Mode.
+
+### Connect To The Internet :
+
+Arch Linux Needs Internet Connection To Install Arch Linux ***base*** And Other Needed Packages.
+
+ + Ensure Network Interface is Listed And Enabled :
+
+	```
+	ip link
+	```
+
+Above Command Output Will Be Something Like This :
 
 ```
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
@@ -63,75 +81,206 @@ You should see something like this:
 		link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff permaddr 00:00:00:00:00:00
 ```
 
-+ `enp0s0` is the wired interface  
-+ `wlan0` is the wireless interface  
+***enp0s0*** is The Wired Interface  
+***wlan0*** is The Wireless Interface  
 
-### Wired Connection
-
-If you are on a wired connection, you can enable your wired interface by systemctl start `dhcpcd@<interface>`.  
-
-```
-# systemctl start dhcpcd@enp0s0
-```
-
-### Wireless Connection
-
-If you are on a laptop, you can connect to a wireless access point using `iwctl` command from `iwd`. Note that it's already enabled by default. Also make sure the wireless card is not blocked with `rfkill`.
-
-Scan for network.
-
-```
-# iwctl station wlan0 scan
-```
-
-Get the list of scanned networks by:
-
-```
-# iwctl station wlan0 get-networks
-```
-
-Connect to your network.
-
-```
-# iwctl -P "PASSPHRASE" station wlan0 connect "NETWORKNAME"
-```
-
-Ping archlinux website to make sure we are online:
-
-```
-# ping archlinux.org
-``` 
-
-If you receive Unknown host or Destination host unreachable response, means you are not online yet. Review your network configuration and redo the steps above.
-
-## Update the system clock
-
-Use `timedatectl` to ensure the system clock is accurate:
-
-```
-# timedatectl set-ntp true
-```
-
-To check the service status, use `timedatectl status`.
-
-## Partition the disks
-
-When recognized by the live system, disks are assigned to a block device such as `/dev/sda`, `/dev/nvme0n1` or `/dev/mmcblk0`. To identify these devices, use lsblk or fdisk.  The most common main drive is **sda**.
-
-```
-# lsblk
-```
-
-Results ending in `rom`, `loop` or `airoot` may be ignored.
-
-In this guide, I'll create a two different ways to partition a drive. One for a normal installation, the other one is setting up with an encryption(LUKS/LVM). Let's start with the unecrypted one:
-
-### Unencrypted filesystem
-
-+ Let’s clean up our main drive to create new partitions for our installation. And yeah, in this guide, we will use `/dev/sda` as our disk.
++ For Wireless And WWAN, Make Sure The Card is Not Blocked :
 
 	```
-	# gdisk /dev/sda
+	rfkill
+	```
++ If The Card is Blocked, Unblock Using :
+
+	```
+	rfkill unblock all
+	```
+
+#### Wired Connection :
+***Note :*** Ethernet is Pre-Configured And Enabled By Default.
+In Case, If The Wired Connection is Not Enabled, You Can Enable Ethernet Using :
+
+```
+systemctl start dhcpcd@enp0s0
+```
+
+#### Wireless Connection - ***( Recommended iwd )*** :
+
+If You Have Laptop Or Wireless Adapter, You Can Connect To Wireless Access Point Using ***iwctl*** Command From ***iwd***.
+
+***Note : iwd*** is Enabled By Default.
++ In Case, If ***iwd*** is Not Enabled.
+
+	```
+	systemctl enable iwd
+	```
+
++ Scan For Network :
+
+	```
+	iwctl station wlan0 scan
+	```
+
++ Get The List Of Scanned Networks :
+
+	```
+	iwctl station wlan0 get-networks
+	```
+
++ Connect To Your Network :
+
+	```
+	iwctl -P "PASSPHRASE" station wlan0 connect "NETWORK-NAME"
+	```
+##### <center>OR</center>
+
++ If Your Connection is Hidden, Then Connect Using :
+
+	```
+	iwctl -P "PASSPHRASE" station wlan0 connect-hidden "NETWORK-NAME"
+	```
+
++ Ping A Website To Make Sure We Are Online :
+
+	```
+	ping 1.1.1.1
+	``` 
+
+If You Receive ***Unknown host*** Or ***Network is unreachable,*** Means You Are Not Online Yet. Review Your Network Configuration And Redo The Steps Above.
+
+#### Wireless Connection - ***( wpa_supplicant )*** :
+
+If You Have Laptop Or Wireless Adapter, You Can Connect To Wireless Access Point Using ***wpa_supplicant***.
+
+***Note : wpa_supplicant*** is Enabled By Default.
++ In Case, If You Receive Error. Enable Interface Using :
+
+	```
+	ifup wlan0
+	```
++ Get The List Of Scanned Networks :
+
+	```
+	iwlist wlan0 scan | grep ESSID
+	```
+
+&emsp; **1.** Create Configuration Using One-Line Command :
+
+```
+wpa_passphrase "NETWORK-NAME" "PASSPHRASE" | tee /etc/wpa_supplicant/wpa_supplicant.conf
+```
+
++ Connect To Your Network :
+
+```
+wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
+```
+##### <center>OR</center>
+
+> ##### If Your Connection is ***Hidden***, 
+
+&emsp; **1.** Then Connect Via Editing Configuration :
+
+```
+nano /etc/wpa_supplicant/wpa_supplicant.conf
+```
+&emsp; **2.** Add This Line :
+
+```
+network={
+	ssid="NETWORK-NAME"
+    scan_ssid=1
+    psk="PASSPHRASE"
+}
+```
++ Connect To Your Network :
+
+```
+wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
+```
+##### <center>OR</center>
+
++ If Your Connection is ***Un-Secure***, 
+
+&emsp; **1.** Then Connect Via Editing Configuration :
+
+```
+nano /etc/wpa_supplicant/wpa_supplicant.conf
+```
+&emsp; **2.** Add This Line :
+
+```
+network={
+	ssid="NETWORK-NAME"
+    key_mgmt=NONE
+    priority=100
+}
+```
++ Connect To Your Network :
+
+```
+wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
+```
+##### <center>OR</center>
+
++ If You Have ***WEP-Authentication*** Connection, 
+
+&emsp; **1.** Then Connect Via Editing Configuration :
+
+```
+nano /etc/wpa_supplicant/wpa_supplicant.conf
+```
+&emsp; **2.** Add This Line :
+
+```
+network={
+	ssid="NETWORK-NAME"
+    key_mgmt=NONE
+    wep_key0="PASSPHRASE"  
+    wep_tx_keyidx=0
+}
+```
++ Connect To Your Network :
+
+```
+wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
+```
++ Ping A Website To Make Sure We Are Online :
+
+```
+ping 1.1.1.1
+``` 
+
+If You Receive ***Unknown host*** Or ***Network is unreachable,*** Means You Are Not Online Yet. Review Your Network Configuration And Redo The Steps Above.
+
+### Update The System Clock :
+
+To Ensure That System Clock is Accurate :
+
+```
+timedatectl set-ntp true
+```
+
+To Check The Service Status :
+
+```
+timedatectl status
+```
+
+### Partition The Disks :
+
+When Disks Are Recognized By The Live System, Disks Are Assigned To A Block Device Such As ***/dev/sda, /dev/nvme0n1 or /dev/mmcblk0.*** To Identify These Devices :
+
+```
+lsblk
+```
+
+***Note :*** Results Ending In ***rom, loop*** Or ***airoot*** May Be Ignored.
+
+
++ Let’s Clean Our Drive To Create New Partitions Table For Our Installation. In This Guide, We Will Use ***/dev/sda*** As Our Disk.
+
+    ```
+	gdisk /dev/sda
 	```
 
 + Press <kbd>x</kbd> to enter **expert mode**. Then press <kbd>z</kbd> to *zap* our drive. Then hit <kbd>y</kbd> when prompted about wiping out GPT and blanking out MBR. Note that this will ***zap*** your entire drive so your data will be gone - reduced to atoms after doing this. THIS. CANNOT. BE. UNDONE.
