@@ -71,13 +71,13 @@ If The File Does't Exist, Then The Machine is Booted In ***BIOS*** ( CSM ) Mode.
 
 Arch Linux Needs Internet Connection To Install Arch Linux ***base*** And Other Needed Packages.
 
-+ Ensure Network Interface is Listed And Enabled :
+🎯 Ensure Network Interface is Listed And Enabled :
 
-	```
-	ip link
-	```
+```
+ip link
+```
 
-	Above Command Output Will Be Something Like This :
+	🎯 Above Command Output Will Be Something Like This :
 
 	```
 	1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
