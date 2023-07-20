@@ -15,15 +15,17 @@ A Personal Arch Installation Guide So If I Ever Lost, This Guide Will Help Me To
 + Prepare An Installation Medium.
 + Boot In To The Live Environment.
 
-### Minimum Requirements :
-+ An x86_64 ( i.e. 64 Bit ) Compatible Machine
-+ Minimum 512 MB Of RAM ( Recommended 2 GB )
-+ Minimum 2 GB Of Free Disk Space ( Recommended 20 GB )
-+ An Active Internet Connection
-+ Few Knowledge Of The Linux Command Line
+> ### Minimum Requirements :
+
++ An x86_64 ( i.e. 64 Bit ) Compatible Machine.
++ Minimum 512 MB Of RAM. ( Recommended 2 GB )
++ Minimum 2 GB Of Free Disk Space. ( Recommended 20 GB )
++ An Active Internet Connection.
++ Few Knowledge Of The Linux Command Line.
 
 ## Let's Begin Installation -
-### Set The Keyboard Layout :
+
+> ### Set The Keyboard Layout :
 
 **Note :** The Default is ***US***. Available Layouts Can Be Listed With :
 
@@ -37,12 +39,12 @@ To Modify The Layout, Omitting Path And File Extension. For Example, To Set US K
 loadkeys us
 ```
 
-### Set Console Font : 
+> ### Set Console Font : 
 
 Available Console Fonts Can Be Listed With :
 
 ```
-ls /usr/share/kbd/consolefonts/**.gz
+ls /usr/share/kbd/consolefonts/*.gz
 ```
 
 Console Font Can Be Set With ***setfont***.  For Example, To Use One Of The Fonts : 
@@ -51,7 +53,7 @@ Console Font Can Be Set With ***setfont***.  For Example, To Use One Of The Font
 setfont default8x16
 ```
 
-### Verify The Boot Mode :
+> ### Verify The Boot Mode :
 
 To Verify The Boot Mode, Check The UEFI Witness :  
 
@@ -59,44 +61,47 @@ To Verify The Boot Mode, Check The UEFI Witness :
 cat /sys/firmware/efi/fw_platform_size
 ```
 
-If The Command Returns 64, Then Machine is Booted In UEFI Mode And Has A 64-Bit x64 UEFI. 
-If The Command Returns 32, Then Machine is Booted In UEFI Mode And Has A 32-Bit IA32 UEFI, While This is Supported But Limits The Boot Loader Choice To GRUB.  
+If The Command Returns 64, Then Machine is Booted In UEFI Mode And Has A ***64-Bit x64 UEFI.*** 
+<br>
+If The Command Returns 32, Then Machine is Booted In UEFI Mode And Has A ***32-Bit IA32 UEFI,*** Which is Supported But Limits The Boot Loader Choice To GRUB.
+<br>
 If The File Does't Exist, Then The Machine is Booted In ***BIOS*** ( CSM ) Mode.
 
-### Connect To The Internet :
+>### Connect To The Internet :
 
 Arch Linux Needs Internet Connection To Install Arch Linux ***base*** And Other Needed Packages.
 
- + Ensure Network Interface is Listed And Enabled :
++ Ensure Network Interface is Listed And Enabled :
 
 	```
 	ip link
 	```
 
-Above Command Output Will Be Something Like This :
+	Above Command Output Will Be Something Like This :
+
+	```
+	1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+			link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+	2: enp0s0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc fq_codel state DOWN mode DEFAULT group default qlen 1000
+			link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
+	3: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DORMANT group default qlen 1000
+			link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff permaddr 00:00:00:00:00:00
+	```
+
+***enp0s0*** is The Wired Interface ( Ethernet ) 
+<br>
+***wlan0*** is The Wireless Interface ( Wi-Fi ) 
+
+For Wireless And WWAN, Make Sure The Card is Not Blocked :
 
 ```
-1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
-		link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
-2: enp0s0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc fq_codel state DOWN mode DEFAULT group default qlen 1000
-		link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
-3: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DORMANT group default qlen 1000
-		link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff permaddr 00:00:00:00:00:00
+rfkill
 ```
+If The Card is Blocked, Unblock Using :
 
-***enp0s0*** is The Wired Interface  
-***wlan0*** is The Wireless Interface  
-
-+ For Wireless And WWAN, Make Sure The Card is Not Blocked :
-
-	```
-	rfkill
-	```
-+ If The Card is Blocked, Unblock Using :
-
-	```
-	rfkill unblock all
-	```
+```
+rfkill unblock all
+```
 
 #### Wired Connection :
 ***Note :*** Ethernet is Pre-Configured And Enabled By Default.
