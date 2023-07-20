@@ -71,13 +71,13 @@ If The File Does't Exist, Then The Machine is Booted In ***BIOS*** ( CSM ) Mode.
 
 Arch Linux Needs Internet Connection To Install Arch Linux ***base*** And Other Needed Packages.
 
-🎯 Ensure Network Interface is Listed And Enabled :
++ Ensure Network Interface is Listed And Enabled :
 
-```
-ip link
-```
+	```
+	ip link
+	```
 
-	🎯 Above Command Output Will Be Something Like This :
+	Above Command Output Will Be Something Like This :
 
 	```
 	1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
@@ -88,22 +88,22 @@ ip link
 			link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff permaddr 00:00:00:00:00:00
 	```
 
-***enp0s0*** is The Wired Interface ( Ethernet ) 
-<br>
-***wlan0*** is The Wireless Interface ( Wi-Fi ) 
+	***enp0s0*** is The Wired Interface ( Ethernet ) 
+	<br>
+	***wlan0*** is The Wireless Interface ( Wi-Fi ) 
 
-For Wireless And WWAN, Make Sure The Card is Not Blocked :
++ For Wireless And WWAN, Make Sure The Card is Not Blocked :
 
-```
-rfkill
-```
-If The Card is Blocked, Unblock Using :
+	```
+	rfkill
+	```
++ If The Card is Blocked, Unblock Using :
 
-```
-rfkill unblock all
-```
+	```
+	rfkill unblock all
+	```
 
-#### Wired Connection :
+>> #### Wired Connection :
 ***Note :*** Ethernet is Pre-Configured And Enabled By Default.
 In Case, If The Wired Connection is Not Enabled, You Can Enable Ethernet Using :
 
