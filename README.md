@@ -1,4 +1,5 @@
 # <center> A Personal Arch Installation Guide </center>
+
 A Personal Arch Installation Guide So If I Ever Lost, This Guide Will Help Me To Remember A Bunch Of Things When Re-Installing [**Arch Linux.**](https://archlinux.org) If You Just Found This Guide From Somewhere, I Recommend You To Read The Official 
 [**Installation Guide.**](https://wiki.archlinux.org/title/Installation_guide)  
 
@@ -176,7 +177,7 @@ wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 ```
 ##### <center>OR</center>
 
-> ##### If Your Connection is ***Hidden***, 
+> ##### If Your Connection is Hidden. 
 
 &emsp; **1.** Then Connect Via Editing Configuration :
 
@@ -199,7 +200,7 @@ wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 ```
 ##### <center>OR</center>
 
-+ If Your Connection is ***Un-Secure***, 
+> ##### If Your Connection is Un-Secure . 
 
 &emsp; **1.** Then Connect Via Editing Configuration :
 
@@ -222,7 +223,7 @@ wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 ```
 ##### <center>OR</center>
 
-+ If You Have ***WEP-Authentication*** Connection, 
+> ##### If You Have WEP-Authentication Connection .
 
 &emsp; **1.** Then Connect Via Editing Configuration :
 
