@@ -7,7 +7,7 @@ A Personal Arch Installation Guide So If I Ever Lost, This Guide Will Help Me To
 
 ## Pre-Installation -
 
-> ### Before Installing :
+### Before Installing :
 
 + Read The [Official Guide](https://wiki.archlinux.org/title/Installation_guide).
 + Download Installation Image From [Here](https://www.archlinux.org/download).
@@ -15,7 +15,7 @@ A Personal Arch Installation Guide So If I Ever Lost, This Guide Will Help Me To
 + Prepare An Installation Medium.
 + Boot In To The Live Environment.
 
-> ### Minimum Requirements :
+### Minimum Requirements :
 
 + An x86_64 ( i.e. 64 Bit ) Compatible Machine.
 + Minimum 512 MB Of RAM. ( Recommended 2 GB )
@@ -25,7 +25,7 @@ A Personal Arch Installation Guide So If I Ever Lost, This Guide Will Help Me To
 
 ## Let's Begin Installation -
 
-> ### Set The Keyboard Layout :
+### Set The Keyboard Layout :
 
 **Note :** The Default is ***US***. 
 <br>
@@ -41,7 +41,7 @@ To Modify The Layout, Omitting Path And File Extension. For Example, To Set US K
 loadkeys us
 ```
 
-> ### Set Console Font : 
+### Set Console Font : 
 
 Available Console Fonts Can Be Listed With :
 
@@ -55,7 +55,7 @@ Console Font Can Be Set With ***setfont***.  For Example, To Use One Of The Font
 setfont default8x16
 ```
 
-> ### Verify The Boot Mode :
+### Verify The Boot Mode :
 
 To Verify The Boot Mode, Check The UEFI Witness :  
 
@@ -69,7 +69,7 @@ If The Command Returns 32, Then Machine is Booted In UEFI Mode And Has A ***32-B
 <br>
 If The File Does't Exist, Then The Machine is Booted In ***BIOS*** ( CSM ) Mode.
 
-> ### Connect To The Internet :
+### Connect To The Internet :
 
 Arch Linux Needs Internet Connection To Install Arch Linux ***base*** And Other Needed Packages.
 
@@ -106,7 +106,7 @@ If The Card is Blocked, Unblock Using :
 rfkill unblock all
 ```
 
->> #### Wired Connection : 
+> #### Wired Connection : 
 
 ***Note :*** Ethernet is Pre-Configured And Enabled By Default.
 In Case, If The Wired Connection is Not Enabled, You Can Enable Ethernet Using :
@@ -115,7 +115,7 @@ In Case, If The Wired Connection is Not Enabled, You Can Enable Ethernet Using :
 systemctl start dhcpcd@enp0s0
 ```
 
->> #### Wireless Connection - ***( Recommended iwd )*** :
+> #### Wireless Connection - ***( Recommended iwd )*** :
 
 If You Have Laptop Or Wireless Adapter, You Can Connect To Wireless Access Point Using ***iwctl*** Command From ***iwd***.
 
@@ -161,7 +161,7 @@ ping -c 3 1.1.1.1
 
 If You Receive ***Unknown host*** Or ***Network is unreachable,*** Means You Are Not Online Yet. Review Your Network Configuration And Redo The Steps Above.
 
->> #### Wireless Connection - ***( wpa_supplicant )*** :
+> #### Wireless Connection - ***( wpa_supplicant )*** :
 
 If You Have Laptop Or Wireless Adapter, You Can Connect To Wireless Access Point Using ***wpa_supplicant.***
 
@@ -179,7 +179,7 @@ Get The List Of Scanned Networks :
 iwlist wlan0 scan | grep ESSID
 ```
 
-> ##### Connect To A Visible Wi-Fi :
+>> ##### Connect To A Visible Wi-Fi :
 
 Create ***wpa_supplicant.conf*** Using One Line Command :
 
@@ -195,7 +195,7 @@ wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 
 ##### <center>OR</center>
 
-> ##### Connect To A Hidden Wi-Fi : 
+>> ##### Connect To A Hidden Wi-Fi : 
 
 Create & Open ***wpa_supplicant.conf :***
 
@@ -221,7 +221,7 @@ wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 
 ##### <center>OR</center>
 
-> ##### Connect To A In-Secure Wi-Fi :
+>> ##### Connect To A In-Secure Wi-Fi :
 
 Create & Open ***wpa_supplicant.conf :***
 
@@ -247,7 +247,7 @@ wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 
 ##### <center>OR</center>
 
-> ##### Connect To A Wi-FI Via WEP-Authentication Mode :
+>> ##### Connect To A Wi-FI Via WEP-Authentication Mode :
 
 Create & Open ***wpa_supplicant.conf :***
 
@@ -280,7 +280,7 @@ ping -c 3 1.1.1.1
 
 If You Receive ***Unknown host*** Or ***Network is unreachable,*** Means You Are Not Online Yet. Review Your Network Configuration And Redo The Steps Above.
 
-> ### Update The System Clock :
+### Update The System Clock :
 
 To Ensure That System Clock is Accurate :
 
@@ -305,32 +305,24 @@ lsblk
 ***Note :*** Results Ending In ***rom, loop*** Or ***airoot*** May Be Ignored.
 
 
-+ Let’s Clean Our Drive To Create New Partitions Table For Our Installation. In This Guide, We Will Use ***/dev/sda*** As Our Disk.
+Let’s Clean Our Drive To Create New Partitions Table For Our Installation. In This Guide, We Will Use ***/dev/sda*** As Our Disk.
 
-    ```
-	fdisk /dev/sda
-	```
+```
+fdisk /dev/sda
+```
 
-+ Press <kbd>Return</kbd> To Open ***dev/sda*** In ***fdisk***. Then press <kbd>z</kbd> to *zap* our drive. Then hit <kbd>y</kbd> when prompted about wiping out GPT and blanking out MBR. Note that this will ***zap*** your entire drive so your data will be gone - reduced to atoms after doing this. THIS. CANNOT. BE. UNDONE.
++ Press <kbd>Return</kbd> To Open ***dev/sda*** In ***fdisk***. 
+<br>
++ Press <kbd>g</kbd> To ***<u style="color:red;">Format Entire Drive</u>*** In ***GPT Partition Table.***
 
-+ Open `cgdisk` to start partitioning our filesystem
-
-	```
-	# cgdisk /dev/sda
-	```
-
-+ Press <kbd>Return</kbd> when warned about damaged GPT.
-
-	Now we should be presented with our main drive showing the partition number, partition size, partition type, and partition name. If you see list of partitions, delete all those first.
-
-+ Create the `boot` partition
-
-	- Hit New from the options at the bottom.
-	- Just hit enter to select the default option for the first sector.
-	- Now the partion size - Arch wiki recommends 200-300 MB for the boot + size. Let’s make 1GiB in case we need to add more OS to our machine. I’m gonna assign mine with 1024MiB. Hit enter.
-	- Set GUID to `EF00`. Hit enter.
-	- Set name to `boot`. Hit enter.
-	- Now you should see the new partition in the partitions list with a partition type of EFI System and a partition name of boot. You will also notice there is 1007KB above the created partition. That is the MBR. Don’t worry about that and just leave it there.
+>> ##### Create The Boot Partition :
+- Press <kbd>n</kbd> To Create New Partition
+- Hit New from the options at the bottom.
+- Just hit enter to select the default option for the first sector.
+- Now the partion size - Arch wiki recommends 200-300 MB for the boot + size. Let’s make 1GiB in case we need to add more OS to our machine. I’m gonna assign mine with 1024MiB. Hit enter.
+- Set GUID to `EF00`. Hit enter.
+- Set name to `boot`. Hit enter.
+- Now you should see the new partition in the partitions list with a partition type of EFI System and a partition name of boot. You will also notice there is 1007KB above the created partition. That is the MBR. Don’t worry about that and just leave it there.
 
 + Create the `root` partition
 
