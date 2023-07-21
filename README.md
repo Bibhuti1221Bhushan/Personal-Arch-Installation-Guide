@@ -2,15 +2,15 @@
 
 A Personal Arch Installation Guide So If I Ever Lost, This Guide Will Help Me To Remember A Bunch Of Things While Re-Installing [**Arch Linux.**](https://archlinux.org) If You Just Found This Guide From Somewhere, I Recommend You To First Read The Official 
 [**Installation Guide.**](https://wiki.archlinux.org/title/Installation_guide)  
-
-<br>**Note:** Guide Focused On Minimal Installation With ***'GRUB', 'UEFI', 'Un-Encrypted Partition'*** And ***'Separate Home Partition' .*** 
+<br>
+**Note :** Guide Focused On Minimal Installation With ***'GRUB', 'UEFI', 'Un-Encrypted Partition'*** And ***'Separate Home Partition' .*** 
 
 ## Pre-Installation -
 
 > ### Before Installing :
 
 + Read The [Official Guide](https://wiki.archlinux.org/title/Installation_guide).
-+ Download Installation Image From [Here](https://www.archlinux.org/download/).
++ Download Installation Image From [Here](https://www.archlinux.org/download).
 + Verify Image Signature.
 + Prepare An Installation Medium.
 + Boot In To The Live Environment.
@@ -27,7 +27,9 @@ A Personal Arch Installation Guide So If I Ever Lost, This Guide Will Help Me To
 
 > ### Set The Keyboard Layout :
 
-**Note :** The Default is ***US***. Available Layouts Can Be Listed With :
+**Note :** The Default is ***US***. 
+<br>
+Available Layouts Can Be Listed With :
 
 ```
 ls /usr/share/kbd/keymaps/**/*.map.gz
@@ -67,43 +69,45 @@ If The Command Returns 32, Then Machine is Booted In UEFI Mode And Has A ***32-B
 <br>
 If The File Does't Exist, Then The Machine is Booted In ***BIOS*** ( CSM ) Mode.
 
->### Connect To The Internet :
+> ### Connect To The Internet :
 
 Arch Linux Needs Internet Connection To Install Arch Linux ***base*** And Other Needed Packages.
 
-+ Ensure Network Interface is Listed And Enabled :
+Ensure Network Interface is Listed And Enabled :
 
-	```
-	ip link
-	```
+```
+ip link
+```
 
-	Above Command Output Will Be Something Like This :
+Above Command Output Will Be Something Like This :
 
-	```
-	1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
-			link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
-	2: enp0s0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc fq_codel state DOWN mode DEFAULT group default qlen 1000
-			link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
-	3: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DORMANT group default qlen 1000
-			link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff permaddr 00:00:00:00:00:00
-	```
+```
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+		link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+2: enp0s0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc fq_codel state DOWN mode DEFAULT group default qlen 1000
+		link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
+3: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DORMANT group default qlen 1000
+		link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff permaddr 00:00:00:00:00:00
+```
 
-	***enp0s0*** is The Wired Interface ( Ethernet ) 
-	<br>
-	***wlan0*** is The Wireless Interface ( Wi-Fi ) 
+***enp0s0*** is The Wired Interface ( Ethernet ) 
+<br>
+***wlan0*** is The Wireless Interface ( Wi-Fi ) 
 
-+ For Wireless And WWAN, Make Sure The Card is Not Blocked :
+For Wireless And WWAN, Make Sure The Card is Not Blocked :
 
-	```
-	rfkill
-	```
-+ If The Card is Blocked, Unblock Using :
+```
+rfkill
+```
 
-	```
-	rfkill unblock all
-	```
+If The Card is Blocked, Unblock Using :
 
->> #### Wired Connection :
+```
+rfkill unblock all
+```
+
+>> #### Wired Connection : 
+
 ***Note :*** Ethernet is Pre-Configured And Enabled By Default.
 In Case, If The Wired Connection is Not Enabled, You Can Enable Ethernet Using :
 
@@ -111,87 +115,95 @@ In Case, If The Wired Connection is Not Enabled, You Can Enable Ethernet Using :
 systemctl start dhcpcd@enp0s0
 ```
 
-#### Wireless Connection - ***( Recommended iwd )*** :
+>> #### Wireless Connection - ***( Recommended iwd )*** :
 
 If You Have Laptop Or Wireless Adapter, You Can Connect To Wireless Access Point Using ***iwctl*** Command From ***iwd***.
 
 ***Note : iwd*** is Enabled By Default.
-+ In Case, If ***iwd*** is Not Enabled.
+<br>
+In Case, If ***iwd*** is Not Enabled.
 
-	```
-	systemctl enable iwd
-	```
+```
+systemctl enable iwd
+```
 
-+ Scan For Network :
+Scan For Network :
 
-	```
-	iwctl station wlan0 scan
-	```
+```
+iwctl station wlan0 scan
+```
 
-+ Get The List Of Scanned Networks :
+Get The List Of Scanned Networks :
 
-	```
-	iwctl station wlan0 get-networks
-	```
+```
+iwctl station wlan0 get-networks
+```
 
-+ Connect To Your Network :
+Connect To Your Visible Network :
 
-	```
-	iwctl -P "PASSPHRASE" station wlan0 connect "NETWORK-NAME"
-	```
+```
+iwctl -P "PASSPHRASE" station wlan0 connect "NETWORK-NAME"
+```
+
 ##### <center>OR</center>
 
-+ If Your Connection is Hidden, Then Connect Using :
+Connect To Your Hidden Network :
 
-	```
-	iwctl -P "PASSPHRASE" station wlan0 connect-hidden "NETWORK-NAME"
-	```
+```
+iwctl -P "PASSPHRASE" station wlan0 connect-hidden "NETWORK-NAME"
+```
 
-+ Ping A Website To Make Sure We Are Online :
+Ping A Website To Make Sure We Are Online :
 
-	```
-	ping 1.1.1.1
-	``` 
+```
+ping -c 3 1.1.1.1
+``` 
 
 If You Receive ***Unknown host*** Or ***Network is unreachable,*** Means You Are Not Online Yet. Review Your Network Configuration And Redo The Steps Above.
 
-#### Wireless Connection - ***( wpa_supplicant )*** :
+>> #### Wireless Connection - ***( wpa_supplicant )*** :
 
-If You Have Laptop Or Wireless Adapter, You Can Connect To Wireless Access Point Using ***wpa_supplicant***.
+If You Have Laptop Or Wireless Adapter, You Can Connect To Wireless Access Point Using ***wpa_supplicant.***
 
 ***Note : wpa_supplicant*** is Enabled By Default.
-+ In Case, If You Receive Error. Enable Interface Using :
+<br>
+In Case, If You Receive Error. Enable Interface Using :
 
-	```
-	ifup wlan0
-	```
-+ Get The List Of Scanned Networks :
+```
+ifup wlan0
+```
 
-	```
-	iwlist wlan0 scan | grep ESSID
-	```
+Get The List Of Scanned Networks :
 
-&emsp; **1.** Create Configuration Using One-Line Command :
+```
+iwlist wlan0 scan | grep ESSID
+```
+
+> ##### Connect To A Visible Wi-Fi :
+
+Create ***wpa_supplicant.conf*** Using One Line Command :
 
 ```
 wpa_passphrase "NETWORK-NAME" "PASSPHRASE" | tee /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
-+ Connect To Your Network :
+Connect To Your Network :
 
 ```
 wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 ```
+
 ##### <center>OR</center>
 
-> ##### If Your Connection is Hidden. 
+> ##### Connect To A Hidden Wi-Fi : 
 
-&emsp; **1.** Then Connect Via Editing Configuration :
+Create & Open ***wpa_supplicant.conf :***
 
 ```
 nano /etc/wpa_supplicant/wpa_supplicant.conf
 ```
-&emsp; **2.** Add This Line :
+
+Add This Line In Configuration File :
 
 ```
 network={
@@ -200,21 +212,24 @@ network={
     psk="PASSPHRASE"
 }
 ```
-+ Connect To Your Network :
+
+Connect To Your Network :
 
 ```
 wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 ```
+
 ##### <center>OR</center>
 
-> ##### If Your Connection is Un-Secure . 
+> ##### Connect To A In-Secure Wi-Fi :
 
-&emsp; **1.** Then Connect Via Editing Configuration :
+Create & Open ***wpa_supplicant.conf :***
 
 ```
 nano /etc/wpa_supplicant/wpa_supplicant.conf
 ```
-&emsp; **2.** Add This Line :
+
+Add This Line In Configuration File :
 
 ```
 network={
@@ -223,21 +238,24 @@ network={
     priority=100
 }
 ```
-+ Connect To Your Network :
+
+Connect To Your Network :
 
 ```
 wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 ```
+
 ##### <center>OR</center>
 
-> ##### If You Have WEP-Authentication Connection .
+> ##### Connect To A Wi-FI Via WEP-Authentication Mode :
 
-&emsp; **1.** Then Connect Via Editing Configuration :
+Create & Open ***wpa_supplicant.conf :***
 
 ```
 nano /etc/wpa_supplicant/wpa_supplicant.conf
 ```
-&emsp; **2.** Add This Line :
+
+Add This Line In Configuration File :
 
 ```
 network={
@@ -247,20 +265,22 @@ network={
     wep_tx_keyidx=0
 }
 ```
-+ Connect To Your Network :
+
+Connect To Your Network :
 
 ```
 wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 ```
-+ Ping A Website To Make Sure We Are Online :
+
+Ping A Website To Make Sure We Are Online :
 
 ```
-ping 1.1.1.1
+ping -c 3 1.1.1.1
 ``` 
 
 If You Receive ***Unknown host*** Or ***Network is unreachable,*** Means You Are Not Online Yet. Review Your Network Configuration And Redo The Steps Above.
 
-### Update The System Clock :
+> ### Update The System Clock :
 
 To Ensure That System Clock is Accurate :
 
@@ -288,10 +308,10 @@ lsblk
 + Let’s Clean Our Drive To Create New Partitions Table For Our Installation. In This Guide, We Will Use ***/dev/sda*** As Our Disk.
 
     ```
-	gdisk /dev/sda
+	fdisk /dev/sda
 	```
 
-+ Press <kbd>x</kbd> to enter **expert mode**. Then press <kbd>z</kbd> to *zap* our drive. Then hit <kbd>y</kbd> when prompted about wiping out GPT and blanking out MBR. Note that this will ***zap*** your entire drive so your data will be gone - reduced to atoms after doing this. THIS. CANNOT. BE. UNDONE.
++ Press <kbd>Return</kbd> To Open ***dev/sda*** In ***fdisk***. Then press <kbd>z</kbd> to *zap* our drive. Then hit <kbd>y</kbd> when prompted about wiping out GPT and blanking out MBR. Note that this will ***zap*** your entire drive so your data will be gone - reduced to atoms after doing this. THIS. CANNOT. BE. UNDONE.
 
 + Open `cgdisk` to start partitioning our filesystem
 
@@ -332,7 +352,7 @@ lsblk
 
 ### Encrypted filesystem with `LUKS/LVM`
 
-+ Let’s clean up our main drive to create new partitions for our installation. And yeah, in this guide, we will use `/dev/sda` as our disk.
+[1.]: Let’s clean up our main drive to create new partitions for our installation. And yeah, in this guide, we will use `/dev/sda` as our disk.
 
 	```
 	# gdisk /dev/sda
