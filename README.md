@@ -311,116 +311,97 @@ Let’s Clean Our Drive To Create New Partitions Table For Our Installation. In 
 fdisk /dev/sda
 ```
 
-+ Press <kbd>Return</kbd> To Open ***dev/sda*** In ***fdisk***. 
-<br>
-+ Press <kbd>g</kbd> To ***<u style="color:red;">Format Entire Drive</u>*** In ***GPT Partition Table.***
++ Press <kbd>**Return**</kbd> To Open ***dev/sda*** In ***fdisk***. 
+
++ Press <kbd>**p**</kbd> To Show Current Partition. Now We Should See Our Drive Showing The ***Partition Number, Partition Size, Partition Type,*** And ***Partition Name.***
+
++ Press <kbd>**g**</kbd> To ***<u style="color:red;">Format Entire Drive</u>*** And Create An Empty ***GPT Partition Table.***
+
+**Note :** Press <kbd>**d**</kbd> To Delete A Single Partition. 
 
 >> ##### Create The Boot Partition :
-- Press <kbd>n</kbd> To Create New Partition
-- Hit New from the options at the bottom.
-- Just hit enter to select the default option for the first sector.
-- Now the partion size - Arch wiki recommends 200-300 MB for the boot + size. Let’s make 1GiB in case we need to add more OS to our machine. I’m gonna assign mine with 1024MiB. Hit enter.
-- Set GUID to `EF00`. Hit enter.
-- Set name to `boot`. Hit enter.
-- Now you should see the new partition in the partitions list with a partition type of EFI System and a partition name of boot. You will also notice there is 1007KB above the created partition. That is the MBR. Don’t worry about that and just leave it there.
 
-+ Create the `root` partition
++ Press <kbd>**n**</kbd> To ***Create New Partition.*** You Will Be Prompted To Choose A Partition Number.
 
-	- Hit New again.
-	- Hit enter to select the default option for the first sector.
-	- Hit enter again to input your root size.
-	- Also hit enter for the GUID to select default(`8300`).
-	- Then set name of the partition to `root`.
++ Press <kbd>**1**</kbd> To ***Select Partition Number 1.***
 
-+ Create the `root` partition
++ Press <kbd>**Return**</kbd> To Stay With The ***Default Block Size For First Sector.***
 
-	- Hit New again.
-	- Hit enter to select the default option for the first sector.
-	- Hit enter again to use the remainder of the disk.
-	- Also hit enter for the GUID to select default.
-	- Then set name of the partition to `home`.
++ Enter <kbd>**+512M**</kbd> In ***The Last Sector.*** And Press <kbd>**Return**</kbd> To Create ***EFI Partition With 512 Mib.***
 
-+ Lastly, hit `Write` at the bottom of the patitions list to *write the changes* to the disk. Type `yes` to *confirm* the write command. Now we are done partitioning the disk. Hit `Quit` *to exit cgdisk*. Go to the [next section](#formatting-partitions).
++ Press <kbd>**t**</kbd> To ***Change Partition Type*** Of The EFI Partition.
 
-### Encrypted filesystem with `LUKS/LVM`
++ Enter <kbd>**1**</kbd> For ***EFI System.*** ( Default is Linux System )
 
-[1.]: Let’s clean up our main drive to create new partitions for our installation. And yeah, in this guide, we will use `/dev/sda` as our disk.
+>> ##### Create The Swap Partition :
 
-	```
-	# gdisk /dev/sda
-	```
++ Press <kbd>**n**</kbd> To ***Create New Partition.*** You Will Be Prompted To Choose A Partition Number.
 
-+ Press <kbd>x</kbd> to enter **expert mode**. Then press <kbd>z</kbd> to *zap* our drive. Then hit <kbd>y</kbd> when prompted about wiping out GPT and blanking out MBR. Note that this will ***zap*** your entire drive so your data will be gone - reduced to atoms after doing this. THIS. CANNOT. BE. UNDONE.
++ Press <kbd>**2**</kbd> To ***Select Partition Number 2.***
 
-+ Create our partitions by running `cgdisk /dev/sda`
++ Press <kbd>**Return**</kbd> To Stay With The ***Default Block Size For First Sector.***
 
-	```
-	# cgdisk /dev/sda
-	```
++ Enter <kbd>**+8G**</kbd> In ***The Last Sector.*** And Press <kbd>**Return**</kbd> To Create ***Swap Partition With 8 Gib.***
 
-+ Just press <kbd>Return</kbd> when warned about damaged GPT.
++ Press <kbd>**t**</kbd> To ***Change Partition Type*** Of The Swap Partition.
 
-	Now we should be presented with our main drive showing the partition number, partition size, partition type, and partition name. If you see list of partitions, delete all those first.
++ Enter <kbd>**19**</kbd> For ***Linux Swap.*** ( Default is Linux System )
 
-+ Create the `boot` partition
+>> ##### Create The Root Partition :
 
-	- Hit New from the options at the bottom.
-	- Just hit enter to select the default option for the first sector.
-	- Now the partion size - Arch wiki recommends 200-300 MB for the boot + size. Let’s make 1GiB in case we need to add more OS to our machine. I’m gonna assign mine with 1024MiB. Hit enter.
-	- Set GUID to `EF00`. Hit enter.
-	- Set name to `boot`. Hit enter.
-	- Now you should see the new partition in the partitions list with a partition type of EFI System and a partition name of boot.
++ Press <kbd>**n**</kbd> To ***Create New Partition.*** You Will Be Prompted To Choose A Partition Number.
 
-+ Create the `LVM` partition
++ Press <kbd>**3**</kbd> To ***Select Partition Number 3.***
 
-	- Hit New again.
-	- Hit enter to select the default option for the first sector.
-	- Hit enter again to use the remainder of the disk.
-	- Set GUID to `8e00`. Hit enter.
-	- Set name to `lvm`. Hit enter.
++ Press <kbd>**Return**</kbd> To Stay With The ***Default Block Size For First Sector.***
 
-+ Lastly, hit `Write` at the bottom of the patitions list to *write the changes* to the disk. Type `yes` to *confirm* the write command. Now we are done partitioning the disk. Hit `Quit` *to exit cgdisk*. Go to the [next section](#formatting-partitions).
++ Enter <kbd>**+30G**</kbd> In ***The Last Sector.*** And Press <kbd>**Return**</kbd> To Create ***Root Partition With 30 Gib.***
 
++ **Note :** No Need To Change Partition Type. ***Default is Linux System.***
 
-## Verifying the partitions
+>> ##### Create The Home Partition :
 
-Use `lsblk` again to check the partitions we created. *We? I thought I'm doing this guide for myself lol*
++ Press <kbd>**n**</kbd> To ***Create New Partition.*** You Will Be Prompted To Choose A Partition Number.
+
++ Press <kbd>**4**</kbd> To ***Select Partition Number 4.***
+
++ Press <kbd>**Return**</kbd> To Stay With The ***Default Block Size For First Sector.***
+
++ Press <kbd>**Return**</kbd> In ***The Last Sector*** To Create ***Root Partition Of Remaining Space.***
+
++ **Note :** No Need To Change Partition Type. ***Default is Linux System.***
+
++ Press <kbd>**p**</kbd> To Print The Newly Created Disk Partitions.
+
++ Press <kbd>**w**</kbd> To ***Write And Quit*** From ***fdisk*** Command.
+
+### Verifying The Partitions :
+
+Use ***lsblk*** Again To Check The Newly Created Partitions. <u>***We? I Thought I'm Doing This Guide For Self Lol.***</u>
 
 ```
-# lsblk
+lsblk
 ```
 
-You should see *something like this*:
+You Should See ***Something Like This :***
 
-### Unencrypted filesystem
+### <u> MY &nbsp; PARTITION &nbsp; TABLE </u> -
 
-| NAME | MAJ:MIN | RM | SIZE | RO | TYPE | MOUNTPOINT |
-| --- | --- | --- | --- | --- | --- | --- |
-| sda | 8:0 | 0 | 477G | 0 |   |   |
-| sda1 | 8:1 | 0 | 1 | 0 | part |   |
-| sda2 | 8:2 | 0 | 1 | 0 | part |   |
-| sda3 | 8:3 | 0 | 175G | 0 | part |   |
+|<center> NAME </center>|<center> MAJ:MIN </center>|<center> RM </center>|<center>  SIZE  </center>|<center> RO </center>| TYPE | MOUNTPOINTS |
+| --------------------- | ------------------------ | ------------------- | ----------------------- | ------------------- | ---- | ----------- |
+|<center> sda  </center>|<center>   8:0   </center>|<center> 0  </center>|<center>  240G  </center>|<center>  0 </center>|      |             |
+|<center> sda1 </center>|<center>   8:1   </center>|<center> 0  </center>|<center>  512M  </center>|<center>  0 </center>| part |             |
+|<center> sda2 </center>|<center>   8:2   </center>|<center> 0  </center>|<center>   8G   </center>|<center>  0 </center>| part |             |
+|<center> sda3 </center>|<center>   8:3   </center>|<center> 0  </center>|<center>   30G  </center>|<center>  0 </center>| part |             |
+|<center> sda4 </center>|<center>   8:3   </center>|<center> 0  </center>|<center> 201.5G </center>|<center>  0 </center>| part |             |
 
-**`sda`** is the main disk  
-**`sda1`** is the boot partition  
-**`sda2`** is the swap partition  
-**`sda3`** is the home partition  
+**sda** is The Main Disk.  
+**sda1** is The Boot Partition.  
+**sda2** is The Swap Partition.  
+**sda3** is The Root Partition.  
+**sda4** is The Home Partition.  
 
-### Encrypted filesystem
-
-| NAME | MAJ:MIN | RM | SIZE | RO | TYPE | MOUNTPOINT |
-| --- | --- | --- | --- | --- | --- | --- |
-| sda | 8:0 | 0 | 477G | 0 | disk |   |
-| sda1 | 8:1 | 0 | 1 | 0 | part |   |
-| sda2 | 8:2 | 0 | 1 | 0 | part |   |
-
-**`sda`** is the main disk  
-**`sda1`** is the boot partition  
-**`sda2`** is the LVM partition
-
-**Surprise! Surprise!** We will **not** encrypt the `/boot` partition.
-
-## Format the partitions
+### Format The Partitions :
 
 ### Unencrypted filesystem
 
