@@ -385,7 +385,38 @@ lsblk
 
 You Should See ***Something Like This :***
 
-### <u> MY &nbsp; PARTITION &nbsp; TABLE </u> -
+<table style="text-align:center;">
+  <tr style="font-weight:bold">
+    <td >NAME</td>
+    <td>MAJ:MIN</td>
+    <td>RM</td>
+	<td>SIZE</td>
+	<td>RO</td>
+	<td>TYPE</td>
+	<td>MOUNTPOINTS</td>
+  </tr>
+  <tr>
+    <td>sda</td>
+    <td>8:0</td>
+    <td>0</td>
+	<td>240G</td>
+	<td>0</td>
+	<td>part</td>
+	<td> </td>
+  </tr>
+  <tr>
+    <td>sda1</td>
+    <td>8:1</td>
+    <td>0</td>
+	<td>512M</td>
+	<td>0</td>
+	<td>part</td>
+	<td> </td>
+  </tr>
+</table>
+
+
+
 
 |<center> NAME </center>|<center> MAJ:MIN </center>|<center> RM </center>|<center>  SIZE  </center>|<center> RO </center>| TYPE | MOUNTPOINTS |
 | --------------------- | ------------------------ | ------------------- | ----------------------- | ------------------- | ---- | ----------- |
