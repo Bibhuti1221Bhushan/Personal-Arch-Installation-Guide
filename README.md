@@ -64,9 +64,7 @@ cat /sys/firmware/efi/fw_platform_size
 ```
 
 - If The Command Returns 64, Then Machine is Booted In UEFI Mode And Has A ***64-Bit x64 UEFI.*** 
-<br>
 - If The Command Returns 32, Then Machine is Booted In UEFI Mode And Has A ***32-Bit IA32 UEFI,*** Which is Supported But Limits The Boot Loader Choice To GRUB.
-<br>
 - If The File Does't Exist, Then The Machine is Booted In ***BIOS*** ( CSM ) Mode.
 
 ### Connect To The Internet :
