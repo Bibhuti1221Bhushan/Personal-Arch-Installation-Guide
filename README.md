@@ -1,12 +1,3 @@
-<html>
-<link href="/JetBrainsMono-Regular.ttf" rel="stylesheet">
-<style>
-	body {
-		font-family: 'JetBrainsMono-Regular';
-	}	
-</style>
-
-
 # A Personal Arch Installation Guide
 
 A Personal Arch Installation Guide So If I Get Lost, This Guide Will Help Me To Remember A Bunch Of Things While Re-Installing [**Arch Linux.**](https://archlinux.org) If You Just Found This Guide From Some Where, I Recommend You To First Read The Official 
@@ -34,15 +25,13 @@ A Personal Arch Installation Guide So If I Get Lost, This Guide Will Help Me To 
 
 ## Let's Begin Installation -
 
-### Adjust The Key Map Layout :
+### Set The Keyboard Layout :
 
 **Note :** The Default is ***US***. 
 <br>
 Available Layouts Can Be Listed With :
 
-
-> &nbsp; ls /usr/share/kbd/keymaps/**/*.map.gz
-
+> <p style="background-color:#31363F;">ls /usr/share/kbd/keymaps/**/*.map.gz</p>
 
 To Modify The Layout, Omitting Path And File Extension. For Example, To Set US Keyboard Layout:  
 
@@ -1051,5 +1040,3 @@ If your installation is a success, then ***yay!!!*** If not, you should start qu
 
 ## [[POST INSTALLATION]](./POST.md)		[[EXTRAS]](./EXTRAS.md)
 
-
-</html>
