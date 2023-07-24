@@ -25,15 +25,15 @@ A Personal Arch Installation Guide So If I Get Lost, This Guide Will Help Me To 
 
 ## Let's Begin Installation -
 
-### Set The Keyboard Layout :
+### Adjust The Key Map Layout :
 
 **Note :** The Default is ***US***. 
 <br>
 Available Layouts Can Be Listed With :
 
-```
-ls /usr/share/kbd/keymaps/**/*.map.gz
-```
+> ```
+> ls /usr/share/kbd/keymaps/**/*.map.gz
+> ```
 
 To Modify The Layout, Omitting Path And File Extension. For Example, To Set US Keyboard Layout:  
 
