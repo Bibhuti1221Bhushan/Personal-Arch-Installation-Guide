@@ -93,22 +93,22 @@ Above Command Output Will Be Something Like This :
 
 For Wireless And WWAN, Make Sure The Card is Not Blocked :
 
-```
+```bash
 rfkill
 ```
 
 If The Card is Blocked, Unblock Using :
 
-```
+```bash
 rfkill unblock all
 ```
 
 > #### Wired Connection : 
 
-***Note :*** Ethernet is Pre-Configured And Enabled By Default.
-In Case, If The Wired Connection is Not Enabled, You Can Enable Ethernet Using :
+***Note :*** Wired Connection is Pre-Configured And Enabled By Default.
+In Case, If The Wired Connection is Not Enabled, You Can Enable Connection Using :
 
-```
+```bash
 systemctl start dhcpcd@enp0s0
 ```
 
@@ -120,43 +120,43 @@ If You Have Laptop Or Wireless Adapter, You Can Connect To Wireless Access Point
 <br>
 In Case, If ***iwd*** is Not Enabled.
 
-```
+```bash
 systemctl enable iwd
 ```
 
-Scan For Network :
+Scan For Wi-Fi :
 
-```
+```bash
 iwctl station wlan0 scan
 ```
 
-Get The List Of Scanned Networks :
+Get The List Of Scanned Wi-Fi :
 
-```
+```bash
 iwctl station wlan0 get-networks
 ```
 
-Connect To Your Visible Network :
+Connect To Your Visible Wi-Fi :
 
-```
+```bash
 iwctl -P "PASSPHRASE" station wlan0 connect "NETWORK-NAME"
 ```
 
-##### <center>OR</center>
+##### <center> OR </center>
 
-Connect To Your Hidden Network :
+Connect To Your Hidden Wi-Fi :
 
-```
+```bash
 iwctl -P "PASSPHRASE" station wlan0 connect-hidden "NETWORK-NAME"
 ```
 
 Ping A Website To Make Sure We Are Online :
 
-```
+```bash
 ping -c 3 1.1.1.1
 ``` 
 
-If You Receive ***Unknown host*** Or ***Network is unreachable,*** Means You Are Not Online Yet. Review Your Network Configuration And Redo The Steps Above.
+If You Receive Error Like ***Unknown host*** Or ***Network is unreachable,*** Means You Are Not Online Yet. Review Your Network Configuration And Redo The Above Steps.
 
 > #### Wireless Connection - ***( wpa_supplicant )*** :
 
@@ -166,13 +166,13 @@ If You Have Laptop Or Wireless Adapter, You Can Connect To Wireless Access Point
 <br>
 In Case, If You Receive Error. Enable Interface Using :
 
-```
+```bash
 ifup wlan0
 ```
 
-Get The List Of Scanned Networks :
+Get The List Of Scanned Wi-Fi :
 
-```
+```bash
 iwlist wlan0 scan | grep ESSID
 ```
 
@@ -180,13 +180,13 @@ iwlist wlan0 scan | grep ESSID
 
 Create ***wpa_supplicant.conf*** Using One Line Command :
 
-```
+```bash
 wpa_passphrase "NETWORK-NAME" "PASSPHRASE" | tee /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
-Connect To Your Network :
+Connect To Your Wi-Fi :
 
-```
+```bash
 wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 ```
 
@@ -196,13 +196,13 @@ wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 
 Create & Open ***wpa_supplicant.conf :***
 
-```
+```bash
 nano /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
 Add This Line In Configuration File :
 
-```
+```bash
 network={
 	ssid="NETWORK-NAME"
     scan_ssid=1
@@ -210,9 +210,9 @@ network={
 }
 ```
 
-Connect To Your Network :
+Connect To Your Wi-Fi :
 
-```
+```bash
 wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 ```
 
@@ -222,13 +222,13 @@ wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 
 Create & Open ***wpa_supplicant.conf :***
 
-```
+```bash
 nano /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
 Add This Line In Configuration File :
 
-```
+```bash
 network={
 	ssid="NETWORK-NAME"
     key_mgmt=NONE
@@ -236,9 +236,9 @@ network={
 }
 ```
 
-Connect To Your Network :
+Connect To Your Wi-Fi :
 
-```
+```bash
 wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 ```
 
@@ -248,13 +248,13 @@ wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 
 Create & Open ***wpa_supplicant.conf :***
 
-```
+```bash
 nano /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
 Add This Line In Configuration File :
 
-```
+```bash
 network={
 	ssid="NETWORK-NAME"
     key_mgmt=NONE
@@ -263,54 +263,55 @@ network={
 }
 ```
 
-Connect To Your Network :
+Connect To Your Wi-Fi :
 
-```
+```bash
 wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 ```
 
 Ping A Website To Make Sure We Are Online :
 
-```
+```bash
 ping -c 3 1.1.1.1
 ``` 
 
-If You Receive ***Unknown host*** Or ***Network is unreachable,*** Means You Are Not Online Yet. Review Your Network Configuration And Redo The Steps Above.
+If You Receive Error Like ***Unknown host*** Or ***Network is unreachable,*** Means You Are Not Online Yet. Review Your Network Configuration And Redo The Steps Above.
 
-### Update The System Clock :
+### Update The Device Clock :
 
-To Ensure That System Clock is Accurate :
+To Ensure That Clock is Accurate :
 
-```
+```bash
 timedatectl set-ntp true
 ```
 
 To Check The Service Status :
 
-```
+```bash
 timedatectl status
 ```
 
 ### Partition The Disks :
 
-When Disks Are Recognized By The Live System, Disks Are Assigned To A Block Device Such As ***/dev/sda, /dev/nvme0n1 or /dev/mmcblk0.*** To Identify These Devices :
+When The Disks Are Recognized By The Live Environment, Disks Are Assigned To A Block Device Such As ***/dev/sda, /dev/nvme0n1 or /dev/mmcblk0.*** 
+<br>
+To Identify These Devices :
 
-```
+```bash
 lsblk
 ```
 
 ***Note :*** Results Ending In ***rom, loop*** Or ***airoot*** May Be Ignored.
 
+Let’s Clean Our Drive To Create New Partitions Table For Our Installation. In This Guide, We Will Use ***/dev/sda*** As Our Installation Disk.
 
-Let’s Clean Our Drive To Create New Partitions Table For Our Installation. In This Guide, We Will Use ***/dev/sda*** As Our Disk.
-
-```
+```bash
 fdisk /dev/sda
 ```
 
 + Press <kbd>**Return**</kbd> To Open ***dev/sda*** In ***fdisk***. 
 
-+ Press <kbd>**p**</kbd> To Show Current Partition. Now We Should See Our Drive Showing The ***Partition Number, Partition Size, Partition Type,*** And ***Partition Name.***
++ Press <kbd>**p**</kbd> To Show Current Partition. Now We Should See Our Drive Showing The ***Partition Number, Partition Size,*** And ***Partition Name.***
 
 + Press <kbd>**g**</kbd> To ***<u style="color:red;">Format Entire Drive</u>*** And Create An Empty ***GPT Partition Table.***
 
@@ -322,7 +323,7 @@ fdisk /dev/sda
 
 + Press <kbd>**1**</kbd> To ***Select Partition Number 1.***
 
-+ Press <kbd>**Return**</kbd> To Stay With The ***Default Block Size For First Sector.***
++ Press <kbd>**Return**</kbd> To Continue With The ***Default Block Size For First Sector.***
 
 + Enter <kbd>**+512M**</kbd> In ***The Last Sector.*** And Press <kbd>**Return**</kbd> To Create ***EFI Partition With 512 Mib.***
 
@@ -336,7 +337,7 @@ fdisk /dev/sda
 
 + Press <kbd>**2**</kbd> To ***Select Partition Number 2.***
 
-+ Press <kbd>**Return**</kbd> To Stay With The ***Default Block Size For First Sector.***
++ Press <kbd>**Return**</kbd> To Continue With The ***Default Block Size For First Sector.***
 
 + Enter <kbd>**+8G**</kbd> In ***The Last Sector.*** And Press <kbd>**Return**</kbd> To Create ***Swap Partition With 8 Gib.***
 
@@ -350,7 +351,7 @@ fdisk /dev/sda
 
 + Press <kbd>**3**</kbd> To ***Select Partition Number 3.***
 
-+ Press <kbd>**Return**</kbd> To Stay With The ***Default Block Size For First Sector.***
++ Press <kbd>**Return**</kbd> To Continue With The ***Default Block Size For First Sector.***
 
 + Enter <kbd>**+30G**</kbd> In ***The Last Sector.*** And Press <kbd>**Return**</kbd> To Create ***Root Partition With 30 Gib.***
 
@@ -362,7 +363,7 @@ fdisk /dev/sda
 
 + Press <kbd>**4**</kbd> To ***Select Partition Number 4.***
 
-+ Press <kbd>**Return**</kbd> To Stay With The ***Default Block Size For First Sector.***
++ Press <kbd>**Return**</kbd> To Continue With The ***Default Block Size For First Sector.***
 
 + Press <kbd>**Return**</kbd> In ***The Last Sector*** To Create ***Root Partition Of Remaining Space.***
 
@@ -374,46 +375,13 @@ fdisk /dev/sda
 
 ### Verifying The Partitions :
 
-Use ***lsblk*** Again To Check The Newly Created Partitions. <u>***We? I Thought I'm Doing This Guide For Self Lol.***</u>
+Use ***lsblk*** Again To Check The Created Partitions. <u>***We? I Thought I'm Doing This Guide For Self 🤣.***</u>
 
 ```
 lsblk
 ```
 
 You Should See ***Something Like This :***
-
-<table style="text-align:center;">
-  <tr style="font-weight:bold">
-    <td >NAME</td>
-    <td>MAJ:MIN</td>
-    <td>RM</td>
-	<td>SIZE</td>
-	<td>RO</td>
-	<td>TYPE</td>
-	<td>MOUNTPOINTS</td>
-  </tr>
-  <tr>
-    <td>sda</td>
-    <td>8:0</td>
-    <td>0</td>
-	<td>240G</td>
-	<td>0</td>
-	<td>part</td>
-	<td> </td>
-  </tr>
-  <tr>
-    <td>sda1</td>
-    <td>8:1</td>
-    <td>0</td>
-	<td>512M</td>
-	<td>0</td>
-	<td>part</td>
-	<td> </td>
-  </tr>
-</table>
-
-
-
 
 |<center> NAME </center>|<center> MAJ:MIN </center>|<center> RM </center>|<center>  SIZE  </center>|<center> RO </center>| TYPE | MOUNTPOINTS |
 | --------------------- | ------------------------ | ------------------- | ----------------------- | ------------------- | ---- | ----------- |
