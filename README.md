@@ -25,7 +25,7 @@ A Personal Arch Installation Guide So If I Get Lost, This Guide Will Help Me To 
 
 ## Let's Begin Installation -
 
-### Adjust Input Language Map :
+### Set Input Language Map :
 
 **Note :** The Default  is ***US.***
 <br>
@@ -41,7 +41,7 @@ To Modify The Input Mapping, Omitting Path And File Extension. For Example, To S
 loadkeys us
 ```
 
-### Adjust Console Font : 
+### Set Console Font : 
 
 More Console Fonts Can Be Listed With :
 
