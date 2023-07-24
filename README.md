@@ -32,12 +32,12 @@ A Personal Arch Installation Guide So If I Get Lost, This Guide Will Help Me To 
 Available Mapping Can Be Listed With :
 
 ```bash
-ls /usr/share/kbd/keymaps/**/*.map.gz</p>
+ls /usr/share/kbd/keymaps/**/*.map.gz
 ```
 
 To Modify The Layout, Omitting Path And File Extension. For Example, To Set US Keyboard Layout:  
 
-```
+```bash
 loadkeys us
 ```
 
@@ -45,7 +45,7 @@ loadkeys us
 
 Available Console Fonts Can Be Listed With :
 
-```
+```bash
 ls /usr/share/kbd/consolefonts/*.gz
 ```
 
@@ -59,7 +59,7 @@ setfont default8x16
 
 To Verify The Boot Mode, Check The UEFI Witness :  
 
-```
+```bash
 cat /sys/firmware/efi/fw_platform_size
 ```
 
