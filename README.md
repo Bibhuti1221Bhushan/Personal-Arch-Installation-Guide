@@ -63,9 +63,9 @@ To Verify The Boot Mode, Check The UEFI Witness :
 cat /sys/firmware/efi/fw_platform_size
 ```
 
-- If The Command Returns 64, Then Machine is Booted In UEFI Mode And Has A ***64-Bit x64 UEFI.*** 
-- If The Command Returns 32, Then Machine is Booted In UEFI Mode And Has A ***32-Bit IA32 UEFI,*** Which is Supported But Limits The Boot Loader Choice To GRUB.
-- If The File Does't Exist, Then The Machine is Booted In ***BIOS*** ( CSM ) Mode.
++ If The Command Returns 64, Then Machine is Booted In UEFI Mode And Has A ***64-Bit x64 UEFI.*** 
++ If The Command Returns 32, Then Machine is Booted In UEFI Mode And Has A ***32-Bit IA32 UEFI,*** Which is Supported But Limits The Boot Loader Choice To GRUB.
++ If The File Does't Exist, Then The Machine is Booted In ***BIOS*** ( CSM ) Mode.
 
 ### Connect To The Internet :
 
@@ -73,13 +73,13 @@ Arch Linux Needs Internet Connection To Install Arch Linux ***base*** And Other 
 
 Ensure Network Interface is Listed And Enabled :
 
-```
+```bash
 ip link
 ```
 
 Above Command Output Will Be Something Like This :
 
-```
+```bash
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
 		link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
 2: enp0s0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc fq_codel state DOWN mode DEFAULT group default qlen 1000
@@ -88,9 +88,8 @@ Above Command Output Will Be Something Like This :
 		link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff permaddr 00:00:00:00:00:00
 ```
 
-***enp0s0*** is The Wired Interface ( Ethernet ) 
-<br>
-***wlan0*** is The Wireless Interface ( Wi-Fi ) 
++ ***enp0s0*** is The Wired Interface ( Ethernet ) 
++ ***wlan0*** is The Wireless Interface ( Wi-Fi ) 
 
 For Wireless And WWAN, Make Sure The Card is Not Blocked :
 
