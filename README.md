@@ -28,7 +28,7 @@ A Personal Arch Installation Guide So If I Get Lost, This Guide Will Help Me To 
 ### Set The Keyboard Layout :
 
 **Note :** The Default is ***US***.
-
+<br>
 Available Layouts Can Be Listed With :
 
 ```
