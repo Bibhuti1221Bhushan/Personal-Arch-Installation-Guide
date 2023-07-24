@@ -29,21 +29,21 @@ A Personal Arch Installation Guide So If I Get Lost, This Guide Will Help Me To 
 
 **Note :** The Default  is ***US.***
 <br>
-Available Mapping Can Be Listed With :
+More Mapping Can Be Listed With :
 
 ```bash
 ls /usr/share/kbd/keymaps/**/*.map.gz
 ```
 
-To Modify The Layout, Omitting Path And File Extension. For Example, To Set US Keyboard Layout:  
+To Modify The Input Mapping, Omitting Path And File Extension. For Example, To Set US Input Map :  
 
 ```bash
 loadkeys us
 ```
 
-### Set Console Font : 
+### Adjust Console Font : 
 
-Available Console Fonts Can Be Listed With :
+More Console Fonts Can Be Listed With :
 
 ```bash
 ls /usr/share/kbd/consolefonts/*.gz
@@ -63,11 +63,11 @@ To Verify The Boot Mode, Check The UEFI Witness :
 cat /sys/firmware/efi/fw_platform_size
 ```
 
-If The Command Returns 64, Then Machine is Booted In UEFI Mode And Has A ***64-Bit x64 UEFI.*** 
+- If The Command Returns 64, Then Machine is Booted In UEFI Mode And Has A ***64-Bit x64 UEFI.*** 
 <br>
-If The Command Returns 32, Then Machine is Booted In UEFI Mode And Has A ***32-Bit IA32 UEFI,*** Which is Supported But Limits The Boot Loader Choice To GRUB.
+- If The Command Returns 32, Then Machine is Booted In UEFI Mode And Has A ***32-Bit IA32 UEFI,*** Which is Supported But Limits The Boot Loader Choice To GRUB.
 <br>
-If The File Does't Exist, Then The Machine is Booted In ***BIOS*** ( CSM ) Mode.
+- If The File Does't Exist, Then The Machine is Booted In ***BIOS*** ( CSM ) Mode.
 
 ### Connect To The Internet :
 
