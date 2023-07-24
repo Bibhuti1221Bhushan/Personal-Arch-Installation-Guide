@@ -2,16 +2,16 @@
 
 A Personal Arch Installation Guide So If I Get Lost, This Guide Will Help Me To Remember A Bunch Of Things While Re-Installing [**Arch Linux.**](https://archlinux.org) If You Just Found This Guide From Some Where, I Recommend You To First Read The Official 
 [**Installation Guide.**](https://wiki.archlinux.org/title/Installation_guide)  
-<br>
+
 **Note :** Guide Focused On Minimal Installation With ***'GRUB', 'UEFI', 'Un-Encrypted Partition'*** And ***'Separate Home Partition' .*** 
 
 ## Pre-Installation -
 
 ### Before Installing :
 
-+ Read The [Official Guide](https://wiki.archlinux.org/title/Installation_guide).
++ Read The [Official Installation Guide](https://wiki.archlinux.org/title/Installation_guide).
 + Download Installation Image From [Here](https://www.archlinux.org/download).
-+ Check Image Signature.
++ Check Installation Image Signature.
 + Prepare An Installation Medium.
 + Boot In To The Live Environment.
 
@@ -27,11 +27,13 @@ A Personal Arch Installation Guide So If I Get Lost, This Guide Will Help Me To 
 
 ### Set The Keyboard Layout :
 
-**Note :** The Default is ***US***. 
-<br>
+**Note :** The Default is ***US***.
+
 Available Layouts Can Be Listed With :
 
-> <p style="background-color:#31363F;">ls /usr/share/kbd/keymaps/**/*.map.gz</p>
+```
+ls /usr/share/kbd/keymaps/**/*.map.gz</p>
+```
 
 To Modify The Layout, Omitting Path And File Extension. For Example, To Set US Keyboard Layout:  
 
