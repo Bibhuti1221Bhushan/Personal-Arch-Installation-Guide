@@ -1,9 +1,13 @@
-============
-Gooooooooooo
-============
+================
+    Gooooooooooo
+================
 
-    ENFJKHKJDH_`
+    **ENFJKHKJDH_`**
     
-    Gooogle
 
-    kvnkjfbgfd
+
+.. math::
+
+   \gamma = \sqrt{(\alpha^2 + \beta^2)}
+
+|    **Definition list**:
