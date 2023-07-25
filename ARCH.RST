@@ -5,16 +5,16 @@ A Personal Arch Installation Guide
 A Personal Arch Installation Guide So If I Get Lost, This Guide Will Help Me To Remember A Bunch Of Things While Re-Installing `Arch Linux <https://archlinux.org>`_. If You Just Found This Guide From Some Where, I Recommend You To First Read The Official 
 `Installation Guide <https://wiki.archlinux.org/title/Installation_guide>`_.  
 
-**Note :** Guide Focused On Minimal Installation With ***'GRUB', 'UEFI', 'Un-Encrypted Partition'*** And ***'Separate Home Partition' .*** 
+**Note :** Guide Focused On Minimal Installation With **'GRUB', 'UEFI', 'Un-Encrypted Partition'** And **'Separate Home Partition' .** 
 
 Pre-Installation -
 ------------------
 
-Before Installing 
-#################
+Before Installing : 
+###################
 
-+ Read The [Official Installation Guide](https://wiki.archlinux.org/title/Installation_guide).
-+ Download Installation Image From [Here](https://www.archlinux.org/download).
++ Read The `Official Installation Guide <https://wiki.archlinux.org/title/Installation_guide>`_.
++ Download Installation Image From `Here <https://www.archlinux.org/download>`_.
 + Check Installation Image Signature.
 + Prepare An Installation Medium.
 + Boot In To The Live Environment.
@@ -34,118 +34,123 @@ Let's Begin Installation -
 Set Input Language Map :
 ########################
 
-**Note :** The Default  is ***US.***
-<br>
+**Note :** The Default  is **US.**
+
 More Mapping Can Be Listed With :
 
-```bash
-ls /usr/share/kbd/keymaps/**/*.map.gz
-```
+::
+  
+  ls /usr/share/kbd/keymaps/**/*.map.gz
 
 To Modify The Input Mapping, Omitting Path And File Extension. For Example, To Set US Input Map :  
 
-```bash
-loadkeys us
-```
+::
 
-### Set Console Font : 
+  loadkeys us
+
+
+Set Console Font : 
+##################
 
 More Console Fonts Can Be Listed With :
 
-```bash
-ls /usr/share/kbd/consolefonts/*.gz
-```
+::
 
-Console Font Can Be Set With ***setfont***.  For Example, To Use One Of The Fonts : 
+  ls /usr/share/kbd/consolefonts/*.gz
 
-```
-setfont default8x16
-```
+Console Font Can Be Set With **setfont**.  For Example, To Use One Of The Fonts : 
 
-### Verify The Boot Mode :
+::
+
+  setfont default8x16
+
+Verify The Boot Mode :
+######################
 
 To Verify The Boot Mode, Check The UEFI Witness :  
 
-```bash
-cat /sys/firmware/efi/fw_platform_size
-```
+::
 
-+ If The Command Returns 64, Then Machine is Booted In UEFI Mode And Has A ***64-Bit x64 UEFI.*** 
-+ If The Command Returns 32, Then Machine is Booted In UEFI Mode And Has A ***32-Bit IA32 UEFI,*** Which is Supported But Limits The Boot Loader Choice To GRUB.
-+ If The File Does't Exist, Then The Machine is Booted In ***BIOS*** ( CSM ) Mode.
+  cat /sys/firmware/efi/fw_platform_size
 
-### Connect To The Internet :
++ If The Command Returns 64, Then Machine is Booted In UEFI Mode And Has A **64-Bit x64 UEFI.** 
++ If The Command Returns 32, Then Machine is Booted In UEFI Mode And Has A **32-Bit IA32 UEFI,** Which is Supported But Limits The Boot Loader Choice To GRUB.
++ If The File Does't Exist, Then The Machine is Booted In **BIOS** ( CSM ) Mode.
 
-Arch Linux Needs Internet Connection To Install Arch Linux ***base*** And Other Needed Packages.
+Connect To The Internet :
+#########################
+
+Arch Linux Needs Internet Connection To Install Arch Linux **base** And Other Needed Packages.
 
 Ensure Network Interface is Listed And Enabled :
 
-```bash
-ip link
-```
+::
+
+  ip link
 
 Above Command Output Will Be Something Like This :
 
-```bash
-1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
-		link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
-2: enp0s0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc fq_codel state DOWN mode DEFAULT group default qlen 1000
-		link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
-3: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DORMANT group default qlen 1000
-		link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff permaddr 00:00:00:00:00:00
-```
+::
 
-+ ***enp0s0*** is The Wired Interface ( Ethernet ) 
-+ ***wlan0*** is The Wireless Interface ( Wi-Fi ) 
+  1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+  		  link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+  2: enp0s0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc fq_codel state DOWN mode DEFAULT group default qlen 1000
+ 		  link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
+  3: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DORMANT group default qlen 1000
+		  link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff permaddr 00:00:00:00:00:00
+
++ **enp0s0** is The Wired Interface ( Ethernet ) 
++ **wlan0** is The Wireless Interface ( Wi-Fi ) 
 
 For Wireless And WWAN, Make Sure The Card is Not Blocked :
 
-```bash
-rfkill
-```
+::
+
+  rfkill
 
 If The Card is Blocked, Unblock Using :
 
-```bash
-rfkill unblock all
-```
+::
 
-> #### Wired Connection : 
+  rfkill unblock all
 
-***Note :*** Wired Connection is Pre-Configured And Enabled By Default.
+``Wired Connection`` : 
+
+
+**Note :** Wired Connection is Pre-Configured And Enabled By Default.
 In Case, If The Wired Connection is Not Enabled, You Can Enable Connection Using :
 
-```bash
+::
 systemctl start dhcpcd@enp0s0
 ```
 
-> #### Wireless Connection - ***( Recommended iwd )*** :
+> #### Wireless Connection - **( Recommended iwd )** :
 
-If You Have Laptop Or Wireless Adapter, You Can Connect To Wireless Access Point Using ***iwctl*** Command From ***iwd***.
+If You Have Laptop Or Wireless Adapter, You Can Connect To Wireless Access Point Using **iwctl** Command From **iwd**.
 
-***Note : iwd*** is Enabled By Default.
+**Note : iwd** is Enabled By Default.
 <br>
-In Case, If ***iwd*** is Not Enabled.
+In Case, If **iwd** is Not Enabled.
 
-```bash
+::
 systemctl enable iwd
 ```
 
 Scan For Wi-Fi :
 
-```bash
+::
 iwctl station wlan0 scan
 ```
 
 Get The List Of Scanned Wi-Fi :
 
-```bash
+::
 iwctl station wlan0 get-networks
 ```
 
 Connect To Your Visible Wi-Fi :
 
-```bash
+::
 iwctl -P "PASSPHRASE" station wlan0 connect "NETWORK-NAME"
 ```
 
@@ -153,47 +158,47 @@ iwctl -P "PASSPHRASE" station wlan0 connect "NETWORK-NAME"
 
 Connect To Your Hidden Wi-Fi :
 
-```bash
+::
 iwctl -P "PASSPHRASE" station wlan0 connect-hidden "NETWORK-NAME"
 ```
 
 Ping A Website To Make Sure We Are Online :
 
-```bash
+::
 ping -c 3 1.1.1.1
 ``` 
 
-If You Receive Error Like ***Unknown host*** Or ***Network is unreachable,*** Means You Are Not Online Yet. Review Your Network Configuration And Redo The Above Steps.
+If You Receive Error Like **Unknown host** Or **Network is unreachable,** Means You Are Not Online Yet. Review Your Network Configuration And Redo The Above Steps.
 
-> #### Wireless Connection - ***( wpa_supplicant )*** :
+> #### Wireless Connection - **( wpa_supplicant )** :
 
-If You Have Laptop Or Wireless Adapter, You Can Connect To Wireless Access Point Using ***wpa_supplicant.***
+If You Have Laptop Or Wireless Adapter, You Can Connect To Wireless Access Point Using **wpa_supplicant.**
 
-***Note : wpa_supplicant*** is Enabled By Default.
+**Note : wpa_supplicant** is Enabled By Default.
 <br>
 In Case, If You Receive Error. Enable Interface Using :
 
-```bash
+::
 ifup wlan0
 ```
 
 Get The List Of Scanned Wi-Fi :
 
-```bash
+::
 iwlist wlan0 scan | grep ESSID
 ```
 
 >> ##### Connect To A Visible Wi-Fi :
 
-Create ***wpa_supplicant.conf*** Using One Line Command :
+Create **wpa_supplicant.conf** Using One Line Command :
 
-```bash
+::
 wpa_passphrase "NETWORK-NAME" "PASSPHRASE" | tee /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
 Connect To Your Wi-Fi :
 
-```bash
+::
 wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 ```
 
@@ -201,15 +206,15 @@ wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 
 >> ##### Connect To A Hidden Wi-Fi : 
 
-Create & Open ***wpa_supplicant.conf :***
+Create & Open **wpa_supplicant.conf :**
 
-```bash
+::
 nano /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
 Add This Line In Configuration File :
 
-```bash
+::
 network={
 	ssid="NETWORK-NAME"
     scan_ssid=1
@@ -219,7 +224,7 @@ network={
 
 Connect To Your Wi-Fi :
 
-```bash
+::
 wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 ```
 
@@ -227,15 +232,15 @@ wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 
 >> ##### Connect To A In-Secure Wi-Fi :
 
-Create & Open ***wpa_supplicant.conf :***
+Create & Open **wpa_supplicant.conf :**
 
-```bash
+::
 nano /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
 Add This Line In Configuration File :
 
-```bash
+::
 network={
 	ssid="NETWORK-NAME"
     key_mgmt=NONE
@@ -245,7 +250,7 @@ network={
 
 Connect To Your Wi-Fi :
 
-```bash
+::
 wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 ```
 
@@ -253,15 +258,15 @@ wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 
 >> ##### Connect To A Wi-FI Via WEP-Authentication Mode :
 
-Create & Open ***wpa_supplicant.conf :***
+Create & Open **wpa_supplicant.conf :**
 
-```bash
+::
 nano /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
 Add This Line In Configuration File :
 
-```bash
+::
 network={
 	ssid="NETWORK-NAME"
     key_mgmt=NONE
@@ -272,123 +277,123 @@ network={
 
 Connect To Your Wi-Fi :
 
-```bash
+::
 wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 ```
 
 Ping A Website To Make Sure We Are Online :
 
-```bash
+::
 ping -c 3 1.1.1.1
 ``` 
 
-If You Receive Error Like ***Unknown host*** Or ***Network is unreachable,*** Means You Are Not Online Yet. Review Your Network Configuration And Redo The Steps Above.
+If You Receive Error Like **Unknown host** Or **Network is unreachable,** Means You Are Not Online Yet. Review Your Network Configuration And Redo The Steps Above.
 
 ### Update The Device Clock :
 
 To Ensure That Clock is Accurate :
 
-```bash
+::
 timedatectl set-ntp true
 ```
 
 To Check The Service Status :
 
-```bash
+::
 timedatectl status
 ```
 
 ### Partition The Disks :
 
-When The Disks Are Recognized By The Live Environment, Disks Are Assigned To A Block Device Such As ***/dev/sda, /dev/nvme0n1 or /dev/mmcblk0.*** 
+When The Disks Are Recognized By The Live Environment, Disks Are Assigned To A Block Device Such As **/dev/sda, /dev/nvme0n1 or /dev/mmcblk0.** 
 <br>
 To Identify These Devices :
 
-```bash
+::
 lsblk
 ```
 
-***Note :*** Results Ending In ***rom, loop*** Or ***airoot*** May Be Ignored.
+**Note :** Results Ending In **rom, loop** Or **airoot** May Be Ignored.
 
-Let’s Clean Our Drive To Create New Partitions Table For Our Installation. In This Guide, We Will Use ***/dev/sda*** As Our Installation Disk.
+Let’s Clean Our Drive To Create New Partitions Table For Our Installation. In This Guide, We Will Use **/dev/sda** As Our Installation Disk.
 
-```bash
+::
 fdisk /dev/sda
 ```
 
-+ Press <kbd>**Return**</kbd> To Open ***dev/sda*** In ***fdisk***. 
++ Press <kbd>**Return**</kbd> To Open **dev/sda** In **fdisk**. 
 
-+ Press <kbd>**p**</kbd> To Show Current Partition. Now We Should See Our Drive Showing The ***Partition Number, Partition Size,*** And ***Partition Name.***
++ Press <kbd>**p**</kbd> To Show Current Partition. Now We Should See Our Drive Showing The **Partition Number, Partition Size,** And **Partition Name.**
 
-+ Press <kbd>**g**</kbd> To ***<u style="color:red;">Format Entire Drive</u>*** And Create An Empty ***GPT Partition Table.***
++ Press <kbd>**g**</kbd> To **<u style="color:red;">Format Entire Drive</u>** And Create An Empty **GPT Partition Table.**
 
 **Note :** Press <kbd>**d**</kbd> To Delete A Single Partition. 
 
 >> ##### Create The Boot Partition :
 
-+ Press <kbd>**n**</kbd> To ***Create New Partition.*** You Will Be Prompted To Choose A Partition Number.
++ Press <kbd>**n**</kbd> To **Create New Partition.** You Will Be Prompted To Choose A Partition Number.
 
-+ Press <kbd>**1**</kbd> To ***Select Partition Number 1.***
++ Press <kbd>**1**</kbd> To **Select Partition Number 1.**
 
-+ Press <kbd>**Return**</kbd> To Continue With The ***Default Block Size For First Sector.***
++ Press <kbd>**Return**</kbd> To Continue With The **Default Block Size For First Sector.**
 
-+ Enter <kbd>**+512M**</kbd> In ***The Last Sector.*** And Press <kbd>**Return**</kbd> To Create ***EFI Partition With 512 Mib.***
++ Enter <kbd>**+512M**</kbd> In **The Last Sector.** And Press <kbd>**Return**</kbd> To Create **EFI Partition With 512 Mib.**
 
-+ Press <kbd>**t**</kbd> To ***Change Partition Type*** Of The EFI Partition.
++ Press <kbd>**t**</kbd> To **Change Partition Type** Of The EFI Partition.
 
-+ Enter <kbd>**1**</kbd> For ***EFI System.*** ( Default is Linux System )
++ Enter <kbd>**1**</kbd> For **EFI System.** ( Default is Linux System )
 
 >> ##### Create The Swap Partition :
 
-+ Press <kbd>**n**</kbd> To ***Create New Partition.*** You Will Be Prompted To Choose A Partition Number.
++ Press <kbd>**n**</kbd> To **Create New Partition.** You Will Be Prompted To Choose A Partition Number.
 
-+ Press <kbd>**2**</kbd> To ***Select Partition Number 2.***
++ Press <kbd>**2**</kbd> To **Select Partition Number 2.**
 
-+ Press <kbd>**Return**</kbd> To Continue With The ***Default Block Size For First Sector.***
++ Press <kbd>**Return**</kbd> To Continue With The **Default Block Size For First Sector.**
 
-+ Enter <kbd>**+8G**</kbd> In ***The Last Sector.*** And Press <kbd>**Return**</kbd> To Create ***Swap Partition With 8 Gib.***
++ Enter <kbd>**+8G**</kbd> In **The Last Sector.** And Press <kbd>**Return**</kbd> To Create **Swap Partition With 8 Gib.**
 
-+ Press <kbd>**t**</kbd> To ***Change Partition Type*** Of The Swap Partition.
++ Press <kbd>**t**</kbd> To **Change Partition Type** Of The Swap Partition.
 
-+ Enter <kbd>**19**</kbd> For ***Linux Swap.*** ( Default is Linux System )
++ Enter <kbd>**19**</kbd> For **Linux Swap.** ( Default is Linux System )
 
 >> ##### Create The Root Partition :
 
-+ Press <kbd>**n**</kbd> To ***Create New Partition.*** You Will Be Prompted To Choose A Partition Number.
++ Press <kbd>**n**</kbd> To **Create New Partition.** You Will Be Prompted To Choose A Partition Number.
 
-+ Press <kbd>**3**</kbd> To ***Select Partition Number 3.***
++ Press <kbd>**3**</kbd> To **Select Partition Number 3.**
 
-+ Press <kbd>**Return**</kbd> To Continue With The ***Default Block Size For First Sector.***
++ Press <kbd>**Return**</kbd> To Continue With The **Default Block Size For First Sector.**
 
-+ Enter <kbd>**+30G**</kbd> In ***The Last Sector.*** And Press <kbd>**Return**</kbd> To Create ***Root Partition With 30 Gib.***
++ Enter <kbd>**+30G**</kbd> In **The Last Sector.** And Press <kbd>**Return**</kbd> To Create **Root Partition With 30 Gib.**
 
-+ **Note :** No Need To Change Partition Type. ***Default is Linux System.***
++ **Note :** No Need To Change Partition Type. **Default is Linux System.**
 
 >> ##### Create The Home Partition :
 
-+ Press <kbd>**n**</kbd> To ***Create New Partition.*** You Will Be Prompted To Choose A Partition Number.
++ Press <kbd>**n**</kbd> To **Create New Partition.** You Will Be Prompted To Choose A Partition Number.
 
-+ Press <kbd>**4**</kbd> To ***Select Partition Number 4.***
++ Press <kbd>**4**</kbd> To **Select Partition Number 4.**
 
-+ Press <kbd>**Return**</kbd> To Continue With The ***Default Block Size For First Sector.***
++ Press <kbd>**Return**</kbd> To Continue With The **Default Block Size For First Sector.**
 
-+ Press <kbd>**Return**</kbd> In ***The Last Sector*** To Create ***Root Partition Of Remaining Space.***
++ Press <kbd>**Return**</kbd> In **The Last Sector** To Create **Root Partition Of Remaining Space.**
 
-+ **Note :** No Need To Change Partition Type. ***Default is Linux System.***
++ **Note :** No Need To Change Partition Type. **Default is Linux System.**
 
 + Press <kbd>**p**</kbd> To Print The Newly Created Disk Partitions.
 
-+ Press <kbd>**w**</kbd> To ***Write And Quit*** From ***fdisk*** Command.
++ Press <kbd>**w**</kbd> To **Write And Quit** From **fdisk** Command.
 
 ### Verifying The Partitions :
 
-Use ***lsblk*** Again To Check The Created Partitions. <u>***We? I Thought I'm Doing This Guide For Self Lol.***</u>
+Use **lsblk** Again To Check The Created Partitions. <u>**We? I Thought I'm Doing This Guide For Self Lol.**</u>
 
-```bash
+::
 lsblk
 ```
 
-You Should See ***Something Like This :***
+You Should See **Something Like This :**
 
 | NAME | MAJ:MIN | RM |  SIZE  | RO | TYPE | MOUNTPOINTS |
 | ---- | ------- | -- | ------ | -- | ---- | ----------- |
@@ -406,52 +411,52 @@ You Should See ***Something Like This :***
 
 ### Format The Partitions :
 
-Format ***/dev/sda1*** Partition As Boot Partition In ***FAT32***.
+Format **/dev/sda1** Partition As Boot Partition In **FAT32**.
 
-```bash
+::
 mkfs.fat -F 32 -n EFI /dev/sda1
 ```
 
-Format ***/dev/sda2*** Partition As Swap Partition.
+Format **/dev/sda2** Partition As Swap Partition.
 
-```bash
+::
 mkswap -L SWAP /dev/sda2
 ```
 
-Format ***/dev/sda3*** And ***/dev/sda4*** Partition As ***'Root'*** And ***'Home'*** Partition In ***EXT4***.
+Format **/dev/sda3** And **/dev/sda4** Partition As **'Root'** And **'Home'** Partition In **EXT4**.
 
-```bash
+::
 mkfs.ext4 -L ARCH /dev/sda3
 mkfs.ext4 -L HOME /dev/sda4
 ```
 
 ### Mount The Partitions :
 
-Mount The Root Partition ***/dev/sda3*** To ***/mnt***.
+Mount The Root Partition **/dev/sda3** To **/mnt**.
 
-```bash
+::
 mount /dev/sda3 /mnt
 ```
 
-Create A ***/boot/EFI*** Directory For Boot Partition.
+Create A **/boot/EFI** Directory For Boot Partition.
 
-```bash
+::
 mkdir -p /mnt/boot/EFI  
 ```
 
-Mount The Boot Partition ***/dev/sda1/*** To ***/mnt/boot/EFI*** Partition.
+Mount The Boot Partition **/dev/sda1/** To **/mnt/boot/EFI** Partition.
 
-```bash
+::
 mount /dev/sda1 /mnt/boot/EFI
 ```
 
-Create a ***/home*** mountpoint:
+Create a **/home** mountpoint:
 
 ```
 mkdir /mnt/home  
 ```
 
-Mount ***/dev/sda4*** to ***/mnt/home*** partition. This is will be our `/home`:
+Mount **/dev/sda4** to **/mnt/home** partition. This is will be our `/home`:
 
 ```
 mount /dev/sda1 /mnt/home
@@ -913,7 +918,7 @@ Finally, `reboot`.
 
 ##  Finale
 
-If your installation is a success, then ***yay!!!*** If not, you should start questioning your own existence. Are your parents proud of you? 
+If your installation is a success, then **yay!!!** If not, you should start questioning your own existence. Are your parents proud of you? 
 
 ## [[POST INSTALLATION]](./POST.md)		[[EXTRAS]](./EXTRAS.md)
 
