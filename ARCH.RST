@@ -612,9 +612,9 @@ Creating a new initramfs is usually not required, because mkinitcpio was run on 
 
 ### Unencrypted filesystem
 
-	```
+	
 	# mkinitcpio -P
-	```
+	
 
 	DO NOT FORGET TO RUN THIS BEFORE REBOOTING YOUR SYSTEM!
 
@@ -642,9 +642,9 @@ Creating a new initramfs is usually not required, because mkinitcpio was run on 
 
 	- Regenerate initramfs image:
 
-		```
+		
 		# mkinitcpio -P
-		```
+		
 
 		DO NOT FORGET TO RUN THIS BEFORE REBOOTING YOUR SYSTEM!
 
