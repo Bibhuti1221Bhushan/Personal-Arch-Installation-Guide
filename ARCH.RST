@@ -121,40 +121,41 @@ Wired Connection :
 In Case, If The Wired Connection is Not Enabled, You Can Enable Connection Using :
 
 ::
-systemctl start dhcpcd@enp0s0
-```
 
-> #### Wireless Connection - **( Recommended iwd )** :
+  systemctl start dhcpcd@enp0s0
 
+Wireless Connection - **( Recommended iwd )** :
+***********************************************
 If You Have Laptop Or Wireless Adapter, You Can Connect To Wireless Access Point Using **iwctl** Command From **iwd**.
 
 **Note : iwd** is Enabled By Default.
-<br>
+
 In Case, If **iwd** is Not Enabled.
 
 ::
-systemctl enable iwd
-```
+
+  systemctl enable iwd
 
 Scan For Wi-Fi :
 
 ::
-iwctl station wlan0 scan
-```
+
+  iwctl station wlan0 scan
 
 Get The List Of Scanned Wi-Fi :
 
-::
-iwctl station wlan0 get-networks
-```
+.. code:: bash
+
+  iwctl station wlan0 get-networks
 
 Connect To Your Visible Wi-Fi :
 
-::
-iwctl -P "PASSPHRASE" station wlan0 connect "NETWORK-NAME"
-```
+.. code:: bash
 
-##### <center> OR </center>
+  iwctl -P "PASSPHRASE" station wlan0 connect "NETWORK-NAME"
+
+OR
+--
 
 Connect To Your Hidden Wi-Fi :
 
