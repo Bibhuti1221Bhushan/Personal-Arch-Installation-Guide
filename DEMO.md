@@ -137,6 +137,6 @@ mount /dev/sda1 /mnt/boot/EFI
 
 Create a ***/home*** mountpoint:
 
-```
+```buttonless
 mkdir /mnt/home  
 ```
