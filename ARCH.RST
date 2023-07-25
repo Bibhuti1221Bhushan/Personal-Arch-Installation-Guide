@@ -5,7 +5,7 @@ A Personal Arch Installation Guide
 A Personal Arch Installation Guide So If I Get Lost, This Guide Will Help Me To Remember A Bunch Of Things While Re-Installing `Arch Linux <https://archlinux.org>`_. If You Just Found This Guide From Some Where, I Recommend You To First Read The Official 
 `Installation Guide <https://wiki.archlinux.org/title/Installation_guide>`_.  
 
-**Note :** Guide Focused On Minimal Installation With **'GRUB', 'UEFI', 'Un-Encrypted Partition'** And **'Separate Home Partition' .** 
+**Note :** Guide Focused On Minimal Installation Having **GRUB, UEFI, Standard Partitions** And **Separate Home Partition.** 
 
 Pre-Installation -
 ------------------
@@ -13,7 +13,7 @@ Pre-Installation -
 Before Installing : 
 ###################
 
-+ Read The `Official Installation Guide <https://wiki.archlinux.org/title/Installation_guide>`_.
++ Read The Official `Installation Guide <https://wiki.archlinux.org/title/Installation_guide>`_.
 + Download Installation Image From `Here <https://www.archlinux.org/download>`_.
 + Check Installation Image Signature.
 + Prepare An Installation Medium.
@@ -47,7 +47,6 @@ To Modify The Input Mapping, Omitting Path And File Extension. For Example, To S
 ::
 
   loadkeys us
-
 
 Set Console Font : 
 ##################
