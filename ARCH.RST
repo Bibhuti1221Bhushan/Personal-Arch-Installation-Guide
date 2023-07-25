@@ -144,13 +144,13 @@ Scan For Wi-Fi :
 
 Get The List Of Scanned Wi-Fi :
 
-.. code:: bash
+::
 
   iwctl station wlan0 get-networks
 
 Connect To Your Visible Wi-Fi :
 
-.. code:: bash
+::
 
   iwctl -P "PASSPHRASE" station wlan0 connect "NETWORK-NAME"
 
@@ -160,15 +160,15 @@ OR
 Connect To Your Hidden Wi-Fi :
 
 ::
-iwctl -P "PASSPHRASE" station wlan0 connect-hidden "NETWORK-NAME"
-```
+
+  iwctl -P "PASSPHRASE" station wlan0 connect-hidden "NETWORK-NAME"
 
 Ping A Website To Make Sure We Are Online :
 
 ::
-ping -c 3 1.1.1.1
-``` 
 
+  ping -c 3 1.1.1.1
+ 
 If You Receive Error Like **Unknown host** Or **Network is unreachable,** Means You Are Not Online Yet. Review Your Network Configuration And Redo The Above Steps.
 
 > #### Wireless Connection - **( wpa_supplicant )** :
@@ -176,32 +176,33 @@ If You Receive Error Like **Unknown host** Or **Network is unreachable,** Means 
 If You Have Laptop Or Wireless Adapter, You Can Connect To Wireless Access Point Using **wpa_supplicant.**
 
 **Note : wpa_supplicant** is Enabled By Default.
-<br>
+
 In Case, If You Receive Error. Enable Interface Using :
 
 ::
-ifup wlan0
-```
+
+  ifup wlan0
 
 Get The List Of Scanned Wi-Fi :
 
 ::
-iwlist wlan0 scan | grep ESSID
-```
+
+  iwlist wlan0 scan | grep ESSID
+
 
 >> ##### Connect To A Visible Wi-Fi :
 
 Create **wpa_supplicant.conf** Using One Line Command :
 
 ::
-wpa_passphrase "NETWORK-NAME" "PASSPHRASE" | tee /etc/wpa_supplicant/wpa_supplicant.conf
-```
+
+  wpa_passphrase "NETWORK-NAME" "PASSPHRASE" | tee /etc/wpa_supplicant/wpa_supplicant.conf
 
 Connect To Your Wi-Fi :
 
 ::
-wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
-```
+
+  wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 
 ##### <center>OR</center>
 
@@ -210,24 +211,24 @@ wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 Create & Open **wpa_supplicant.conf :**
 
 ::
-nano /etc/wpa_supplicant/wpa_supplicant.conf
-```
+ 
+  nano /etc/wpa_supplicant/wpa_supplicant.conf
 
 Add This Line In Configuration File :
 
 ::
-network={
-	ssid="NETWORK-NAME"
-    scan_ssid=1
-    psk="PASSPHRASE"
-}
-```
+
+  network={
+	  ssid="NETWORK-NAME"
+      scan_ssid=1
+      psk="PASSPHRASE"
+  }
 
 Connect To Your Wi-Fi :
 
 ::
-wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
-```
+
+  wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 
 ##### <center>OR</center>
 
@@ -236,24 +237,24 @@ wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 Create & Open **wpa_supplicant.conf :**
 
 ::
-nano /etc/wpa_supplicant/wpa_supplicant.conf
-```
+
+  nano /etc/wpa_supplicant/wpa_supplicant.conf
 
 Add This Line In Configuration File :
 
 ::
-network={
-	ssid="NETWORK-NAME"
-    key_mgmt=NONE
-    priority=100
-}
-```
+
+  network={
+	  ssid="NETWORK-NAME"
+      key_mgmt=NONE
+      priority=100
+  }
 
 Connect To Your Wi-Fi :
 
 ::
-wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
-```
+
+  wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 
 ##### <center>OR</center>
 
@@ -262,31 +263,31 @@ wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 Create & Open **wpa_supplicant.conf :**
 
 ::
-nano /etc/wpa_supplicant/wpa_supplicant.conf
-```
+
+  nano /etc/wpa_supplicant/wpa_supplicant.conf
 
 Add This Line In Configuration File :
 
 ::
-network={
-	ssid="NETWORK-NAME"
-    key_mgmt=NONE
-    wep_key0="PASSPHRASE"  
-    wep_tx_keyidx=0
-}
-```
+
+  network={
+	  ssid="NETWORK-NAME"
+      key_mgmt=NONE
+      wep_key0="PASSPHRASE"  
+      wep_tx_keyidx=0
+  }
 
 Connect To Your Wi-Fi :
 
 ::
-wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
-```
+
+  wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 
 Ping A Website To Make Sure We Are Online :
 
 ::
-ping -c 3 1.1.1.1
-``` 
+
+  ping -c 3 1.1.1.1 
 
 If You Receive Error Like **Unknown host** Or **Network is unreachable,** Means You Are Not Online Yet. Review Your Network Configuration And Redo The Steps Above.
 
@@ -295,14 +296,14 @@ If You Receive Error Like **Unknown host** Or **Network is unreachable,** Means 
 To Ensure That Clock is Accurate :
 
 ::
-timedatectl set-ntp true
-```
+
+  timedatectl set-ntp true
 
 To Check The Service Status :
 
 ::
-timedatectl status
-```
+
+  timedatectl status
 
 ### Partition The Disks :
 
@@ -311,16 +312,16 @@ When The Disks Are Recognized By The Live Environment, Disks Are Assigned To A B
 To Identify These Devices :
 
 ::
-lsblk
-```
+
+  lsblk
 
 **Note :** Results Ending In **rom, loop** Or **airoot** May Be Ignored.
 
 Let’s Clean Our Drive To Create New Partitions Table For Our Installation. In This Guide, We Will Use **/dev/sda** As Our Installation Disk.
 
 ::
-fdisk /dev/sda
-```
+
+  fdisk /dev/sda
 
 + Press <kbd>**Return**</kbd> To Open **dev/sda** In **fdisk**. 
 
@@ -391,8 +392,8 @@ fdisk /dev/sda
 Use **lsblk** Again To Check The Created Partitions. <u>**We? I Thought I'm Doing This Guide For Self Lol.**</u>
 
 ::
-lsblk
-```
+
+  lsblk
 
 You Should See **Something Like This :**
 
@@ -415,47 +416,48 @@ You Should See **Something Like This :**
 Format **/dev/sda1** Partition As Boot Partition In **FAT32**.
 
 ::
-mkfs.fat -F 32 -n EFI /dev/sda1
-```
+ 
+  mkfs.fat -F 32 -n EFI /dev/sda1
 
 Format **/dev/sda2** Partition As Swap Partition.
 
 ::
-mkswap -L SWAP /dev/sda2
-```
+
+  mkswap -L SWAP /dev/sda2
 
 Format **/dev/sda3** And **/dev/sda4** Partition As **'Root'** And **'Home'** Partition In **EXT4**.
 
 ::
-mkfs.ext4 -L ARCH /dev/sda3
-mkfs.ext4 -L HOME /dev/sda4
-```
+
+  mkfs.ext4 -L ARCH /dev/sda3
+  mkfs.ext4 -L HOME /dev/sda4
 
 ### Mount The Partitions :
 
 Mount The Root Partition **/dev/sda3** To **/mnt**.
 
 ::
-mount /dev/sda3 /mnt
-```
+
+  mount /dev/sda3 /mnt
 
 Create A **/boot/EFI** Directory For Boot Partition.
 
 ::
-mkdir -p /mnt/boot/EFI  
-```
+
+  mkdir -p /mnt/boot/EFI  
 
 Mount The Boot Partition **/dev/sda1/** To **/mnt/boot/EFI** Partition.
 
 ::
-mount /dev/sda1 /mnt/boot/EFI
-```
+
+  mount /dev/sda1 /mnt/boot/EFI
 
 Create a **/home** mountpoint:
 
-```
-mkdir /mnt/home  
-```
+::
+
+  mkdir /mnt/home  
+
 
 Mount **/dev/sda4** to **/mnt/home** partition. This is will be our `/home`:
 
@@ -683,11 +685,12 @@ Finally, edit the fstab configuration to add an entry for the swap file in `/etc
 Let's make a config file at `/etc/systemd/zram-generator.conf
 !` I prefer having HALF of my TOTAL RAM as zswap size. My laptop have 4 cores, so I'll distribute it to FOUR zram devices. So I'll uthis config :
 
-```
-[zram0]
-zram-size = ram/8
-compression-algorithm = zstd
-swap-priority = 100
+::
+
+  [zram0]
+  zram-size = ram/8
+  compression-algorithm = zstd
+  swap-priority = 100
 
 [zram1]
 zram-size = ram/8
@@ -703,7 +706,7 @@ swap-priority = 100
 zram-size = ram/8
 compression-algorithm = zstd
 swap-priority = 100
-```
+
 
 No need to enable/start anything, it will automatically initialize zram devices! Just reboot and run `swapon -s` to check the swap you have.
 
