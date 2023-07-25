@@ -1,3 +1,9 @@
+markdown_extensions:
+  - attr_list
+
+extra_css:
+  - /custom.css
+
 
 ## Adding "Copy" (to Clipboard) Button
 
