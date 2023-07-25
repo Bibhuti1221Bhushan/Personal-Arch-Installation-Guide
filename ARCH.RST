@@ -7,9 +7,11 @@ A Personal Arch Installation Guide So If I Get Lost, This Guide Will Help Me To 
 
 **Note :** Guide Focused On Minimal Installation With ***'GRUB', 'UEFI', 'Un-Encrypted Partition'*** And ***'Separate Home Partition' .*** 
 
-## Pre-Installation -
+Pre-Installation -
+------------------
 
-### Before Installing :
+Before Installing 
+#################
 
 + Read The [Official Installation Guide](https://wiki.archlinux.org/title/Installation_guide).
 + Download Installation Image From [Here](https://www.archlinux.org/download).
@@ -17,7 +19,8 @@ A Personal Arch Installation Guide So If I Get Lost, This Guide Will Help Me To 
 + Prepare An Installation Medium.
 + Boot In To The Live Environment.
 
-### Minimum Requirements :
+Minimum Requirements :
+######################
 
 + An x86_64 ( i.e. 64 Bit ) Compatible Machine.
 + Minimum 512 MB Of RAM. ( Recommended 2 GB )
@@ -25,9 +28,11 @@ A Personal Arch Installation Guide So If I Get Lost, This Guide Will Help Me To 
 + An Active Internet Connection.
 + Few Knowledge Of The Linux Command Line.
 
-## Let's Begin Installation -
+Let's Begin Installation -
+--------------------------
 
-### Set Input Language Map :
+Set Input Language Map :
+########################
 
 **Note :** The Default  is ***US.***
 <br>
