@@ -1,5 +1,5 @@
 # Welcome
-< u style="color:red;"> Create a ***/home*** mountpoint:</u>
+<u style="color:red;">This is a paragraph.</u>
 
 ```noCopy
 mkdir /mnt/home  
