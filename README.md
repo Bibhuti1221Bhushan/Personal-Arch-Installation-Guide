@@ -375,179 +375,82 @@ fdisk /dev/sda
 
 ### Verifying The Partitions :
 
-Use ***lsblk*** Again To Check The Created Partitions. <u>***We? I Thought I'm Doing This Guide For Self 🤣.***</u>
+Use ***lsblk*** Again To Check The Created Partitions. <u>***We? I Thought I'm Doing This Guide For Self Lol.***</u>
 
-```
+```bash
 lsblk
 ```
 
 You Should See ***Something Like This :***
 
-|<center> NAME </center>|<center> MAJ:MIN </center>|<center> RM </center>|<center>  SIZE  </center>|<center> RO </center>| TYPE | MOUNTPOINTS |
-| --------------------- | ------------------------ | ------------------- | ----------------------- | ------------------- | ---- | ----------- |
-|<center> sda  </center>|<center>   8:0   </center>|<center> 0  </center>|<center>  240G  </center>|<center>  0 </center>|      |             |
-|<center> sda1 </center>|<center>   8:1   </center>|<center> 0  </center>|<center>  512M  </center>|<center>  0 </center>| part |             |
-|<center> sda2 </center>|<center>   8:2   </center>|<center> 0  </center>|<center>   8G   </center>|<center>  0 </center>| part |             |
-|<center> sda3 </center>|<center>   8:3   </center>|<center> 0  </center>|<center>   30G  </center>|<center>  0 </center>| part |             |
-|<center> sda4 </center>|<center>   8:3   </center>|<center> 0  </center>|<center> 201.5G </center>|<center>  0 </center>| part |             |
+| NAME | MAJ:MIN | RM |  SIZE  | RO | TYPE | MOUNTPOINTS |
+| ---- | ------- | -- | ------ | -- | ---- | ----------- |
+| sda  |   8:0   | 0  |  240G  |  0 |      |             |
+| sda1 |   8:1   | 0  |  512M  |  0 | part |             |
+| sda2 |   8:2   | 0  |   8G   |  0 | part |             |
+| sda3 |   8:3   | 0  |   30G  |  0 | part |             |
+| sda4 |   8:3   | 0  | 201.5G |  0 | part |             |
 
-**sda** is The Main Disk.  
-**sda1** is The Boot Partition.  
-**sda2** is The Swap Partition.  
-**sda3** is The Root Partition.  
-**sda4** is The Home Partition.  
++ **sda** is The Main Disk.  
++ **sda1** is The Boot Partition.  
++ **sda2** is The Swap Partition.  
++ **sda3** is The Root Partition.  
++ **sda4** is The Home Partition.  
 
 ### Format The Partitions :
 
-### Unencrypted filesystem
+Format ***/dev/sda1*** Partition As Boot Partition In ***FAT32***.
 
-+ Format `/dev/sda1` partition as `FAT32`. This will be our `/boot`.
+```bash
+mkfs.fat -F 32 -n EFI /dev/sda1
+```
 
-	```
-	# mkfs.fat -F32 /dev/sda1
-	```
+Format ***/dev/sda2*** Partition As Swap Partition.
 
-+ Format `/dev/sda3` and `/dev/sda4` partition as `EXT4`. This will be our `root` and `home`  partition.
+```bash
+mkswap -L SWAP /dev/sda2
+```
 
-	```
-	# mkfs.ext4 /dev/sda3
-	# mkfs.ext4 /dev/sda4
-	```
+Format ***/dev/sda3*** And ***/dev/sda4*** Partition As ***'Root'*** And ***'Home'*** Partition In ***EXT4***.
 
-### Encrypted filesystem
+```bash
+mkfs.ext4 -L ARCH /dev/sda3
+mkfs.ext4 -L HOME /dev/sda4
+```
 
-+ Format `/dev/sda1` partition as `FAT32`. This will be our `/boot`.
+### Mount The Partitions :
 
-	```
-	# mkfs.fat -F32 /dev/sda1
-	```
+Mount The Root Partition ***/dev/sda3*** To ***/mnt***.
 
-+ Create the LUKS encrypted container.
+```bash
+mount /dev/sda3 /mnt
+```
 
-	```
-	# cryptsetup luksFormat /dev/sda2
-	```
+Create A ***/boot/EFI*** Directory For Boot Partition.
 
-+ Enter your passphrase twice. Don't forget this!
+```bash
+mkdir -p /mnt/boot/EFI  
+```
 
-+ Open the created container and name it whatever you want. In this guide I'll just use `cryptlvm`.
+Mount The Boot Partition ***/dev/sda1/*** To ***/mnt/boot/EFI*** Partition.
 
-	```
-	# cryptsetup open --type luks /dev/sda2 cryptlvm
-	```
+```bash
+mount /dev/sda1 /mnt/boot/EFI
+```
 
-+ Enter your passphrase and verify it.
+Create a ***/home*** mountpoint:
 
-+ The decrypted container is now available at `/dev/mapper/cryptlvm`.
+```
+mkdir /mnt/home  
+```
 
-+ Create a physical volume on top of the opened LUKS container:
+Mount ***/dev/sda4*** to ***/mnt/home*** partition. This is will be our `/home`:
 
-	```
-	# pvcreate /dev/mapper/cryptlvm
-	```
+```
+mount /dev/sda1 /mnt/home
+```
 
-+ Create the volume group and name it `volume` (or whatever you want), adding the previously created physical volume to it:
 
-	In this guide, I'll just use `volume` as the volume group name.
-
-	```
-	# vgcreate volume /dev/mapper/cryptlvm
-	```
-
-+ Create all your needed logical volumes on the volume group. We will create `root` and `home` logical volumes. Note that the `volume` is the name of the volume we just created.
-
-	- Create our `root`. In this guide, I'll use 100GB.
-
-		```
-		# lvcreate -L 100G volume -n root
-		```
-
-		This will create `/dev/mapper/volume-root`.
-
-	- Create our home sweet `home`. I'll just assign the remaining space to it.
-
-		```
-		# lvcreate -l 100%FREE volume -n home
-		```
-
-	This will create `/dev/mapper/volume-home`.
-
-+ Format the logical partitions under the LVM volume.
-
-	- Format our `root` and `home` partitions.
-
-		```
-		# mkfs.ext4 /dev/mapper/volume-root
-		# mkfs.ext4 /dev/mapper/volume-home
-		```
-
-## Mount the filesystems
-
-### Unencryped partition
-
-+ Mount the `/dev/sda` partition to `/mnt`. This is our `/`:
-
-	```
-	# mount /dev/sda3 /mnt
-	```
-
-+ Create a `/boot` mountpoint:
-
-	```
-	# mkdir /mnt/boot  
-	```
-
-+ Mount `/dev/sda1` to `/mnt/boot` partition. This is will be our `/boot`:
-
-	```
-	# mount /dev/sda1 /mnt/boot
-	```
-
-+ Create a `/home` mountpoint:
-
-	```
-	# mkdir /mnt/home  
-	```
-
-+ Mount `/dev/sda4` to `/mnt/home` partition. This is will be our `/home`:
-
-	```
-	# mount /dev/sda1 /mnt/home
-	```
-
-### Encrypted partition
-
-+ Mount the `/dev/mapper/volume-root` partition to `/mnt`. This is our `/`:
-
-	```
-	# mount /dev/mapper/volume-root /mnt
-	```
-
-+ Create a `/boot` mountpoint:
-
-	```
-	# mkdir /mnt/boot  
-	```
-
-+ Mount `/dev/sda1` to `/mnt/boot` partition. This is will be our `/boot`:
-
-	```
-	# mount /dev/sda1 /mnt/boot
-	```
-
-+ Create a `/home` mountpoint:
-
-	```
-	# mkdir /mnt/home  
-	```
-
-+ Mount `/dev/mapper/volume-home` to `/mnt/home` partition. This is will be our `/home`:
-
-	```
-	# mount /dev/mapper/volume-home /mnt/home
-	```
-
-	 We don’t need to mount `swap` since it is already enabled.
 
 ## Installation
 
