@@ -4,7 +4,7 @@
 
 + Mount The Root Partition ***/dev/sda3*** To ***/mnt***.
 
-```{: .bash .no-copy}
+```bash
 mount /dev/sda3 /mnt
 ```
 
