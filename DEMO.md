@@ -2,13 +2,13 @@
 
 ### Mount The Partitions :
 
-Mount The Root Partition ***/dev/sda3*** To ***/mnt***.
++ Mount The Root Partition ***/dev/sda3*** To ***/mnt***.
 
 ```{: .bash .no-copy}
 mount /dev/sda3 /mnt
 ```
 
-Create A ***/boot/EFI*** Directory For Boot Partition.
++ Create A ***/boot/EFI*** Directory For Boot Partition.
 
 ```bash no-copy
 mkdir -p /mnt/boot/EFI  
