@@ -1,16 +1,19 @@
+![header](https://capsule-render.vercel.app/api?type=transparent&section=header&color=gradient&customColorList=12&height=150&animation=fadeIn&fontSize=50&&text=A%20Personal%20Arch%20Installation%20Guide&fontAlignY=40)
+
+
 # A Personal Arch Installation Guide
 
-A Personal Arch Installation Guide So If I Get Lost, This Guide Will Help Me To Remember A Bunch Of Things While Re-Installing [**Arch Linux.**](https://archlinux.org) If You Just Found This Guide From Some Where, I Recommend You To First Read The Official 
-[**Installation Guide.**](https://wiki.archlinux.org/title/Installation_guide)  
+A Personal Arch Installation Guide So If I Get Lost, This Guide Will Help Me To Remember A Bunch Of Things While Re-Installing [Arch Linux.](https://archlinux.org) If You Just Found This Guide From Some Where, I Recommend You To First Read The Official 
+[Installation Guide.](https://wiki.archlinux.org/title/Installation_guide)
 
-**Note :** Guide Focused On Minimal Installation With ***'GRUB', 'UEFI', 'Un-Encrypted Partition'*** And ***'Separate Home Partition' .*** 
+> **Note :** This Guide is Focus On Minimal Installation With **" GRUB " , " UEFI " , " Un-Encripted Partition "** And **" Separate Home Partition " .** 
 
 ## Pre-Installation -
 
 ### Before Installing :
 
-+ Read The [Official Installation Guide](https://wiki.archlinux.org/title/Installation_guide).
-+ Download Installation Image From [Here](https://www.archlinux.org/download).
++ Read The Official [Installation Guide.](https://wiki.archlinux.org/title/Installation_guide)
++ Download Installation Image From [Here.](https://www.archlinux.org/download)
 + Check Installation Image Signature.
 + Prepare An Installation Medium.
 + Boot In To The Live Environment.
@@ -21,21 +24,21 @@ A Personal Arch Installation Guide So If I Get Lost, This Guide Will Help Me To 
 + Minimum 512 MB Of RAM. ( Recommended 2 GB )
 + Minimum 2 GB Of Free Disk Space. ( Recommended 20 GB )
 + An Active Internet Connection.
-+ Few Knowledge Of The Linux Command Line.
++ Little Bit Knowledge Of Linux Commands.
 
 ## Let's Begin Installation -
 
 ### Set Input Language Map :
 
-**Note :** The Default  is ***US.***
-<br>
+> **Note :** The Default  is **US.**
+
 More Mapping Can Be Listed With :
 
 ```bash
 ls /usr/share/kbd/keymaps/**/*.map.gz
 ```
 
-To Modify The Input Mapping, Omitting Path And File Extension. For Example, To Set US Input Map :  
+To Modify The Input Mapping, Omitting Path And File Extension. For Example, To Set US Input Map :
 
 ```bash
 loadkeys us
@@ -49,7 +52,7 @@ More Console Fonts Can Be Listed With :
 ls /usr/share/kbd/consolefonts/*.gz
 ```
 
-Console Font Can Be Set With ***setfont***.  For Example, To Use One Of The Fonts : 
+Console Font Can Be Set With **" setfont "** Command.  For Example, To Use One Of The Fonts : 
 
 ```
 setfont default8x16
@@ -63,13 +66,13 @@ To Verify The Boot Mode, Check The UEFI Witness :
 cat /sys/firmware/efi/fw_platform_size
 ```
 
-+ If The Command Returns 64, Then Machine is Booted In UEFI Mode And Has A ***64-Bit x64 UEFI.*** 
-+ If The Command Returns 32, Then Machine is Booted In UEFI Mode And Has A ***32-Bit IA32 UEFI,*** Which is Supported But Limits The Boot Loader Choice To GRUB.
-+ If The File Does't Exist, Then The Machine is Booted In ***BIOS*** ( CSM ) Mode.
++ If The Command Returns 64, Then Machine is Booted In UEFI Mode And Has A **64-Bit x64 UEFI.** 
++ If The Command Returns 32, Then Machine is Booted In UEFI Mode And Has A **32-Bit IA32 UEFI,** Which is Supported But Limits The Boot Loader Choice To GRUB.
++ If The File Does't Exist, Then The Machine is Booted In **BIOS** ( CSM ) Mode.
 
 ### Connect To The Internet :
 
-Arch Linux Needs Internet Connection To Install Arch Linux ***base*** And Other Needed Packages.
+Arch Linux Needs Internet Connection To Install Arch Linux **" base "** And Other Needed Packages.
 
 Ensure Network Interface is Listed And Enabled :
 
@@ -142,9 +145,9 @@ Connect To Your Visible Wi-Fi :
 iwctl -P "PASSPHRASE" station wlan0 connect "NETWORK-NAME"
 ```
 
-##### <center> OR </center>
+##### <center> OR </center>				
 
-Connect To Your Hidden Wi-Fi :
+Connect To Your Hidden Wi-Fi :    
 
 ```bash
 iwctl -P "PASSPHRASE" station wlan0 connect-hidden "NETWORK-NAME"
@@ -908,5 +911,10 @@ Finally, `reboot`.
 
 If your installation is a success, then ***yay!!!*** If not, you should start questioning your own existence. Are your parents proud of you? 
 
-## [[POST INSTALLATION]](./POST.md)		[[EXTRAS]](./EXTRAS.md)
+
+
+
+
+![header](https://capsule-render.vercel.app/api?type=waving&section=footer&color=gradient&customColorList=12&height=125&desc=Made%20With%20%20%20🩷&descAlignY=50&animation=fadeIn&fontSize=5000&stroke=feac5e&strokeWidth=50)
+
 
