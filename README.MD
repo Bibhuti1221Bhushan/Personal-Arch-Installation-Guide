@@ -5,9 +5,9 @@ A Personal Arch Installation Guide So If I Get Lost, This Guide Will Help Me To 
 
 > **Note :** This Guide is Focus On Minimal Installation With **" GRUB " , " UEFI " , " Un-Encripted Partition "** And **" Separate Home Partition " .** 
 
-## Pre-Installation -
+# Pre-Installation -
 
-### Before Installing :
+## Before Installing :
 
 + Read The Official [Installation Guide.](https://wiki.archlinux.org/title/Installation_guide)
 + Download Installation Image From [Here.](https://www.archlinux.org/download)
@@ -15,7 +15,7 @@ A Personal Arch Installation Guide So If I Get Lost, This Guide Will Help Me To 
 + Prepare An Installation Medium.
 + Boot In To The Live Environment.
 
-### Minimum Requirements :
+## Minimum Requirements :
 
 + An x86_64 ( i.e. 64 Bit ) Compatible Machine.
 + Minimum 512 MB Of RAM. ( Recommended 2 GB )
@@ -23,9 +23,9 @@ A Personal Arch Installation Guide So If I Get Lost, This Guide Will Help Me To 
 + An Active Internet Connection.
 + Little Bit Knowledge Of Linux Commands.
 
-## Let's Begin Installation -
+# Let's Begin Installation -
 
-### Set Input Language Map :
+## Set Input Language Map :
 
 > **Note :** The Default  is **US.**
 
@@ -41,7 +41,7 @@ To Modify The Input Mapping, Omitting Path And File Extension. For Example, To S
 loadkeys us
 ```
 
-### Set Console Font : 
+## Set Console Font : 
 
 More Console Fonts Can Be Listed With :
 
@@ -55,7 +55,7 @@ Console Font Can Be Set With **" setfont "** Command.  For Example, To Use One O
 setfont default8x16
 ```
 
-### Verify The Boot Mode :
+## Verify The Boot Mode :
 
 To Verify The Boot Mode, Check The UEFI Witness :  
 
@@ -63,13 +63,13 @@ To Verify The Boot Mode, Check The UEFI Witness :
 cat /sys/firmware/efi/fw_platform_size
 ```
 
-+ If The Command Returns 64, Then Machine is Booted In UEFI Mode And Has A **64-Bit x64 UEFI.** 
-+ If The Command Returns 32, Then Machine is Booted In UEFI Mode And Has A **32-Bit IA32 UEFI,** Which is Supported But Limits The Boot Loader Choice To GRUB.
-+ If The File Does't Exist, Then The Machine is Booted In **BIOS** ( CSM ) Mode.
+> + If The Command Returns 64, Then Machine is Booted In UEFI Mode And Has A **64-Bit x64 UEFI.** 
+> + If The Command Returns 32, Then Machine is Booted In UEFI Mode And Has A **32-Bit IA32 UEFI,** Which is Supported But Limits The Boot Loader Choice To GRUB.
+> + If The File Does't Exist, Then The Machine is Booted In **BIOS** ( CSM ) Mode.
 
 ### Connect To The Internet :
 
-Arch Linux Needs Internet Connection To Install Arch Linux **" base "** And Other Needed Packages.
+Arch Linux Needs Internet Connection To Install Arch Linux **" Base " , " Linux Kernel " , "Linux Firmware "** And Other Needed Packages.
 
 Ensure Network Interface is Listed And Enabled :
 
@@ -82,14 +82,15 @@ Above Command Output Will Be Something Like This :
 ```bash
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
 		link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
-2: enp0s0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc fq_codel state DOWN mode DEFAULT group default qlen 1000
+2: enp7s0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc fq_codel state DOWN mode DEFAULT group default qlen 1000
 		link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
 3: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DORMANT group default qlen 1000
 		link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff permaddr 00:00:00:00:00:00
 ```
 
-+ ***enp0s0*** is The Wired Interface ( Ethernet ) 
-+ ***wlan0*** is The Wireless Interface ( Wi-Fi ) 
+> + **" lo "** is The Loop-Back Interface ( Local Server )
+> + **" enp7s0 "** is The Wired Interface ( Ethernet ) 
+> + **" wlan0 "** is The Wireless Interface ( Wi-Fi ) 
 
 For Wireless And WWAN, Make Sure The Card is Not Blocked :
 
@@ -103,13 +104,13 @@ If The Card is Blocked, Unblock Using :
 rfkill unblock all
 ```
 
-> #### Wired Connection : 
-
+### Wired Connection : 
+-----------------------
 ***Note :*** Wired Connection is Pre-Configured And Enabled By Default.
 In Case, If The Wired Connection is Not Enabled, You Can Enable Connection Using :
 
 ```bash
-systemctl start dhcpcd@enp0s0
+systemctl start dhcpcd@enp7s0
 ```
 
 > #### Wireless Connection - ***( Recommended iwd )*** :
