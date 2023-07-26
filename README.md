@@ -1,7 +1,6 @@
 ![header](https://capsule-render.vercel.app/api?type=waving&section=header&color=gradient&customColorList=12&height=150&text=A%20Personal%20Arch%20Installation%20Guide&fontAlignY=35&fontSize=45)
 
-A Personal Arch Installation Guide So If I Get Lost, This Guide Will Help Me To Remember A Bunch Of Things While Re-Installing [Arch Linux.](https://archlinux.org) If You Just Found This Guide From Some Where, I Recommend You To First Read The Official 
-[Installation Guide.](https://wiki.archlinux.org/title/Installation_guide)
+A Personal Arch Installation Guide So If I Get Lost, This Guide Will Help Me To Remember A Bunch Of Things While Re-Installing [Arch Linux.](https://archlinux.org) If You Just Found This Guide From Some Where, I Recommend You To First Read The Official [Installation Guide.](https://wiki.archlinux.org/title/Installation_guide)
 
 > **Note :** This Guide is Focus On Minimal Installation With **" GRUB " , " UEFI " , " Un-Encripted Partition "** And **" Separate Home Partition " .** 
 
@@ -63,13 +62,13 @@ To Verify The Boot Mode, Check The UEFI Witness :
 cat /sys/firmware/efi/fw_platform_size
 ```
 
-> + If The Command Returns 64, Then Machine is Booted In UEFI Mode And Has A **64-Bit x64 UEFI.** 
-> + If The Command Returns 32, Then Machine is Booted In UEFI Mode And Has A **32-Bit IA32 UEFI,** Which is Supported But Limits The Boot Loader Choice To GRUB.
-> + If The File Does't Exist, Then The Machine is Booted In **BIOS** ( CSM ) Mode.
++ If The Command Returns 64, Then Machine is Booted In UEFI Mode And Has A **64-Bit x64 UEFI.** 
++ If The Command Returns 32, Then Machine is Booted In UEFI Mode And Has A **32-Bit IA32 UEFI,** Which is Supported But Limits The Boot Loader Choice To GRUB.
++ If The File Does't Exist, Then The Machine is Booted In **BIOS** ( CSM ) Mode.
 
-### Connect To The Internet :
+## Connect To The Internet :
 
-Arch Linux Needs Internet Connection To Install Arch Linux **" Base " , " Linux Kernel " , "Linux Firmware "** And Other Needed Packages.
+Arch Linux Needs Internet Connection To Install Arch Linux **Base , Linux Kernel , Linux Firmware** And **Other Needed Packages.**
 
 Ensure Network Interface is Listed And Enabled :
 
@@ -88,9 +87,9 @@ Above Command Output Will Be Something Like This :
 		link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff permaddr 00:00:00:00:00:00
 ```
 
-> + **" lo "** is The Loop-Back Interface ( Local Server )
-> + **" enp7s0 "** is The Wired Interface ( Ethernet ) 
-> + **" wlan0 "** is The Wireless Interface ( Wi-Fi ) 
++ **lo** is The Loop-Back Interface ( Local Server )
++ **enp7s0** is The Wired Interface ( Ethernet ) 
++ **wlan0** is The Wireless Interface ( Wi-Fi ) 
 
 For Wireless And WWAN, Make Sure The Card is Not Blocked :
 
@@ -104,22 +103,23 @@ If The Card is Blocked, Unblock Using :
 rfkill unblock all
 ```
 
-> ### Wired Connection : 
+### Wired Connection : 
 
-***Note :*** Wired Connection is Pre-Configured And Enabled By Default.
+> **Note :** Wired Connection is Pre-Configured And Enabled By Default.
+
 In Case, If The Wired Connection is Not Enabled, You Can Enable Connection Using :
 
 ```bash
 systemctl start dhcpcd@enp7s0
 ```
 
-> ### Wireless Connection - ***( Recommended iwd )*** :
+### Wireless Connection - ( Recommended iwd ) :
 
-If You Have Laptop Or Wireless Adapter, You Can Connect To Wireless Access Point Using ***iwctl*** Command From ***iwd***.
+If You Have Laptop Or Wireless Adapter, You Can Connect To Wireless Access Point Using **iwctl** Command From **iwd**.
 
-***Note : iwd*** is Enabled By Default.
-<br>
-In Case, If ***iwd*** is Not Enabled.
+> **Note : iwd** is Enabled By Default.
+
+In Case, If **iwd** is Not Enabled.
 
 ```bash
 systemctl enable iwd
@@ -143,7 +143,10 @@ Connect To Your Visible Wi-Fi :
 iwctl -P "PASSPHRASE" station wlan0 connect "NETWORK-NAME"
 ```
 
-##### <center> OR </center>				
+<p align="center">OR</p>
+
+
+#####  OR
 
 Connect To Your Hidden Wi-Fi :    
 
@@ -157,14 +160,14 @@ Ping A Website To Make Sure We Are Online :
 ping -c 3 1.1.1.1
 ``` 
 
-If You Receive Error Like ***Unknown host*** Or ***Network is unreachable,*** Means You Are Not Online Yet. Review Your Network Configuration And Redo The Above Steps.
+If You Receive Error Like **Unknown host** Or **Network is unreachable,** Means You Are Not Online Yet. Review Your Network Configuration And Redo The Above Steps.
 
-> #### Wireless Connection - ***( wpa_supplicant )*** :
+### Wireless Connection - ( wpa_supplicant ) :
 
-If You Have Laptop Or Wireless Adapter, You Can Connect To Wireless Access Point Using ***wpa_supplicant.***
+If You Have Laptop Or Wireless Adapter, You Can Connect To Wireless Access Point Using **wpa_supplicant.**
 
-***Note : wpa_supplicant*** is Enabled By Default.
-<br>
+> **Note : wpa_supplicant** is Enabled By Default.
+
 In Case, If You Receive Error. Enable Interface Using :
 
 ```bash
@@ -177,9 +180,9 @@ Get The List Of Scanned Wi-Fi :
 iwlist wlan0 scan | grep ESSID
 ```
 
->> ##### Connect To A Visible Wi-Fi :
+#### Connect To A Visible Wi-Fi :
 
-Create ***wpa_supplicant.conf*** Using One Line Command :
+Create **wpa_supplicant.conf** Using One Line Command :
 
 ```bash
 wpa_passphrase "NETWORK-NAME" "PASSPHRASE" | tee /etc/wpa_supplicant/wpa_supplicant.conf
@@ -193,9 +196,9 @@ wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 
 ##### <center>OR</center>
 
->> ##### Connect To A Hidden Wi-Fi : 
+#### Connect To A Hidden Wi-Fi : 
 
-Create & Open ***wpa_supplicant.conf :***
+Create & Open **wpa_supplicant.conf :**
 
 ```bash
 nano /etc/wpa_supplicant/wpa_supplicant.conf
@@ -219,9 +222,9 @@ wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 
 ##### <center>OR</center>
 
->> ##### Connect To A In-Secure Wi-Fi :
+#### Connect To A In-Secure Wi-Fi :
 
-Create & Open ***wpa_supplicant.conf :***
+Create & Open **wpa_supplicant.conf :**
 
 ```bash
 nano /etc/wpa_supplicant/wpa_supplicant.conf
@@ -247,7 +250,7 @@ wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 
 >> ##### Connect To A Wi-FI Via WEP-Authentication Mode :
 
-Create & Open ***wpa_supplicant.conf :***
+Create & Open **wpa_supplicant.conf :**
 
 ```bash
 nano /etc/wpa_supplicant/wpa_supplicant.conf
@@ -276,7 +279,7 @@ Ping A Website To Make Sure We Are Online :
 ping -c 3 1.1.1.1
 ``` 
 
-If You Receive Error Like ***Unknown host*** Or ***Network is unreachable,*** Means You Are Not Online Yet. Review Your Network Configuration And Redo The Steps Above.
+If You Receive Error Like **Unknown host** Or **Network is unreachable,** Means You Are Not Online Yet. Review Your Network Configuration And Redo The Steps Above.
 
 ### Update The Device Clock :
 
@@ -294,7 +297,7 @@ timedatectl status
 
 ### Partition The Disks :
 
-When The Disks Are Recognized By The Live Environment, Disks Are Assigned To A Block Device Such As ***/dev/sda, /dev/nvme0n1 or /dev/mmcblk0.*** 
+When The Disks Are Recognized By The Live Environment, Disks Are Assigned To A Block Device Such As **/dev/sda, /dev/nvme0n1 or /dev/mmcblk0.** 
 <br>
 To Identify These Devices :
 
@@ -302,87 +305,87 @@ To Identify These Devices :
 lsblk
 ```
 
-***Note :*** Results Ending In ***rom, loop*** Or ***airoot*** May Be Ignored.
+**Note :** Results Ending In **rom, loop** Or **airoot** May Be Ignored.
 
-Let’s Clean Our Drive To Create New Partitions Table For Our Installation. In This Guide, We Will Use ***/dev/sda*** As Our Installation Disk.
+Let’s Clean Our Drive To Create New Partitions Table For Our Installation. In This Guide, We Will Use **/dev/sda** As Our Installation Disk.
 
 ```bash
 fdisk /dev/sda
 ```
 
-+ Press <kbd>**Return**</kbd> To Open ***dev/sda*** In ***fdisk***. 
++ Press <kbd>**Return**</kbd> To Open **dev/sda** In **fdisk**. 
 
-+ Press <kbd>**p**</kbd> To Show Current Partition. Now We Should See Our Drive Showing The ***Partition Number, Partition Size,*** And ***Partition Name.***
++ Press <kbd>**p**</kbd> To Show Current Partition. Now We Should See Our Drive Showing The **Partition Number, Partition Size,** And **Partition Name.**
 
-+ Press <kbd>**g**</kbd> To ***<u style="color:red;">Format Entire Drive</u>*** And Create An Empty ***GPT Partition Table.***
++ Press <kbd>**g**</kbd> To **<u style="color:red;">Format Entire Drive</u>** And Create An Empty **GPT Partition Table.**
 
 **Note :** Press <kbd>**d**</kbd> To Delete A Single Partition. 
 
 >> ##### Create The Boot Partition :
 
-+ Press <kbd>**n**</kbd> To ***Create New Partition.*** You Will Be Prompted To Choose A Partition Number.
++ Press <kbd>**n**</kbd> To **Create New Partition.** You Will Be Prompted To Choose A Partition Number.
 
-+ Press <kbd>**1**</kbd> To ***Select Partition Number 1.***
++ Press <kbd>**1**</kbd> To **Select Partition Number 1.**
 
-+ Press <kbd>**Return**</kbd> To Continue With The ***Default Block Size For First Sector.***
++ Press <kbd>**Return**</kbd> To Continue With The **Default Block Size For First Sector.**
 
-+ Enter <kbd>**+512M**</kbd> In ***The Last Sector.*** And Press <kbd>**Return**</kbd> To Create ***EFI Partition With 512 Mib.***
++ Enter <kbd>**+512M**</kbd> In **The Last Sector.** And Press <kbd>**Return**</kbd> To Create **EFI Partition With 512 Mib.**
 
-+ Press <kbd>**t**</kbd> To ***Change Partition Type*** Of The EFI Partition.
++ Press <kbd>**t**</kbd> To **Change Partition Type** Of The EFI Partition.
 
-+ Enter <kbd>**1**</kbd> For ***EFI System.*** ( Default is Linux System )
++ Enter <kbd>**1**</kbd> For **EFI System.** ( Default is Linux System )
 
 >> ##### Create The Swap Partition :
 
-+ Press <kbd>**n**</kbd> To ***Create New Partition.*** You Will Be Prompted To Choose A Partition Number.
++ Press <kbd>**n**</kbd> To **Create New Partition.** You Will Be Prompted To Choose A Partition Number.
 
-+ Press <kbd>**2**</kbd> To ***Select Partition Number 2.***
++ Press <kbd>**2**</kbd> To **Select Partition Number 2.**
 
-+ Press <kbd>**Return**</kbd> To Continue With The ***Default Block Size For First Sector.***
++ Press <kbd>**Return**</kbd> To Continue With The **Default Block Size For First Sector.**
 
-+ Enter <kbd>**+8G**</kbd> In ***The Last Sector.*** And Press <kbd>**Return**</kbd> To Create ***Swap Partition With 8 Gib.***
++ Enter <kbd>**+8G**</kbd> In **The Last Sector.** And Press <kbd>**Return**</kbd> To Create **Swap Partition With 8 Gib.**
 
-+ Press <kbd>**t**</kbd> To ***Change Partition Type*** Of The Swap Partition.
++ Press <kbd>**t**</kbd> To **Change Partition Type** Of The Swap Partition.
 
-+ Enter <kbd>**19**</kbd> For ***Linux Swap.*** ( Default is Linux System )
++ Enter <kbd>**19**</kbd> For **Linux Swap.** ( Default is Linux System )
 
 >> ##### Create The Root Partition :
 
-+ Press <kbd>**n**</kbd> To ***Create New Partition.*** You Will Be Prompted To Choose A Partition Number.
++ Press <kbd>**n**</kbd> To **Create New Partition.** You Will Be Prompted To Choose A Partition Number.
 
-+ Press <kbd>**3**</kbd> To ***Select Partition Number 3.***
++ Press <kbd>**3**</kbd> To **Select Partition Number 3.**
 
-+ Press <kbd>**Return**</kbd> To Continue With The ***Default Block Size For First Sector.***
++ Press <kbd>**Return**</kbd> To Continue With The **Default Block Size For First Sector.**
 
-+ Enter <kbd>**+30G**</kbd> In ***The Last Sector.*** And Press <kbd>**Return**</kbd> To Create ***Root Partition With 30 Gib.***
++ Enter <kbd>**+30G**</kbd> In **The Last Sector.** And Press <kbd>**Return**</kbd> To Create **Root Partition With 30 Gib.**
 
-+ **Note :** No Need To Change Partition Type. ***Default is Linux System.***
++ **Note :** No Need To Change Partition Type. **Default is Linux System.**
 
 >> ##### Create The Home Partition :
 
-+ Press <kbd>**n**</kbd> To ***Create New Partition.*** You Will Be Prompted To Choose A Partition Number.
++ Press <kbd>**n**</kbd> To **Create New Partition.** You Will Be Prompted To Choose A Partition Number.
 
-+ Press <kbd>**4**</kbd> To ***Select Partition Number 4.***
++ Press <kbd>**4**</kbd> To **Select Partition Number 4.**
 
-+ Press <kbd>**Return**</kbd> To Continue With The ***Default Block Size For First Sector.***
++ Press <kbd>**Return**</kbd> To Continue With The **Default Block Size For First Sector.**
 
-+ Press <kbd>**Return**</kbd> In ***The Last Sector*** To Create ***Root Partition Of Remaining Space.***
++ Press <kbd>**Return**</kbd> In **The Last Sector** To Create **Root Partition Of Remaining Space.**
 
-+ **Note :** No Need To Change Partition Type. ***Default is Linux System.***
++ **Note :** No Need To Change Partition Type. **Default is Linux System.**
 
 + Press <kbd>**p**</kbd> To Print The Newly Created Disk Partitions.
 
-+ Press <kbd>**w**</kbd> To ***Write And Quit*** From ***fdisk*** Command.
++ Press <kbd>**w**</kbd> To **Write And Quit** From **fdisk** Command.
 
 ### Verifying The Partitions :
 
-Use ***lsblk*** Again To Check The Created Partitions. <u>***We? I Thought I'm Doing This Guide For Self Lol.***</u>
+Use **lsblk** Again To Check The Created Partitions. <u>**We? I Thought I'm Doing This Guide For Self Lol.**</u>
 
 ```bash
 lsblk
 ```
 
-You Should See ***Something Like This :***
+You Should See **Something Like This :**
 
 | NAME | MAJ:MIN | RM |  SIZE  | RO | TYPE | MOUNTPOINTS |
 | ---- | ------- | -- | ------ | -- | ---- | ----------- |
@@ -400,19 +403,19 @@ You Should See ***Something Like This :***
 
 ### Format The Partitions :
 
-Format ***/dev/sda1*** Partition As Boot Partition In ***FAT32***.
+Format **/dev/sda1** Partition As Boot Partition In **FAT32**.
 
 ```bash
 mkfs.fat -F 32 -n EFI /dev/sda1
 ```
 
-Format ***/dev/sda2*** Partition As Swap Partition.
+Format **/dev/sda2** Partition As Swap Partition.
 
 ```bash
 mkswap -L SWAP /dev/sda2
 ```
 
-Format ***/dev/sda3*** And ***/dev/sda4*** Partition As ***'Root'*** And ***'Home'*** Partition In ***EXT4***.
+Format **/dev/sda3** And **/dev/sda4** Partition As **'Root'** And **'Home'** Partition In **EXT4**.
 
 ```bash
 mkfs.ext4 -L ARCH /dev/sda3
@@ -421,31 +424,31 @@ mkfs.ext4 -L HOME /dev/sda4
 
 ### Mount The Partitions :
 
-Mount The Root Partition ***/dev/sda3*** To ***/mnt***.
+Mount The Root Partition **/dev/sda3** To **/mnt**.
 
 ```bash
 mount /dev/sda3 /mnt
 ```
 
-Create A ***/boot/EFI*** Directory For Boot Partition.
+Create A **/boot/EFI** Directory For Boot Partition.
 
 ```bash
 mkdir -p /mnt/boot/EFI  
 ```
 
-Mount The Boot Partition ***/dev/sda1/*** To ***/mnt/boot/EFI*** Partition.
+Mount The Boot Partition **/dev/sda1/** To **/mnt/boot/EFI** Partition.
 
 ```bash
 mount /dev/sda1 /mnt/boot/EFI
 ```
 
-Create a ***/home*** mountpoint:
+Create a **/home** mountpoint:
 
 ```
 mkdir /mnt/home  
 ```
 
-Mount ***/dev/sda4*** to ***/mnt/home*** partition. This is will be our `/home`:
+Mount **/dev/sda4** to **/mnt/home** partition. This is will be our `/home`:
 
 ```
 mount /dev/sda1 /mnt/home
@@ -907,7 +910,7 @@ Finally, `reboot`.
 
 ##  Finale
 
-If your installation is a success, then ***yay!!!*** If not, you should start questioning your own existence. Are your parents proud of you? 
+If your installation is a success, then **yay!!!** If not, you should start questioning your own existence. Are your parents proud of you? 
 
 
 
