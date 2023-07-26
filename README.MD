@@ -104,8 +104,8 @@ If The Card is Blocked, Unblock Using :
 rfkill unblock all
 ```
 
-### Wired Connection : 
------------------------
+> ### Wired Connection : 
+
 ***Note :*** Wired Connection is Pre-Configured And Enabled By Default.
 In Case, If The Wired Connection is Not Enabled, You Can Enable Connection Using :
 
@@ -113,7 +113,7 @@ In Case, If The Wired Connection is Not Enabled, You Can Enable Connection Using
 systemctl start dhcpcd@enp7s0
 ```
 
-> #### Wireless Connection - ***( Recommended iwd )*** :
+> ### Wireless Connection - ***( Recommended iwd )*** :
 
 If You Have Laptop Or Wireless Adapter, You Can Connect To Wireless Access Point Using ***iwctl*** Command From ***iwd***.
 
