@@ -1,4 +1,5 @@
-![header](https://capsule-render.vercel.app/api?type=waving&section=header&color=gradient&customColorList=12&height=150&animation=fadeIn&fontSize=50&&text=A%20Personal%20Arch%20Installation%20Guide&fontAlignY=35)
+![header](https://capsule-render.vercel.app/api?type=waving&section=header&color=gradient&customColorList=12&height=150&text=A%20Personal%20Arch%20Installation%20Guide&fontAlignY=35&fontSize=45)
+
 A Personal Arch Installation Guide So If I Get Lost, This Guide Will Help Me To Remember A Bunch Of Things While Re-Installing [Arch Linux.](https://archlinux.org) If You Just Found This Guide From Some Where, I Recommend You To First Read The Official 
 [Installation Guide.](https://wiki.archlinux.org/title/Installation_guide)
 
