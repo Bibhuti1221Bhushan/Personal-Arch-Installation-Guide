@@ -157,7 +157,7 @@ Ping A Website To Make Sure We Are Online :
 ping -c 3 1.1.1.1
 ``` 
 
-If You Receive Error Like **Unknown host** Or **Network is unreachable,** Means You Are Not Online Yet. Review Your Network Configuration And Redo The Above Steps.
+If You Receive Error Like **Unknown Host** Or **Network is Not Available,** Means You Are Not Online Yet. Review Your Network Configuration And Redo The Above Steps.
 
 ### Wireless Connection - ( wpa_supplicant ) :
 
@@ -179,7 +179,7 @@ iwlist wlan0 scan | grep ESSID
 
 #### Connect To A Visible Wi-Fi :
 
-Create **wpa_supplicant.conf** Using One Line Command :
+Create wpa_supplicant.conf Using One Line Command :
 
 ```bash
 wpa_passphrase "NETWORK-NAME" "PASSPHRASE" | tee /etc/wpa_supplicant/wpa_supplicant.conf
@@ -191,11 +191,11 @@ Connect To Your Wi-Fi :
 wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 ```
 
-##### <center>OR</center>
+<h3 align=center>OR</h3>
 
 #### Connect To A Hidden Wi-Fi : 
 
-Create & Open **wpa_supplicant.conf :**
+Create & Open wpa_supplicant.conf :
 
 ```bash
 nano /etc/wpa_supplicant/wpa_supplicant.conf
@@ -217,11 +217,11 @@ Connect To Your Wi-Fi :
 wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 ```
 
-##### <center>OR</center>
+<h3 align=center>OR</h3>
 
 #### Connect To A In-Secure Wi-Fi :
 
-Create & Open **wpa_supplicant.conf :**
+Create & Open wpa_supplicant.conf :
 
 ```bash
 nano /etc/wpa_supplicant/wpa_supplicant.conf
@@ -243,11 +243,11 @@ Connect To Your Wi-Fi :
 wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 ```
 
-##### <center>OR</center>
+<h3 align=center>OR</h3>
 
->> ##### Connect To A Wi-FI Via WEP-Authentication Mode :
+##### Connect To A Wi-FI Via WEP-Authentication Mode :
 
-Create & Open **wpa_supplicant.conf :**
+Create & Open wpa_supplicant.conf :
 
 ```bash
 nano /etc/wpa_supplicant/wpa_supplicant.conf
@@ -276,9 +276,9 @@ Ping A Website To Make Sure We Are Online :
 ping -c 3 1.1.1.1
 ``` 
 
-If You Receive Error Like **Unknown host** Or **Network is unreachable,** Means You Are Not Online Yet. Review Your Network Configuration And Redo The Steps Above.
+If You Receive Error Like **Unknown Host** Or **Network is Not Available,** Means You Are Not Online Yet. Review Your Network Configuration And Redo The Steps Above.
 
-### Update The Device Clock :
+## Update The Device Clock :
 
 To Ensure That Clock is Accurate :
 
@@ -292,10 +292,10 @@ To Check The Service Status :
 timedatectl status
 ```
 
-### Partition The Disks :
+## Partition The Disks :
 
-When The Disks Are Recognized By The Live Environment, Disks Are Assigned To A Block Device Such As **/dev/sda, /dev/nvme0n1 or /dev/mmcblk0.** 
-<br>
+When The Disks Are Recognized By The Live Environment, Disks Are Assigned To A Block Device Such As **/dev/sda, /dev/nvme0n1** Or **/dev/mmcblk0.** 
+
 To Identify These Devices :
 
 ```bash
