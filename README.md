@@ -143,7 +143,7 @@ Connect To Your Visible Wi-Fi :
 iwctl -P "PASSPHRASE" station wlan0 connect "NETWORK-NAME"
 ```
 
-<p align="center">OR</p>
+<h1 style="font-size:10vw">OR</h1>
 
 
 #####  OR
