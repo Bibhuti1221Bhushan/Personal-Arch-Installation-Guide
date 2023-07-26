@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=transparent&section=header&color=gradient&customColorList=12&height=150&animation=fadeIn&fontSize=50&&text=A%20Personal%20Arch%20Installation%20Guide&fontAlignY=40)
+![header](https://capsule-render.vercel.app/api?type=waving&section=header&color=gradient&customColorList=12&height=150&animation=fadeIn&fontSize=50&&text=A%20Personal%20Arch%20Installation%20Guide&fontAlignY=40)
 
 
 # A Personal Arch Installation Guide
