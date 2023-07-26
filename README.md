@@ -143,10 +143,7 @@ Connect To Your Visible Wi-Fi :
 iwctl -P "PASSPHRASE" station wlan0 connect "NETWORK-NAME"
 ```
 
-<h1 style="font-size:10vw">OR</h1>
-
-
-#####  OR
+<h3 align=center>OR</h3>
 
 Connect To Your Hidden Wi-Fi :    
 
