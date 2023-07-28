@@ -1,14 +1,14 @@
 <h3 align=center>A Personal Arch Installation Guide</h3>
 
-<h1>
+<!-- <h1>
   <a href="#">
     <img alt="" align="left" src="https://img.shields.io/github/watchers/Bibhuti1221Bhushan/Cute-Dots?color=0C0E0F&labelColor=0C0E0F&style=for-the-badge"/>
-  </a>
+  </a> -->
   <hr>
-  <a href="#">
+  <!-- <a href="#">
     <img alt="" align="right" src="https://img.shields.io/github/repo-size/Bibhuti1221Bhushan/Cute-Dots?color=0C0E0F&labelColor=0C0E0F&style=for-the-badge"/>
   </a>
-</h1>
+</h1> -->
 
 <br>
 
