@@ -63,3 +63,8 @@ A footnote can also have multiple lines[^2].
 𝔄 𝔓𝔈ℜ𝔖𝔒𝔑𝔄𝔏 𝔄ℜℭℌ ℑ𝔑𝔖𝔗𝔄𝔏𝔏𝔄𝔗ℑ𝔒𝔑 𝔊𝔘ℑ𝔇𝔈
 
 𝕬 𝕻𝕰𝕽𝕾𝕺𝕹𝕬𝕷 𝕬𝕽𝕮𝕳 𝕴𝕹𝕾𝕿𝕬𝕷𝕷𝕬𝕿𝕴𝕺𝕹 𝕲𝖀𝕴𝕯𝕰
+
+
+  <a href="#">
+    <img alt="" align="left" src="/Done.png"/>
+  </a>
