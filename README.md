@@ -4,10 +4,13 @@
   <a href="#">
     <img alt="" align="left" src="https://img.shields.io/github/watchers/Bibhuti1221Bhushan/Cute-Dots?color=0C0E0F&labelColor=0C0E0F&style=for-the-badge"/>
   </a>
+  <hr>
   <a href="#">
     <img alt="" align="right" src="https://img.shields.io/github/repo-size/Bibhuti1221Bhushan/Cute-Dots?color=0C0E0F&labelColor=0C0E0F&style=for-the-badge"/>
   </a>
 </h1>
+
+<br>
 
 A Personal Arch Installation Guide So If I Get Lost, This Guide Will Help Me To Remember A Bunch Of Things While Re-Installing [Arch Linux.](https://archlinux.org) If You Just Found This Guide From Some Where, I Recommend You To First Read The Official [Installation Guide.](https://wiki.archlinux.org/title/Installation_guide)
 
