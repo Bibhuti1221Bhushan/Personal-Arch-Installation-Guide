@@ -1,21 +1,6 @@
-<h3 align=center>ᴀ ᴘᴇʀꜱᴏɴᴀʟ ᴀʀᴄʜ ɪɴꜱᴛᴀʟʟᴀᴛɪᴏɴ ɢᴜɪᴅᴇ 𝕬 𝕻𝖊𝖗𝖘𝖔𝖓𝖆𝖑 𝕬𝖗𝖈𝖍 𝕴𝖓𝖘𝖙𝖆𝖑𝖑𝖆𝖙𝖎𝖔𝖓 𝕲𝖚𝖎𝖉𝖊</h3>
+<h1 align=center> 𝕬 𝕻𝖊𝖗𝖘𝖔𝖓𝖆𝖑 𝕬𝖗𝖈𝖍 𝕴𝖓𝖘𝖙𝖆𝖑𝖑𝖆𝖙𝖎𝖔𝖓 𝕲𝖚𝖎𝖉𝖊 <h1>
 
-𝕬 𝕻𝖊𝖗𝖘𝖔𝖓𝖆𝖑 𝕬𝖗𝖈𝖍 𝕴𝖓𝖘𝖙𝖆𝖑𝖑𝖆𝖙𝖎𝖔𝖓 𝕲𝖚𝖎𝖉𝖊
-
-ᴀ ᴘᴇʀꜱᴏɴᴀʟ ᴀʀᴄʜ ɪɴꜱᴛᴀʟʟᴀᴛɪᴏɴ ɢᴜɪᴅᴇ
-<!-- <h1>
-  <a href="#">
-    <img alt="" align="left" src="https://img.shields.io/github/watchers/Bibhuti1221Bhushan/Cute-Dots?color=0C0E0F&labelColor=0C0E0F&style=for-the-badge"/>
-  </a> -->
-  <hr>
-  <!-- <a href="#">
-    <img alt="" align="right" src="https://img.shields.io/github/repo-size/Bibhuti1221Bhushan/Cute-Dots?color=0C0E0F&labelColor=0C0E0F&style=for-the-badge"/>
-  </a>
-</h1> -->
-
-<br>
-
-A Personal Arch Installation Guide So If I Get Lost, This Guide Will Help Me To Remember A Bunch Of Things While Re-Installing [Arch Linux.](https://archlinux.org) If You Just Found This Guide From Some Where, I Recommend You To First Read The Official [Installation Guide.](https://wiki.archlinux.org/title/Installation_guide)
+**𝙰 𝙿𝙴𝚁𝚂𝙾𝙽𝙰𝙻 𝙰𝚁𝙲𝙷 𝙸𝙽𝚂𝚃𝙰𝙻𝙻𝙰𝚃𝙸𝙾𝙽 𝙶𝚄𝙸𝙳𝙴 𝚂𝙾 𝙸𝙵 𝙸 𝙶𝙴𝚃 𝙻𝙾𝚂𝚃, 𝚃𝙷𝙸𝚂 𝙶𝚄𝙸𝙳𝙴 𝚆𝙸𝙻𝙻 𝙷𝙴𝙻𝙿 𝙼𝙴 𝚃𝙾 𝚁𝙴𝙼𝙴𝙼𝙱𝙴𝚁 𝙰 𝙱𝚄𝙽𝙲𝙷 𝙾𝙵 𝚃𝙷𝙸𝙽𝙶𝚂 𝚆𝙷𝙸𝙻𝙴 𝚁𝙴-𝙸𝙽𝚂𝚃𝙰𝙻𝙻𝙸𝙽𝙶 [𝙰𝚁𝙲𝙷 𝙻𝙸𝙽𝚄𝚇.](https://archlinux.org) 𝙸𝙵 𝚈𝙾𝚄 𝙹𝚄𝚂𝚃 𝙵𝙾𝚄𝙽𝙳 𝚃𝙷𝙸𝚂 𝙶𝚄𝙸𝙳𝙴 𝙵𝚁𝙾𝙼 𝚂𝙾𝙼𝙴 𝚆𝙷𝙴𝚁𝙴, 𝙸 𝚁𝙴𝙲𝙾𝙼𝙼𝙴𝙽𝙳 𝚈𝙾𝚄 𝚃𝙾 𝙵𝙸𝚁𝚂𝚃 𝚁𝙴𝙰𝙳 𝚃𝙷𝙴 𝙾𝙵𝙵𝙸𝙲𝙸𝙰𝙻 [𝙸𝙽𝚂𝚃𝙰𝙻𝙻𝙰𝚃𝙸𝙾𝙽 𝙶𝚄𝙸𝙳𝙴.](https://wiki.archlinux.org/title/Installation_guide)**
 
 > **Note :** This Guide is Focus On Minimal Installation With **" GRUB " , " UEFI " , " Un-Encripted Partition "** And **" Separate Home Partition " .** 
 
