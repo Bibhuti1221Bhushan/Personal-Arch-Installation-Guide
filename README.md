@@ -1,10 +1,17 @@
-![header](https://capsule-render.vercel.app/api?type=waving&section=header&color=gradient&customColorList=12&height=150&text=A%20Personal%20Arch%20Installation%20Guide&fontAlignY=35&fontSize=45)
+<h3 align=center>A Personal Arch Installation Guide</h3>
+
+<h1>
+  <a href="#">
+    <img alt="" align="left" src="https://img.shields.io/github/watchers/Bibhuti1221Bhushan/Cute-Dots?color=0C0E0F&labelColor=0C0E0F&style=for-the-badge"/>
+  </a>
+  <a href="#">
+    <img alt="" align="right" src="https://img.shields.io/github/repo-size/Bibhuti1221Bhushan/Cute-Dots?color=0C0E0F&labelColor=0C0E0F&style=for-the-badge"/>
+  </a>
+</h1>
 
 A Personal Arch Installation Guide So If I Get Lost, This Guide Will Help Me To Remember A Bunch Of Things While Re-Installing [Arch Linux.](https://archlinux.org) If You Just Found This Guide From Some Where, I Recommend You To First Read The Official [Installation Guide.](https://wiki.archlinux.org/title/Installation_guide)
 
 > **Note :** This Guide is Focus On Minimal Installation With **" GRUB " , " UEFI " , " Un-Encripted Partition "** And **" Separate Home Partition " .** 
-
-# Pre-Installation -
 
 ## Before Installing :
 
@@ -22,7 +29,7 @@ A Personal Arch Installation Guide So If I Get Lost, This Guide Will Help Me To 
 + An Active Internet Connection.
 + Little Bit Knowledge Of Linux Commands.
 
-# Let's Begin Installation -
+# Pre-Installation -
 
 ## Set Input Language Map :
 
@@ -62,13 +69,13 @@ To Verify The Boot Mode, Check The UEFI Witness :
 cat /sys/firmware/efi/fw_platform_size
 ```
 
-+ If The Command Returns 64, Then Machine is Booted In UEFI Mode And Has A **64-Bit x64 UEFI.** 
-+ If The Command Returns 32, Then Machine is Booted In UEFI Mode And Has A **32-Bit IA32 UEFI,** Which is Supported But Limits The Boot Loader Choice To GRUB.
-+ If The File Does't Exist, Then The Machine is Booted In **BIOS** ( CSM ) Mode.
++ If The Command Returns 64, Then Machine is Booted In UEFI Mode And Has **A 64-Bit x64 UEFI.**
++ If The Command Returns 32, Then Machine is Booted In UEFI Mode And Has **A 32-Bit IA32 UEFI,** Which is Supported But Limits The Boot Loader Choice To GRUB.
++ If The File Does't Exist, Then The Machine is Booted In **BIOS ( CSM ) Mode.**
 
 ## Connect To The Internet :
 
-Arch Linux Needs Internet Connection To Install Arch Linux **Base , Linux Kernel , Linux Firmware** And **Other Needed Packages.**
+Arch Linux Needs Internet Connection To Install **Arch Linux Base , Linux Kernel , Linux Firmware** And **Other Needed Packages.**
 
 Ensure Network Interface is Listed And Enabled :
 
@@ -119,7 +126,7 @@ If You Have Laptop Or Wireless Adapter, You Can Connect To Wireless Access Point
 
 > **Note : iwd** is Enabled By Default.
 
-In Case, If **iwd** is Not Enabled.
+In Case, If This is Not Enabled.
 
 ```bash
 systemctl enable iwd
@@ -157,7 +164,7 @@ Ping A Website To Make Sure We Are Online :
 ping -c 3 1.1.1.1
 ``` 
 
-If You Receive Error Like **Unknown Host** Or **Network is Not Available,** Means You Are Not Online Yet. Review Your Network Configuration And Redo The Above Steps.
+If You Receive Error Like Unknown Host Or Network is Not Available, Means You Are Not Online Yet. Review Your Network Configuration And Redo The Above Steps.
 
 ### Wireless Connection - ( wpa_supplicant ) :
 
@@ -276,7 +283,7 @@ Ping A Website To Make Sure We Are Online :
 ping -c 3 1.1.1.1
 ``` 
 
-If You Receive Error Like **Unknown Host** Or **Network is Not Available,** Means You Are Not Online Yet. Review Your Network Configuration And Redo The Steps Above.
+If You Receive Error Like Unknown Host Or Network is Not Available, Means You Are Not Online Yet. Review Your Network Configuration And Redo The Steps Above.
 
 ## Update The Device Clock :
 
@@ -302,7 +309,7 @@ To Identify These Devices :
 lsblk
 ```
 
-**Note :** Results Ending In **rom, loop** Or **airoot** May Be Ignored.
+> **Note :** Results Ending In **rom, loop** Or **airoot** May Be Ignored.
 
 Let’s Clean Our Drive To Create New Partitions Table For Our Installation. In This Guide, We Will Use **/dev/sda** As Our Installation Disk.
 
@@ -314,11 +321,11 @@ fdisk /dev/sda
 
 + Press <kbd>**p**</kbd> To Show Current Partition. Now We Should See Our Drive Showing The **Partition Number, Partition Size,** And **Partition Name.**
 
-+ Press <kbd>**g**</kbd> To **<u style="color:red;">Format Entire Drive</u>** And Create An Empty **GPT Partition Table.**
++ Press <kbd>**g**</kbd> To **Format Entire Drive** And Create An Empty **GPT Partition Table.**
 
-**Note :** Press <kbd>**d**</kbd> To Delete A Single Partition. 
+> **Note :** Press <kbd>**d**</kbd> To Delete A Single Partition. 
 
->> ##### Create The Boot Partition :
+### Create The Boot Partition :
 
 + Press <kbd>**n**</kbd> To **Create New Partition.** You Will Be Prompted To Choose A Partition Number.
 
@@ -332,7 +339,7 @@ fdisk /dev/sda
 
 + Enter <kbd>**1**</kbd> For **EFI System.** ( Default is Linux System )
 
->> ##### Create The Swap Partition :
+### Create The Swap Partition :
 
 + Press <kbd>**n**</kbd> To **Create New Partition.** You Will Be Prompted To Choose A Partition Number.
 
@@ -346,7 +353,7 @@ fdisk /dev/sda
 
 + Enter <kbd>**19**</kbd> For **Linux Swap.** ( Default is Linux System )
 
->> ##### Create The Root Partition :
+### Create The Root Partition :
 
 + Press <kbd>**n**</kbd> To **Create New Partition.** You Will Be Prompted To Choose A Partition Number.
 
@@ -356,9 +363,9 @@ fdisk /dev/sda
 
 + Enter <kbd>**+30G**</kbd> In **The Last Sector.** And Press <kbd>**Return**</kbd> To Create **Root Partition With 30 Gib.**
 
-+ **Note :** No Need To Change Partition Type. **Default is Linux System.**
+> **Note :** No Need To Change Partition Type. **Default is Linux System.**
 
->> ##### Create The Home Partition :
+### Create The Home Partition :
 
 + Press <kbd>**n**</kbd> To **Create New Partition.** You Will Be Prompted To Choose A Partition Number.
 
@@ -368,13 +375,13 @@ fdisk /dev/sda
 
 + Press <kbd>**Return**</kbd> In **The Last Sector** To Create **Root Partition Of Remaining Space.**
 
-+ **Note :** No Need To Change Partition Type. **Default is Linux System.**
+> **Note :** No Need To Change Partition Type. **Default is Linux System.**
 
 + Press <kbd>**p**</kbd> To Print The Newly Created Disk Partitions.
 
 + Press <kbd>**w**</kbd> To **Write And Quit** From **fdisk** Command.
 
-### Verifying The Partitions :
+## Verifying The Partitions :
 
 Use **lsblk** Again To Check The Created Partitions. <u>**We? I Thought I'm Doing This Guide For Self Lol.**</u>
 
@@ -385,20 +392,20 @@ lsblk
 You Should See **Something Like This :**
 
 | NAME | MAJ:MIN | RM |  SIZE  | RO | TYPE | MOUNTPOINTS |
-| ---- | ------- | -- | ------ | -- | ---- | ----------- |
+| :--: | :-----: |:--:| :----: |:--:| :--: | :---------: |
 | sda  |   8:0   | 0  |  240G  |  0 |      |             |
 | sda1 |   8:1   | 0  |  512M  |  0 | part |             |
 | sda2 |   8:2   | 0  |   8G   |  0 | part |             |
 | sda3 |   8:3   | 0  |   30G  |  0 | part |             |
 | sda4 |   8:3   | 0  | 201.5G |  0 | part |             |
 
-+ **sda** is The Main Disk.  
-+ **sda1** is The Boot Partition.  
-+ **sda2** is The Swap Partition.  
-+ **sda3** is The Root Partition.  
-+ **sda4** is The Home Partition.  
+> + **sda** is The Main Disk.  
+> + **sda1** is The Boot Partition.  
+> + **sda2** is The Swap Partition.  
+> + **sda3** is The Root Partition.  
+> + **sda4** is The Home Partition.  
 
-### Format The Partitions :
+## Format The Partitions :
 
 Format **/dev/sda1** Partition As Boot Partition In **FAT32**.
 
@@ -419,7 +426,7 @@ mkfs.ext4 -L ARCH /dev/sda3
 mkfs.ext4 -L HOME /dev/sda4
 ```
 
-### Mount The Partitions :
+## Mount The Partitions :
 
 Mount The Root Partition **/dev/sda3** To **/mnt**.
 
@@ -439,31 +446,48 @@ Mount The Boot Partition **/dev/sda1/** To **/mnt/boot/EFI** Partition.
 mount /dev/sda1 /mnt/boot/EFI
 ```
 
-Create a **/home** mountpoint:
+Create a **/home** Directory For Home Partition.
 
-```
+```bash
 mkdir /mnt/home  
 ```
 
-Mount **/dev/sda4** to **/mnt/home** partition. This is will be our `/home`:
+Mount The Home Partition **/dev/sda4** To **/mnt/home** Partition.
 
 ```
 mount /dev/sda1 /mnt/home
 ```
 
+Mount And Enable The Swap Partition.
 
-
-## Installation
-
-Now let’s go ahead and install `base`, `linux`, `linux-firmware`, and `base-devel` packages into our system. 
-
+```bash
+swapon /dev/sda2
 ```
-# pacstrap /mnt base base-devel linux linux-zen linux-firmware
+
+# Let's Begin Installation -
+
+## Install The Basic Packages :
+
+Now Let’s Go Ahead And Install **Arch Linux Base , Linux Kernel , Linux Firmware** And **Other Needed Packages.**
+
+```bash
+pacstrap -Ki /mnt base base-devel linux linux-firmware linux-headers intel-ucode
 ```
+
+> **1. base -** Minimal Package Set To Define A Basic Arch Linux Installation.
+>
+> **1. base-devel -**
+>
+> **1. linux -**
+>
+> **1. linux-firmware -**
+>
+> **1. linux-headers -**
+>
+> **1. intel-ucode -**
 
 I will install `linux-zen` since it has necessary modules for gaming.
 
-The `base` package does not include all tools from the live installation, so installing other packages may be necessary for a fully functional base system. In particular, consider installing: 
 
 + software necessary for networking,
 
