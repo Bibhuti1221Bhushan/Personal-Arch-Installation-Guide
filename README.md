@@ -58,42 +58,44 @@
 𝚜𝚎𝚝𝚏𝚘𝚗𝚝 𝚍𝚎𝚏𝚊𝚞𝚕𝚝𝟾𝚡𝟷𝟼
 ```
 
-## Verify The Boot Mode 
+## 𝖁𝖊𝖗𝖎𝖋𝖞 𝕿𝖍𝖊 𝕭𝖔𝖔𝖙 𝕸𝖔𝖉𝖊
 
-TO VERIFY THE BOOT MODE , CHECK THE UEFI WITNESS :  
-
-```bash
-cat /sys/firmware/efi/fw_platform_size
-```
-
-IF THE COMMAND RETURNS 64 , THEN SYSTEM IS BOOTED IN `UEFI MODE` AND HAS A 64-BIT X64 UEFI .
-IF THE COMMAND RETURNS 32 , THEN SYSTEM IS BOOTED IN `UEFI MODE` AND HAS A 32-BIT IA32 UEFI , WHICH IS SUPPORTED BUT LIMITS THE BOOT LOADER CHOICE TO GRUB .
-IF THE FILE DOES'T EXIST , THEN THE SYSTEM IS BOOTED IN `BIOS MODE` .
-
-## Connect To The Internet 
-
-ARCH LINUX NEEDS INTERNET CONNECTION TO INSTALL ARCH LINUX BASE , LINUX KERNEL , LINUX FIRMWARE AND OTHER NEEDED PACKAGES .
-
-TO ENSURE THAT NETWORK INTERFACE IS LISTED AND ENABLED :
+**<sub>𝚃𝙾 𝚅𝙴𝚁𝙸𝙵𝚈 𝚃𝙷𝙴 𝙱𝙾𝙾𝚃 𝙼𝙾𝙳𝙴 , 𝙲𝙷𝙴𝙲𝙺 𝚃𝙷𝙴 𝚄𝙴𝙵𝙸 𝚆𝙸𝚃𝙽𝙴𝚂𝚂 :</sub>** 
 
 ```bash
-ip link
+𝚌𝚊𝚝 /𝚜𝚢𝚜/𝚏𝚒𝚛𝚖𝚠𝚊𝚛𝚎/𝚎𝚏𝚒/𝚏𝚠_𝚙𝚕𝚊𝚝𝚏𝚘𝚛𝚖_𝚜𝚒𝚣𝚎
 ```
 
-ABOVE COMMAND OUTPUT WILL BE SOMETHING LIKE THIS :
+**<sub>𝙸𝙵 𝚃𝙷𝙴 𝙲𝙾𝙼𝙼𝙰𝙽𝙳 𝚁𝙴𝚃𝚄𝚁𝙽𝚂 𝟼𝟺 , 𝚃𝙷𝙴𝙽 𝚂𝚈𝚂𝚃𝙴𝙼 𝙸𝚂 𝙱𝙾𝙾𝚃𝙴𝙳 𝙸𝙽 `𝚄𝙴𝙵𝙸 𝙼𝙾𝙳𝙴` 𝙰𝙽𝙳 𝙷𝙰𝚂 𝙰 𝟼𝟺-𝙱𝙸𝚃 𝚇𝟼𝟺 𝚄𝙴𝙵𝙸 . 
+<br>
+𝙸𝙵 𝚃𝙷𝙴 𝙲𝙾𝙼𝙼𝙰𝙽𝙳 𝚁𝙴𝚃𝚄𝚁𝙽𝚂 𝟹𝟸 , 𝚃𝙷𝙴𝙽 𝚂𝚈𝚂𝚃𝙴𝙼 𝙸𝚂 𝙱𝙾𝙾𝚃𝙴𝙳 𝙸𝙽 `𝚄𝙴𝙵𝙸 𝙼𝙾𝙳𝙴` 𝙰𝙽𝙳 𝙷𝙰𝚂 𝙰 𝟹𝟸-𝙱𝙸𝚃 𝙸𝙰𝟹𝟸 𝚄𝙴𝙵𝙸 , 𝚆𝙷𝙸𝙲𝙷 𝙸𝚂 𝚂𝚄𝙿𝙿𝙾𝚁𝚃𝙴𝙳 𝙱𝚄𝚃 𝙻𝙸𝙼𝙸𝚃𝚂 𝚃𝙷𝙴 𝙱𝙾𝙾𝚃 𝙻𝙾𝙰𝙳𝙴𝚁 𝙲𝙷𝙾𝙸𝙲𝙴 𝚃𝙾 𝙶𝚁𝚄𝙱 . 
+<br>
+𝙸𝙵 𝚃𝙷𝙴 𝙵𝙸𝙻𝙴 𝙳𝙾𝙴𝚂'𝚃 𝙴𝚇𝙸𝚂𝚃 , 𝚃𝙷𝙴𝙽 𝚃𝙷𝙴 𝚂𝚈𝚂𝚃𝙴𝙼 𝙸𝚂 𝙱𝙾𝙾𝚃𝙴𝙳 𝙸𝙽 `𝙱𝙸𝙾𝚂 𝙼𝙾𝙳𝙴` .</sub>**
+
+## 𝕮𝖔𝖓𝖓𝖊𝖈𝖙 𝕿𝖔 𝕿𝖍𝖊 𝕴𝖓𝖙𝖊𝖗𝖓𝖊𝖙
+
+**<sub>𝙰𝚁𝙲𝙷 𝙻𝙸𝙽𝚄𝚇 𝙽𝙴𝙴𝙳𝚂 𝙸𝙽𝚃𝙴𝚁𝙽𝙴𝚃 𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙸𝙾𝙽 𝚃𝙾 𝙸𝙽𝚂𝚃𝙰𝙻𝙻 `𝙰𝚁𝙲𝙷 𝙻𝙸𝙽𝚄𝚇 𝙱𝙰𝚂𝙴` , `𝙻𝙸𝙽𝚄𝚇 𝙺𝙴𝚁𝙽𝙴𝙻` , `𝙻𝙸𝙽𝚄𝚇 𝙵𝙸𝚁𝙼𝚆𝙰𝚁𝙴` 𝙰𝙽𝙳 𝙾𝚃𝙷𝙴𝚁 𝙽𝙴𝙴𝙳𝙴𝙳 𝙿𝙰𝙲𝙺𝙰𝙶𝙴𝚂 .</sub>**
+
+**<sub>𝚃𝙾 𝙴𝙽𝚂𝚄𝚁𝙴 𝚃𝙷𝙰𝚃 𝙽𝙴𝚃𝚆𝙾𝚁𝙺 𝙸𝙽𝚃𝙴𝚁𝙵𝙰𝙲𝙴 𝙸𝚂 𝙻𝙸𝚂𝚃𝙴𝙳 𝙰𝙽𝙳 𝙴𝙽𝙰𝙱𝙻𝙴𝙳 :</sub>**
 
 ```bash
-1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
-		link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
-2: enp7s0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc fq_codel state DOWN mode DEFAULT group default qlen 1000
-		link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
-3: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DORMANT group default qlen 1000
-		link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff permaddr 00:00:00:00:00:00
+𝚒𝚙 𝚕𝚒𝚗𝚔
 ```
 
-`lo` IS THE LOOP-BACK INTERFACE ( LOCAL SERVER )
-`enp7s0` IS THE WIRED INTERFACE ( ETHERNET ) 
-`wlan0` IS THE WIRELESS INTERFACE ( WI-FI ) 
+**<sub>𝙰𝙱𝙾𝚅𝙴 𝙲𝙾𝙼𝙼𝙰𝙽𝙳 𝙾𝚄𝚃𝙿𝚄𝚃 𝚆𝙸𝙻𝙻 𝙱𝙴 𝚂𝙾𝙼𝙴𝚃𝙷𝙸𝙽𝙶 𝙻𝙸𝙺𝙴 𝚃𝙷𝙸𝚂 :</sub>**
+
+```bash
+1: 𝚕𝚘: <𝙻𝙾𝙾𝙿𝙱𝙰𝙲𝙺,𝚄𝙿,𝙻𝙾𝚆𝙴𝚁_𝚄𝙿> 𝚖𝚝𝚞 𝟼𝟻𝟻𝟹𝟼 𝚚𝚍𝚒𝚜𝚌 𝚗𝚘𝚚𝚞𝚎𝚞𝚎 𝚜𝚝𝚊𝚝𝚎 𝚄𝙽𝙺𝙽𝙾𝚆𝙽 𝚖𝚘𝚍𝚎 𝙳𝙴𝙵𝙰𝚄𝙻𝚃 𝚐𝚛𝚘𝚞𝚙 𝚍𝚎𝚏𝚊𝚞𝚕𝚝 𝚚𝚕𝚎𝚗 𝟷𝟶𝟶𝟶
+		𝚕𝚒𝚗𝚔/𝚕𝚘𝚘𝚙𝚋𝚊𝚌𝚔 𝟶𝟶:𝟶𝟶:𝟶𝟶:𝟶𝟶:𝟶𝟶:𝟶𝟶 𝚋𝚛𝚍 𝟶𝟶:𝟶𝟶:𝟶𝟶:𝟶𝟶:𝟶𝟶:𝟶𝟶
+2: 𝚎𝚗𝚙𝟽𝚜𝟶: <𝙽𝙾-𝙲𝙰𝚁𝚁𝙸𝙴𝚁,𝙱𝚁𝙾𝙰𝙳𝙲𝙰𝚂𝚃,𝙼𝚄𝙻𝚃𝙸𝙲𝙰𝚂𝚃,𝚄𝙿> 𝚖𝚝𝚞 𝟷𝟻𝟶𝟶 𝚚𝚍𝚒𝚜𝚌 𝚏𝚚_𝚌𝚘𝚍𝚎𝚕 𝚜𝚝𝚊𝚝𝚎 𝙳𝙾𝚆𝙽 𝚖𝚘𝚍𝚎 𝙳𝙴𝙵𝙰𝚄𝙻𝚃 𝚐𝚛𝚘𝚞𝚙 𝚍𝚎𝚏𝚊𝚞𝚕𝚝 𝚚𝚕𝚎𝚗 𝟷𝟶𝟶𝟶
+		𝚕𝚒𝚗𝚔/𝚎𝚝𝚑𝚎𝚛 𝟶𝟶:𝟶𝟶:𝟶𝟶:𝟶𝟶:𝟶𝟶:𝟶𝟶 𝚋𝚛𝚍 𝚏𝚏:𝚏𝚏:𝚏𝚏:𝚏𝚏:𝚏𝚏:𝚏𝚏
+3: 𝚠𝚕𝚊𝚗𝟶: <𝙱𝚁𝙾𝙰𝙳𝙲𝙰𝚂𝚃,𝙼𝚄𝙻𝚃𝙸𝙲𝙰𝚂𝚃,𝚄𝙿,𝙻𝙾𝚆𝙴𝚁_𝚄𝙿> 𝚖𝚝𝚞 𝟷𝟻𝟶𝟶 𝚚𝚍𝚒𝚜𝚌 𝚖𝚚 𝚜𝚝𝚊𝚝𝚎 𝚄𝙿 𝚖𝚘𝚍𝚎 𝙳𝙾𝚁𝙼𝙰𝙽𝚃 𝚐𝚛𝚘𝚞𝚙 𝚍𝚎𝚏𝚊𝚞𝚕𝚝 𝚚𝚕𝚎𝚗 𝟷𝟶𝟶𝟶
+		𝚕𝚒𝚗𝚔/𝚎𝚝𝚑𝚎𝚛 𝟶𝟶:𝟶𝟶:𝟶𝟶:𝟶𝟶:𝟶𝟶:𝟶𝟶 𝚋𝚛𝚍 𝚏𝚏:𝚏𝚏:𝚏𝚏:𝚏𝚏:𝚏𝚏:𝚏𝚏 𝚙𝚎𝚛𝚖𝚊𝚍𝚍𝚛 𝟶𝟶:𝟶𝟶:𝟶𝟶:𝟶𝟶:𝟶𝟶:𝟶𝟶
+```
+
+> **<sub>`𝚕𝚘` 𝙸𝚂 𝚃𝙷𝙴 𝙻𝙾𝙾𝙿-𝙱𝙰𝙲𝙺 𝙸𝙽𝚃𝙴𝚁𝙵𝙰𝙲𝙴 ( 𝙻𝙾𝙲𝙰𝙻 𝚂𝙴𝚁𝚅𝙴𝚁 )</sub>**<br>
+> **<sub>`𝚎𝚗𝚙𝟽𝚜𝟶` 𝙸𝚂 𝚃𝙷𝙴 𝚆𝙸𝚁𝙴𝙳 𝙸𝙽𝚃𝙴𝚁𝙵𝙰𝙲𝙴 ( 𝙴𝚃𝙷𝙴𝚁𝙽𝙴𝚃 )</sub>**<br>
+> **<sub>`𝚠𝚕𝚊𝚗𝟶` 𝙸𝚂 𝚃𝙷𝙴 𝚆𝙸𝚁𝙴𝙻𝙴𝚂𝚂 𝙸𝙽𝚃𝙴𝚁𝙵𝙰𝙲𝙴 ( 𝚆𝙸-𝙵𝙸 )</sub>**
 
 FOR `WIRELESS AND WWAN` , MAKE SURE THE CARD IS NOT BLOCKED :
 
