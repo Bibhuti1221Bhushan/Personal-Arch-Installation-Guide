@@ -14,72 +14,73 @@
 **<sub>4. 𝙿𝚁𝙴𝙿𝙰𝚁𝙴 𝙰𝙽 𝙸𝙽𝚂𝚃𝙰𝙻𝙻𝙰𝚃𝙸𝙾𝙽 𝙼𝙴𝙳𝙸𝚄𝙼 .</sub>**  
 **<sub>5. 𝙱𝙾𝙾𝚃 𝙸𝙽 𝚃𝙾 𝚃𝙷𝙴 𝙻𝙸𝚅𝙴 𝙴𝙽𝚅𝙸𝚁𝙾𝙽𝙼𝙴𝙽𝚃 .</sub>**
 
-## 𝕸𝖎𝖓𝖎𝖒𝖚𝖒 𝕽𝖊𝖖𝖚𝖎𝖗𝖊𝖒𝖊𝖓𝖙𝖘
+## 𝕸𝖎𝖓𝖎𝖒𝖚𝖒 𝕽𝖊𝖖𝖚𝖎𝖗𝖊𝖒𝖊𝖓𝖙𝖘 
 
-+ **<sub>𝙰𝙽 𝚡𝟾𝟼_𝟼𝟺 ( `𝟼𝟺 𝙱𝙸𝚃` ) 𝙲𝙾𝙼𝙿𝙰𝚃𝙸𝙱𝙻𝙴 𝙼𝙰𝙲𝙷𝙸𝙽𝙴 .</sub>** <br>
-- **<sub>• 𝙼𝙸𝙽𝙸𝙼𝚄𝙼 𝟻𝟷𝟸 𝙼𝙱 𝙾𝙵 𝚁𝙰𝙼 . ( 𝚁𝙴𝙲𝙾𝙼𝙼𝙴𝙽𝙳𝙴𝙳 𝟸 𝙶𝙱 )</sub>** 
-
-- **<sub>𝙼𝙸𝙽𝙸𝙼𝚄𝙼 𝟸 𝙶𝙱 𝙾𝙵 𝙵𝚁𝙴𝙴 𝙳𝙸𝚂𝙺 𝚂𝙿𝙰𝙲𝙴 . ( 𝚁𝙴𝙲𝙾𝙼𝙼𝙴𝙽𝙳𝙴𝙳 𝟸𝟶 𝙶𝙱 )</sub>**
+**<sub>1. 𝙰𝙽 𝚡𝟾𝟼_𝟼𝟺 ( `𝟼𝟺 𝙱𝙸𝚃` ) 𝙲𝙾𝙼𝙿𝙰𝚃𝙸𝙱𝙻𝙴 𝙼𝙰𝙲𝙷𝙸𝙽𝙴 .</sub>**
 <br>
-**<sub>𝙰𝙽 𝙰𝙲𝚃𝙸𝚅𝙴 𝙸𝙽𝚃𝙴𝚁𝙽𝙴𝚃 𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙸𝙾𝙽 .</sub>** 
+**<sub>2. 𝙼𝙸𝙽𝙸𝙼𝚄𝙼 `𝟻𝟷𝟸 𝙼𝙱 𝙾𝙵 𝚁𝙰𝙼` . ( 𝚁𝙴𝙲𝙾𝙼𝙼𝙴𝙽𝙳𝙴𝙳 𝟸 𝙶𝙱 )</sub>**
+<br> 
+**<sub>3. 𝙼𝙸𝙽𝙸𝙼𝚄𝙼 `𝟸 𝙶𝙱 𝙾𝙵 𝙵𝚁𝙴𝙴 𝙳𝙸𝚂𝙺 𝚂𝙿𝙰𝙲𝙴` . ( 𝚁𝙴𝙲𝙾𝙼𝙼𝙴𝙽𝙳𝙴𝙳 𝟸𝟶 𝙶𝙱 )</sub>**
 <br>
-**<sub>𝙻𝙸𝚃𝚃𝙻𝙴 𝙱𝙸𝚃 𝙺𝙽𝙾𝚆𝙻𝙴𝙳𝙶𝙴 𝙾𝙵 𝙻𝙸𝙽𝚄𝚇 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂 .</sub>**
+**<sub>4. 𝙰𝙽 𝙰𝙲𝚃𝙸𝚅𝙴 𝙸𝙽𝚃𝙴𝚁𝙽𝙴𝚃 𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙸𝙾𝙽 .</sub>** 
+<br>
+**<sub>5. 𝙻𝙸𝚃𝚃𝙻𝙴 𝙱𝙸𝚃 𝙺𝙽𝙾𝚆𝙻𝙴𝙳𝙶𝙴 𝙾𝙵 𝙻𝙸𝙽𝚄𝚇 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂 .</sub>**
 
-# Pre-Installation -
+# 𝕻𝖗𝖊-𝕴𝖓𝖘𝖙𝖆𝖑𝖑𝖆𝖙𝖎𝖔𝖓 
 
-## Set Input Language Map :
+## 𝕾𝖊𝖙 𝕶𝖊𝖞𝖇𝖔𝖆𝖗𝖉 𝕷𝖆𝖞𝖔𝖚𝖙 
 
-> **Note :** The Default  is **US.**
+> **<sub>𝙽𝙾𝚃𝙴 : 𝚃𝙷𝙴 𝙳𝙴𝙵𝙰𝚄𝙻𝚃 𝙺𝙴𝚈𝙱𝙾𝙰𝚁𝙳 𝙻𝙰𝚈𝙾𝚄𝚃 𝙸𝚂 `𝚄𝚂` .</sub>**
 
-More Mapping Can Be Listed With :
-
-```bash
-ls /usr/share/kbd/keymaps/**/*.map.gz
-```
-
-To Modify The Input Mapping, Omitting Path And File Extension. For Example, To Set US Input Map :
+**<sub>𝙼𝙾𝚁𝙴 𝙺𝙴𝚈𝙱𝙾𝙰𝚁𝙳 𝙻𝙰𝚈𝙾𝚄𝚃 𝙲𝙰𝙽 𝙱𝙴 𝙻𝙸𝚂𝚃𝙴𝙳 𝚆𝙸𝚃𝙷 :</sub>**
 
 ```bash
-loadkeys us
+𝚕𝚜 /𝚞𝚜𝚛/𝚜𝚑𝚊𝚛𝚎/𝚔𝚋𝚍/𝚔𝚎𝚢𝚖𝚊𝚙𝚜/**/*.𝚖𝚊𝚙.𝚐𝚣
 ```
 
-## Set Console Font : 
-
-More Console Fonts Can Be Listed With :
+**<sub>𝚃𝙾 𝙼𝙾𝙳𝙸𝙵𝚈 𝚃𝙷𝙴 𝙺𝙴𝚈𝙱𝙾𝙰𝚁𝙳 𝙻𝙰𝚈𝙾𝚄𝚃 , 𝙾𝙼𝙸𝚃𝚃𝙸𝙽𝙶 𝙿𝙰𝚃𝙷 𝙰𝙽𝙳 𝙵𝙸𝙻𝙴 𝙴𝚇𝚃𝙴𝙽𝚂𝙸𝙾𝙽 . 𝙵𝙾𝚁 𝙴𝚇𝙰𝙼𝙿𝙻𝙴 , 𝚃𝙾 𝚂𝙴𝚃 `𝚄𝚂` 𝙺𝙴𝚈𝙱𝙾𝙰𝚁𝙳 𝙻𝙰𝚈𝙾𝚄𝚃 :</sub>**
 
 ```bash
-ls /usr/share/kbd/consolefonts/*.gz
+𝚕𝚘𝚊𝚍𝚔𝚎𝚢𝚜 𝚞𝚜
 ```
 
-Console Font Can Be Set With **" setfont "** Command.  For Example, To Use One Of The Fonts : 
+## 𝕾𝖊𝖙 𝕮𝖔𝖓𝖘𝖔𝖑𝖊 𝕱𝖔𝖓𝖙
 
+**<sub>𝙼𝙾𝚁𝙴 𝙲𝙾𝙽𝚂𝙾𝙻𝙴 𝙵𝙾𝙽𝚃𝚂 𝙲𝙰𝙽 𝙱𝙴 𝙻𝙸𝚂𝚃𝙴𝙳 𝚆𝙸𝚃𝙷 :</sub>**
+
+```bash
+𝚕𝚜 /𝚞𝚜𝚛/𝚜𝚑𝚊𝚛𝚎/𝚔𝚋𝚍/𝚌𝚘𝚗𝚜𝚘𝚕𝚎𝚏𝚘𝚗𝚝𝚜/*.𝚐𝚣
 ```
-setfont default8x16
+
+**<sub>𝙲𝙾𝙽𝚂𝙾𝙻𝙴 𝙵𝙾𝙽𝚃𝚂 𝙲𝙰𝙽 𝙱𝙴 𝚂𝙴𝚃 𝚆𝙸𝚃𝙷 `𝚜𝚎𝚝𝚏𝚘𝚗𝚝` 𝙲𝙾𝙼𝙼𝙰𝙽𝙳 .  𝙵𝙾𝚁 𝙴𝚇𝙰𝙼𝙿𝙻𝙴 , 𝚃𝙾 𝚄𝚂𝙴 𝙾𝙽𝙴 𝙾𝙵 𝚃𝙷𝙴 𝙵𝙾𝙽𝚃 :</sub>**
+
+```bash
+𝚜𝚎𝚝𝚏𝚘𝚗𝚝 𝚍𝚎𝚏𝚊𝚞𝚕𝚝𝟾𝚡𝟷𝟼
 ```
 
-## Verify The Boot Mode :
+## Verify The Boot Mode 
 
-To Verify The Boot Mode, Check The UEFI Witness :  
+TO VERIFY THE BOOT MODE , CHECK THE UEFI WITNESS :  
 
 ```bash
 cat /sys/firmware/efi/fw_platform_size
 ```
 
-+ If The Command Returns 64, Then Machine is Booted In UEFI Mode And Has **A 64-Bit x64 UEFI.**
-+ If The Command Returns 32, Then Machine is Booted In UEFI Mode And Has **A 32-Bit IA32 UEFI,** Which is Supported But Limits The Boot Loader Choice To GRUB.
-+ If The File Does't Exist, Then The Machine is Booted In **BIOS ( CSM ) Mode.**
+IF THE COMMAND RETURNS 64 , THEN SYSTEM IS BOOTED IN `UEFI MODE` AND HAS A 64-BIT X64 UEFI .
+IF THE COMMAND RETURNS 32 , THEN SYSTEM IS BOOTED IN `UEFI MODE` AND HAS A 32-BIT IA32 UEFI , WHICH IS SUPPORTED BUT LIMITS THE BOOT LOADER CHOICE TO GRUB .
+IF THE FILE DOES'T EXIST , THEN THE SYSTEM IS BOOTED IN `BIOS MODE` .
 
-## Connect To The Internet :
+## Connect To The Internet 
 
-Arch Linux Needs Internet Connection To Install **Arch Linux Base , Linux Kernel , Linux Firmware** And **Other Needed Packages.**
+ARCH LINUX NEEDS INTERNET CONNECTION TO INSTALL ARCH LINUX BASE , LINUX KERNEL , LINUX FIRMWARE AND OTHER NEEDED PACKAGES .
 
-Ensure Network Interface is Listed And Enabled :
+TO ENSURE THAT NETWORK INTERFACE IS LISTED AND ENABLED :
 
 ```bash
 ip link
 ```
 
-Above Command Output Will Be Something Like This :
+ABOVE COMMAND OUTPUT WILL BE SOMETHING LIKE THIS :
 
 ```bash
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
@@ -90,27 +91,27 @@ Above Command Output Will Be Something Like This :
 		link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff permaddr 00:00:00:00:00:00
 ```
 
-+ **lo** is The Loop-Back Interface ( Local Server )
-+ **enp7s0** is The Wired Interface ( Ethernet ) 
-+ **wlan0** is The Wireless Interface ( Wi-Fi ) 
+`lo` IS THE LOOP-BACK INTERFACE ( LOCAL SERVER )
+`enp7s0` IS THE WIRED INTERFACE ( ETHERNET ) 
+`wlan0` IS THE WIRELESS INTERFACE ( WI-FI ) 
 
-For Wireless And WWAN, Make Sure The Card is Not Blocked :
+FOR `WIRELESS AND WWAN` , MAKE SURE THE CARD IS NOT BLOCKED :
 
 ```bash
 rfkill
 ```
 
-If The Card is Blocked, Unblock Using :
+IF THE CARD IS BLOCKED , UNBLOCK USING :
 
 ```bash
 rfkill unblock all
 ```
 
-### Wired Connection : 
+### Wired Connection 
 
-> **Note :** Wired Connection is Pre-Configured And Enabled By Default.
+> **NOTE : WIRED CONNECTION IS PRE-CONFIGURED AND ENABLED BY DEFAULT .**
 
-In Case, If The Wired Connection is Not Enabled, You Can Enable Connection Using :
+IN CASE , IF THE WIRED CONNECTION IS NOT ENABLED , YOU CAN ENABLE CONNECTION USING :
 
 ```bash
 systemctl start dhcpcd@enp7s0
@@ -118,29 +119,29 @@ systemctl start dhcpcd@enp7s0
 
 ### Wireless Connection - ( Recommended iwd ) :
 
-If You Have Laptop Or Wireless Adapter, You Can Connect To Wireless Access Point Using **iwctl** Command From **iwd**.
+IF YOU HAVE LAPTOP OR WIRELESS ADAPTER , YOU CAN CONNECT TO WIRELESS ACCESS POINT USING `iwctl` COMMAND FROM `iwd` .
 
-> **Note : iwd** is Enabled By Default.
+> **Note : `iwd` is Enabled By Default .**
 
-In Case, If This is Not Enabled.
+IN CASE , IF THIS IS NOT ENABLED , YOU CAN ENABLE IT USING :
 
 ```bash
 systemctl enable iwd
 ```
 
-Scan For Wi-Fi :
+SCAN FOR NETWORK :
 
 ```bash
 iwctl station wlan0 scan
 ```
 
-Get The List Of Scanned Wi-Fi :
+GET THE LIST OF SCANNED NETWORK :
 
 ```bash
 iwctl station wlan0 get-networks
 ```
 
-Connect To Your Visible Wi-Fi :
+CONNECT TO YOUR VISIBLE NETWORK :
 
 ```bash
 iwctl -P "PASSPHRASE" station wlan0 connect "NETWORK-NAME"
@@ -148,47 +149,47 @@ iwctl -P "PASSPHRASE" station wlan0 connect "NETWORK-NAME"
 
 <h3 align=center>OR</h3>
 
-Connect To Your Hidden Wi-Fi :    
+CONNECT TO YOUR HIDDEN NETWORK :    
 
 ```bash
 iwctl -P "PASSPHRASE" station wlan0 connect-hidden "NETWORK-NAME"
 ```
 
-Ping A Website To Make Sure We Are Online :
+PING A WEBSITE TO MAKE SURE WE ARE ONLINE :
 
 ```bash
 ping -c 3 1.1.1.1
 ``` 
 
-If You Receive Error Like Unknown Host Or Network is Not Available, Means You Are Not Online Yet. Review Your Network Configuration And Redo The Above Steps.
+IF YOU RECEIVE ERROR LIKE `UNKNOWN HOST` OR `NETWORK IS NOT AVAILABLE` , MEANS YOU ARE NOT ONLINE YET . REVIEW YOUR NETWORK CONFIGURATION AND REDO THE ABOVE STEPS .
 
 ### Wireless Connection - ( wpa_supplicant ) :
 
-If You Have Laptop Or Wireless Adapter, You Can Connect To Wireless Access Point Using **wpa_supplicant.**
+IF YOU HAVE LAPTOP OR WIRELESS ADAPTER , YOU CAN CONNECT TO WIRELESS ACCESS POINT USING `wpa_supplicant` .
 
-> **Note : wpa_supplicant** is Enabled By Default.
+> **NOTE : `WPA_SUPPLICANT` IS ENABLED BY DEFAULT .**
 
-In Case, If You Receive Error. Enable Interface Using :
+IN CASE , IF YOU RECEIVE ERROR , ENABLE INTERFACE USING :
 
 ```bash
 ifup wlan0
 ```
 
-Get The List Of Scanned Wi-Fi :
+GET THE LIST OF SCANNED NETWORK :
 
 ```bash
 iwlist wlan0 scan | grep ESSID
 ```
 
-#### Connect To A Visible Wi-Fi :
+#### Connect To A Visible Network :
 
-Create wpa_supplicant.conf Using One Line Command :
+CREATE `wpa_supplicant.conf` USING ONE LINE COMMAND :
 
 ```bash
 wpa_passphrase "NETWORK-NAME" "PASSPHRASE" | tee /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
-Connect To Your Wi-Fi :
+CONNECT TO YOUR NETWORK :
 
 ```bash
 wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
@@ -196,15 +197,15 @@ wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 
 <h3 align=center>OR</h3>
 
-#### Connect To A Hidden Wi-Fi : 
+#### Connect To A Hidden Network : 
 
-Create & Open wpa_supplicant.conf :
+CREATE & OPEN `wpa_supplicant.conf` :
 
 ```bash
 nano /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
-Add This Line In Configuration File :
+ADD THIS LINE IN CONFIGURATION FILE :
 
 ```bash
 network={
@@ -214,7 +215,7 @@ network={
 }
 ```
 
-Connect To Your Wi-Fi :
+CONNECT TO YOUR NETWORK :
 
 ```bash
 wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
@@ -222,15 +223,15 @@ wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 
 <h3 align=center>OR</h3>
 
-#### Connect To A In-Secure Wi-Fi :
+#### Connect To A In-Secure Network :
 
-Create & Open wpa_supplicant.conf :
+CREATE & OPEN `wpa_supplicant.conf` :
 
 ```bash
 nano /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
-Add This Line In Configuration File :
+ADD THIS LINE IN CONFIGURATION FILE :
 
 ```bash
 network={
@@ -240,7 +241,7 @@ network={
 }
 ```
 
-Connect To Your Wi-Fi :
+CONNECT TO YOUR NETWORK :
 
 ```bash
 wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
@@ -248,15 +249,15 @@ wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 
 <h3 align=center>OR</h3>
 
-##### Connect To A Wi-FI Via WEP-Authentication Mode :
+##### Connect To A Network Via WEP-Authentication Mode :
 
-Create & Open wpa_supplicant.conf :
+CREATE & OPEN `wpa_supplicant.conf` :
 
 ```bash
 nano /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
-Add This Line In Configuration File :
+ADD THIS LINE IN CONFIGURATION FILE :
 
 ```bash
 network={
@@ -267,29 +268,29 @@ network={
 }
 ```
 
-Connect To Your Wi-Fi :
+CONNECT TO YOUR NETWORK :
 
 ```bash
 wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 ```
 
-Ping A Website To Make Sure We Are Online :
+PING A WEBSITE TO MAKE SURE WE ARE ONLINE :
 
 ```bash
 ping -c 3 1.1.1.1
 ``` 
 
-If You Receive Error Like Unknown Host Or Network is Not Available, Means You Are Not Online Yet. Review Your Network Configuration And Redo The Steps Above.
+IF YOU RECEIVE ERROR LIKE `UNKNOWN HOST` OR `NETWORK IS NOT AVAILABLE` , MEANS YOU ARE NOT ONLINE YET . REVIEW YOUR NETWORK CONFIGURATION AND REDO THE ABOVE STEPS .
 
-## Update The Device Clock :
+## Update The System Clock :
 
-To Ensure That Clock is Accurate :
+TO ENSURE THAT CLOCK IS ACCURATE :
 
 ```bash
 timedatectl set-ntp true
 ```
 
-To Check The Service Status :
+TO CHECK THE SERVICE STATUS :
 
 ```bash
 timedatectl status
@@ -297,17 +298,17 @@ timedatectl status
 
 ## Partition The Disks :
 
-When The Disks Are Recognized By The Live Environment, Disks Are Assigned To A Block Device Such As **/dev/sda, /dev/nvme0n1** Or **/dev/mmcblk0.** 
+WHEN THE DISKS ARE RECOGNIZED BY THE LIVE ENVIRONMENT , DISKS ARE ASSIGNED TO A BLOCK DEVICE SUCH AS `/dev/sda` , `/dev/nvme0n1` OR `/dev/mmcblk0` . 
 
-To Identify These Devices :
+TO IDENTIFY THESE DEVICES :
 
 ```bash
 lsblk
 ```
 
-> **Note :** Results Ending In **rom, loop** Or **airoot** May Be Ignored.
+> **NOTE : RESULTS ENDING IN `rom` , `loop` OR `airoot` MAY BE IGNORED .**
 
-Let’s Clean Our Drive To Create New Partitions Table For Our Installation. In This Guide, We Will Use **/dev/sda** As Our Installation Disk.
+LET’S CLEAN OUR DRIVE TO CREATE NEW PARTITIONS TABLE FOR OUR INSTALLATION . IN THIS GUIDE , WE WILL USE `/DEV/SDA` AS OUR INSTALLATION DISK .
 
 ```bash
 fdisk /dev/sda
