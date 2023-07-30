@@ -97,101 +97,101 @@
 > **<sub>`𝚎𝚗𝚙𝟽𝚜𝟶` 𝙸𝚂 𝚃𝙷𝙴 𝚆𝙸𝚁𝙴𝙳 𝙸𝙽𝚃𝙴𝚁𝙵𝙰𝙲𝙴 ( 𝙴𝚃𝙷𝙴𝚁𝙽𝙴𝚃 )</sub>**<br>
 > **<sub>`𝚠𝚕𝚊𝚗𝟶` 𝙸𝚂 𝚃𝙷𝙴 𝚆𝙸𝚁𝙴𝙻𝙴𝚂𝚂 𝙸𝙽𝚃𝙴𝚁𝙵𝙰𝙲𝙴 ( 𝚆𝙸-𝙵𝙸 )</sub>**
 
-FOR `WIRELESS AND WWAN` , MAKE SURE THE CARD IS NOT BLOCKED :
+**<sub>𝙵𝙾𝚁 `𝚆𝙸𝚁𝙴𝙻𝙴𝚂𝚂 𝙰𝙽𝙳 𝚆𝚆𝙰𝙽` , 𝙼𝙰𝙺𝙴 𝚂𝚄𝚁𝙴 𝚃𝙷𝙴 𝙲𝙰𝚁𝙳 𝙸𝚂 𝙽𝙾𝚃 𝙱𝙻𝙾𝙲𝙺𝙴𝙳 :</sub>**
 
 ```bash
-rfkill
+𝚛𝚏𝚔𝚒𝚕𝚕
 ```
 
-IF THE CARD IS BLOCKED , UNBLOCK USING :
+**<sub>𝙸𝙵 𝚃𝙷𝙴 𝙲𝙰𝚁𝙳 𝙸𝚂 𝙱𝙻𝙾𝙲𝙺𝙴𝙳 , 𝚄𝙽𝙱𝙻𝙾𝙲𝙺 𝚄𝚂𝙸𝙽𝙶 :</sub>**
 
 ```bash
-rfkill unblock all
+𝚛𝚏𝚔𝚒𝚕𝚕 𝚞𝚗𝚋𝚕𝚘𝚌𝚔 𝚊𝚕𝚕
 ```
 
-### Wired Connection 
+### 𝖂𝖎𝖗𝖊𝖉 𝕮𝖔𝖓𝖓𝖊𝖈𝖙𝖎𝖔𝖓
 
-> **NOTE : WIRED CONNECTION IS PRE-CONFIGURED AND ENABLED BY DEFAULT .**
+> **<sub>𝙽𝙾𝚃𝙴 : 𝚆𝙸𝚁𝙴𝙳 𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙸𝙾𝙽 𝙸𝚂 𝙿𝚁𝙴-𝙲𝙾𝙽𝙵𝙸𝙶𝚄𝚁𝙴𝙳 𝙰𝙽𝙳 𝙴𝙽𝙰𝙱𝙻𝙴𝙳 𝙱𝚈 𝙳𝙴𝙵𝙰𝚄𝙻𝚃 .</sub>**
 
-IN CASE , IF THE WIRED CONNECTION IS NOT ENABLED , YOU CAN ENABLE CONNECTION USING :
+**<sub>𝙸𝙽 𝙲𝙰𝚂𝙴 , 𝙸𝙵 𝚃𝙷𝙴 𝚆𝙸𝚁𝙴𝙳 𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙸𝙾𝙽 𝙸𝚂 𝙽𝙾𝚃 𝙴𝙽𝙰𝙱𝙻𝙴𝙳 , 𝚈𝙾𝚄 𝙲𝙰𝙽 𝙴𝙽𝙰𝙱𝙻𝙴 𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙸𝙾𝙽 𝚄𝚂𝙸𝙽𝙶 :</sub>**
 
 ```bash
-systemctl start dhcpcd@enp7s0
+𝚜𝚢𝚜𝚝𝚎𝚖𝚌𝚝𝚕 𝚜𝚝𝚊𝚛𝚝 𝚍𝚑𝚌𝚙𝚌𝚍@𝚎𝚗𝚙𝟽𝚜𝟶
 ```
 
-### Wireless Connection - ( Recommended iwd ) :
+### 𝖂𝖎𝖗𝖊𝖑𝖊𝖘𝖘 𝕮𝖔𝖓𝖓𝖊𝖈𝖙𝖎𝖔𝖓 - ( 𝕽𝖊𝖈𝖔𝖒𝖒𝖊𝖓𝖉𝖊𝖉 𝖎𝖜𝖉 ) :
 
-IF YOU HAVE LAPTOP OR WIRELESS ADAPTER , YOU CAN CONNECT TO WIRELESS ACCESS POINT USING `iwctl` COMMAND FROM `iwd` .
+**<sub>𝙸𝙵 𝚈𝙾𝚄 𝙷𝙰𝚅𝙴 𝙻𝙰𝙿𝚃𝙾𝙿 𝙾𝚁 𝚆𝙸𝚁𝙴𝙻𝙴𝚂𝚂 𝙰𝙳𝙰𝙿𝚃𝙴𝚁 , 𝚈𝙾𝚄 𝙲𝙰𝙽 𝙲𝙾𝙽𝙽𝙴𝙲𝚃 𝚃𝙾 𝚆𝙸𝚁𝙴𝙻𝙴𝚂𝚂 𝙰𝙲𝙲𝙴𝚂𝚂 𝙿𝙾𝙸𝙽𝚃 𝚄𝚂𝙸𝙽𝙶 `𝚒𝚠𝚌𝚝𝚕` 𝙲𝙾𝙼𝙼𝙰𝙽𝙳 𝙵𝚁𝙾𝙼 `𝚒𝚠𝚍` .</sub>**
 
-> **Note : `iwd` is Enabled By Default .**
+> **𝙽𝚘𝚝𝚎 : `𝚒𝚠𝚍` 𝚒𝚜 𝙴𝚗𝚊𝚋𝚕𝚎𝚍 𝙱𝚢 𝙳𝚎𝚏𝚊𝚞𝚕𝚝 .**
 
-IN CASE , IF THIS IS NOT ENABLED , YOU CAN ENABLE IT USING :
+**<sub>𝙸𝙽 𝙲𝙰𝚂𝙴 , 𝙸𝙵 𝚃𝙷𝙸𝚂 𝙸𝚂 𝙽𝙾𝚃 𝙴𝙽𝙰𝙱𝙻𝙴𝙳 , 𝚈𝙾𝚄 𝙲𝙰𝙽 𝙴𝙽𝙰𝙱𝙻𝙴 𝙸𝚃 𝚄𝚂𝙸𝙽𝙶 :</sub>**
 
 ```bash
-systemctl enable iwd
+𝚜𝚢𝚜𝚝𝚎𝚖𝚌𝚝𝚕 𝚎𝚗𝚊𝚋𝚕𝚎 𝚒𝚠𝚍
 ```
 
-SCAN FOR NETWORK :
+**<sub>𝚂𝙲𝙰𝙽 𝙵𝙾𝚁 𝙽𝙴𝚃𝚆𝙾𝚁𝙺 :</sub>**
 
 ```bash
-iwctl station wlan0 scan
+𝚒𝚠𝚌𝚝𝚕 𝚜𝚝𝚊𝚝𝚒𝚘𝚗 𝚠𝚕𝚊𝚗𝟶 𝚜𝚌𝚊𝚗
 ```
 
-GET THE LIST OF SCANNED NETWORK :
+**<sub>𝙶𝙴𝚃 𝚃𝙷𝙴 𝙻𝙸𝚂𝚃 𝙾𝙵 𝚂𝙲𝙰𝙽𝙽𝙴𝙳 𝙽𝙴𝚃𝚆𝙾𝚁𝙺 :</sub>**
 
 ```bash
-iwctl station wlan0 get-networks
+𝚒𝚠𝚌𝚝𝚕 𝚜𝚝𝚊𝚝𝚒𝚘𝚗 𝚠𝚕𝚊𝚗𝟶 𝚐𝚎𝚝-𝚗𝚎𝚝𝚠𝚘𝚛𝚔𝚜
 ```
 
-CONNECT TO YOUR VISIBLE NETWORK :
+**<sub>𝙲𝙾𝙽𝙽𝙴𝙲𝚃 𝚃𝙾 𝚈𝙾𝚄𝚁 𝚅𝙸𝚂𝙸𝙱𝙻𝙴 𝙽𝙴𝚃𝚆𝙾𝚁𝙺 :</sub>**
 
 ```bash
-iwctl -P "PASSPHRASE" station wlan0 connect "NETWORK-NAME"
+𝚒𝚠𝚌𝚝𝚕 -𝙿 "𝙿𝙰𝚂𝚂𝙿𝙷𝚁𝙰𝚂𝙴" 𝚜𝚝𝚊𝚝𝚒𝚘𝚗 𝚠𝚕𝚊𝚗𝟶 𝚌𝚘𝚗𝚗𝚎𝚌𝚝 "𝙽𝙴𝚃𝚆𝙾𝚁𝙺-𝙽𝙰𝙼𝙴"
 ```
 
-<h3 align=center>OR</h3>
+<h3 align=center>O̳̿͟͞R̳̿͟͞</h3>
 
-CONNECT TO YOUR HIDDEN NETWORK :    
+**<sub>𝙲𝙾𝙽𝙽𝙴𝙲𝚃 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙷𝙸𝙳𝙳𝙴𝙽 𝙽𝙴𝚃𝚆𝙾𝚁𝙺 :</sub>**
 
 ```bash
-iwctl -P "PASSPHRASE" station wlan0 connect-hidden "NETWORK-NAME"
+𝚒𝚠𝚌𝚝𝚕 -𝙿 "𝙿𝙰𝚂𝚂𝙿𝙷𝚁𝙰𝚂𝙴" 𝚜𝚝𝚊𝚝𝚒𝚘𝚗 𝚠𝚕𝚊𝚗𝟶 𝚌𝚘𝚗𝚗𝚎𝚌𝚝-𝚑𝚒𝚍𝚍𝚎𝚗 "𝙽𝙴𝚃𝚆𝙾𝚁𝙺-𝙽𝙰𝙼𝙴"
 ```
 
-PING A WEBSITE TO MAKE SURE WE ARE ONLINE :
+**<sub>𝙿𝙸𝙽𝙶 𝙰 𝚆𝙴𝙱𝚂𝙸𝚃𝙴 𝚃𝙾 𝙼𝙰𝙺𝙴 𝚂𝚄𝚁𝙴 𝚆𝙴 𝙰𝚁𝙴 𝙾𝙽𝙻𝙸𝙽𝙴 :</sub>**
 
 ```bash
-ping -c 3 1.1.1.1
+𝚙𝚒𝚗𝚐 -𝚌 𝟹 𝟷.𝟷.𝟷.𝟷
 ``` 
 
-IF YOU RECEIVE ERROR LIKE `UNKNOWN HOST` OR `NETWORK IS NOT AVAILABLE` , MEANS YOU ARE NOT ONLINE YET . REVIEW YOUR NETWORK CONFIGURATION AND REDO THE ABOVE STEPS .
+**<sub>𝙸𝙵 𝚈𝙾𝚄 𝚁𝙴𝙲𝙴𝙸𝚅𝙴 𝙴𝚁𝚁𝙾𝚁 𝙻𝙸𝙺𝙴 `𝚄𝙽𝙺𝙽𝙾𝚆𝙽 𝙷𝙾𝚂𝚃` 𝙾𝚁 `𝙽𝙴𝚃𝚆𝙾𝚁𝙺 𝙸𝚂 𝙽𝙾𝚃 𝙰𝚅𝙰𝙸𝙻𝙰𝙱𝙻𝙴` , 𝙼𝙴𝙰𝙽𝚂 𝚈𝙾𝚄 𝙰𝚁𝙴 𝙽𝙾𝚃 𝙾𝙽𝙻𝙸𝙽𝙴 𝚈𝙴𝚃 . 𝚁𝙴𝚅𝙸𝙴𝚆 𝚈𝙾𝚄𝚁 𝙽𝙴𝚃𝚆𝙾𝚁𝙺 𝙲𝙾𝙽𝙵𝙸𝙶𝚄𝚁𝙰𝚃𝙸𝙾𝙽 𝙰𝙽𝙳 𝚁𝙴𝙳𝙾 𝚃𝙷𝙴 𝙰𝙱𝙾𝚅𝙴 𝚂𝚃𝙴𝙿𝚂 .</sub>**
 
-### Wireless Connection - ( wpa_supplicant ) :
+### 𝖂𝖎𝖗𝖊𝖑𝖊𝖘𝖘 𝕮𝖔𝖓𝖓𝖊𝖈𝖙𝖎𝖔𝖓 - ( 𝖜𝖕𝖆_𝖘𝖚𝖕𝖕𝖑𝖎𝖈𝖆𝖓𝖙 ) :
 
-IF YOU HAVE LAPTOP OR WIRELESS ADAPTER , YOU CAN CONNECT TO WIRELESS ACCESS POINT USING `wpa_supplicant` .
+**<sub>𝙸𝙵 𝚈𝙾𝚄 𝙷𝙰𝚅𝙴 𝙻𝙰𝙿𝚃𝙾𝙿 𝙾𝚁 𝚆𝙸𝚁𝙴𝙻𝙴𝚂𝚂 𝙰𝙳𝙰𝙿𝚃𝙴𝚁 , 𝚈𝙾𝚄 𝙲𝙰𝙽 𝙲𝙾𝙽𝙽𝙴𝙲𝚃 𝚃𝙾 𝚆𝙸𝚁𝙴𝙻𝙴𝚂𝚂 𝙰𝙲𝙲𝙴𝚂𝚂 𝙿𝙾𝙸𝙽𝚃 𝚄𝚂𝙸𝙽𝙶 `𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝` .</sub>**
 
-> **NOTE : `WPA_SUPPLICANT` IS ENABLED BY DEFAULT .**
+> **<sub>𝙽𝙾𝚃𝙴 : `𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝` 𝙸𝚂 𝙴𝙽𝙰𝙱𝙻𝙴𝙳 𝙱𝚈 𝙳𝙴𝙵𝙰𝚄𝙻𝚃 .**
 
-IN CASE , IF YOU RECEIVE ERROR , ENABLE INTERFACE USING :
-
-```bash
-ifup wlan0
-```
-
-GET THE LIST OF SCANNED NETWORK :
+**<sub>𝙸𝙽 𝙲𝙰𝚂𝙴 , 𝙸𝙵 𝚈𝙾𝚄 𝚁𝙴𝙲𝙴𝙸𝚅𝙴 𝙴𝚁𝚁𝙾𝚁 , 𝚂𝚃𝙰𝚁𝚃 `𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝` 𝚄𝚂𝙸𝙽𝙶 :</sub>**
 
 ```bash
-iwlist wlan0 scan | grep ESSID
+𝚜𝚢𝚜𝚝𝚎𝚖𝚌𝚝𝚕 𝚜𝚝𝚊𝚛𝚝 𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝
 ```
 
-#### Connect To A Visible Network :
-
-CREATE `wpa_supplicant.conf` USING ONE LINE COMMAND :
+**<sub>𝙶𝙴𝚃 𝚃𝙷𝙴 𝙻𝙸𝚂𝚃 𝙾𝙵 𝚂𝙲𝙰𝙽𝙽𝙴𝙳 𝙽𝙴𝚃𝚆𝙾𝚁𝙺 :</sub>**
 
 ```bash
-wpa_passphrase "NETWORK-NAME" "PASSPHRASE" | tee /etc/wpa_supplicant/wpa_supplicant.conf
+𝚒𝚠𝚕𝚒𝚜𝚝 𝚠𝚕𝚊𝚗𝟶 𝚜𝚌𝚊𝚗 | 𝚐𝚛𝚎𝚙 𝙴𝚂𝚂𝙸𝙳
 ```
 
-CONNECT TO YOUR NETWORK :
+#### 𝕮𝖔𝖓𝖓𝖊𝖈𝖙 𝕿𝖔 𝕬 𝖁𝖎𝖘𝖎𝖇𝖑𝖊 𝕹𝖊𝖙𝖜𝖔𝖗𝖐 :
+
+**<sub>𝙲𝚁𝙴𝙰𝚃𝙴 `𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝.𝚌𝚘𝚗𝚏` 𝚄𝚂𝙸𝙽𝙶 𝙾𝙽𝙴 𝙻𝙸𝙽𝙴 𝙲𝙾𝙼𝙼𝙰𝙽𝙳 :</sub>**
+
+```bash
+𝚠𝚙𝚊_𝚙𝚊𝚜𝚜𝚙𝚑𝚛𝚊𝚜𝚎 "𝙽𝙴𝚃𝚆𝙾𝚁𝙺-𝙽𝙰𝙼𝙴" "𝙿𝙰𝚂𝚂𝙿𝙷𝚁𝙰𝚂𝙴" | 𝚝𝚎𝚎 /𝚎𝚝𝚌/𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝/𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝.𝚌𝚘𝚗𝚏
+```
+
+**<sub>𝙲𝙾𝙽𝙽𝙴𝙲𝚃 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙽𝙴𝚃𝚆𝙾𝚁𝙺 :</sub>**
 
 ```bash
 wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
@@ -199,90 +199,90 @@ wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 
 <h3 align=center>OR</h3>
 
-#### Connect To A Hidden Network : 
+#### 𝕮𝖔𝖓𝖓𝖊𝖈𝖙 𝕿𝖔 𝕬 𝕳𝖎𝖉𝖉𝖊𝖓 𝕹𝖊𝖙𝖜𝖔𝖗𝖐 :
 
-CREATE & OPEN `wpa_supplicant.conf` :
+**<sub>𝙲𝚁𝙴𝙰𝚃𝙴 & 𝙾𝙿𝙴𝙽 `𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝.𝚌𝚘𝚗𝚏` :</sub>**
 
 ```bash
-nano /etc/wpa_supplicant/wpa_supplicant.conf
+𝚗𝚊𝚗𝚘 /𝚎𝚝𝚌/𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝/𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝.𝚌𝚘𝚗𝚏
 ```
 
-ADD THIS LINE IN CONFIGURATION FILE :
+**<sub>𝙰𝙳𝙳 𝚃𝙷𝙸𝚂 𝙻𝙸𝙽𝙴 𝙸𝙽 𝙲𝙾𝙽𝙵𝙸𝙶𝚄𝚁𝙰𝚃𝙸𝙾𝙽 𝙵𝙸𝙻𝙴 :</sub>**
 
 ```bash
-network={
-	ssid="NETWORK-NAME"
-    scan_ssid=1
-    psk="PASSPHRASE"
+𝚗𝚎𝚝𝚠𝚘𝚛𝚔={ 	
+	𝚜𝚜𝚒𝚍="𝙽𝙴𝚃𝚆𝙾𝚁𝙺-𝙽𝙰𝙼𝙴"     
+	𝚜𝚌𝚊𝚗_𝚜𝚜𝚒𝚍=𝟷     
+	𝚙𝚜𝚔="𝙿𝙰𝚂𝚂𝙿𝙷𝚁𝙰𝚂𝙴" 
 }
 ```
 
-CONNECT TO YOUR NETWORK :
+**<sub>𝙲𝙾𝙽𝙽𝙴𝙲𝚃 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙽𝙴𝚃𝚆𝙾𝚁𝙺 :</sub>**
 
 ```bash
-wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
+𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝 -𝚌 /𝚎𝚝𝚌/𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝/𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝.𝚌𝚘𝚗𝚏 -𝚒 𝚠𝚕𝚊𝚗𝟶
 ```
 
 <h3 align=center>OR</h3>
 
-#### Connect To A In-Secure Network :
+#### 𝕮𝖔𝖓𝖓𝖊𝖈𝖙 𝕿𝖔 𝕬 𝕴𝖓-𝕾𝖊𝖈𝖚𝖗𝖊 𝕹𝖊𝖙𝖜𝖔𝖗𝖐 :
 
-CREATE & OPEN `wpa_supplicant.conf` :
+**<sub>𝙲𝚁𝙴𝙰𝚃𝙴 & 𝙾𝙿𝙴𝙽 `𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝.𝚌𝚘𝚗𝚏` :</sub>**
 
 ```bash
-nano /etc/wpa_supplicant/wpa_supplicant.conf
+𝚗𝚊𝚗𝚘 /𝚎𝚝𝚌/𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝/𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝.𝚌𝚘𝚗𝚏
 ```
 
-ADD THIS LINE IN CONFIGURATION FILE :
+**<sub>𝙰𝙳𝙳 𝚃𝙷𝙸𝚂 𝙻𝙸𝙽𝙴 𝙸𝙽 𝙲𝙾𝙽𝙵𝙸𝙶𝚄𝚁𝙰𝚃𝙸𝙾𝙽 𝙵𝙸𝙻𝙴 :</sub>**
 
 ```bash
-network={
-	ssid="NETWORK-NAME"
-    key_mgmt=NONE
-    priority=100
+𝚗𝚎𝚝𝚠𝚘𝚛𝚔={ 	
+	𝚜𝚜𝚒𝚍="𝙽𝙴𝚃𝚆𝙾𝚁𝙺-𝙽𝙰𝙼𝙴"     
+	𝚔𝚎𝚢_𝚖𝚐𝚖𝚝=𝙽𝙾𝙽𝙴     
+	𝚙𝚛𝚒𝚘𝚛𝚒𝚝𝚢=𝟷𝟶𝟶 
 }
 ```
 
-CONNECT TO YOUR NETWORK :
+**<sub>𝙲𝙾𝙽𝙽𝙴𝙲𝚃 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙽𝙴𝚃𝚆𝙾𝚁𝙺 :</sub>**
 
 ```bash
-wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
+𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝 -𝚌 /𝚎𝚝𝚌/𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝/𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝.𝚌𝚘𝚗𝚏 -𝚒 𝚠𝚕𝚊𝚗𝟶
 ```
 
 <h3 align=center>OR</h3>
 
-##### Connect To A Network Via WEP-Authentication Mode :
+##### 𝕮𝖔𝖓𝖓𝖊𝖈𝖙 𝕿𝖔 𝕬 𝕹𝖊𝖙𝖜𝖔𝖗𝖐 𝖁𝖎𝖆 𝖂𝕰𝕻-𝕬𝖚𝖙𝖍𝖊𝖓𝖙𝖎𝖈𝖆𝖙𝖎𝖔𝖓 𝕸𝖔𝖉𝖊 :
 
-CREATE & OPEN `wpa_supplicant.conf` :
+**<sub>𝙲𝚁𝙴𝙰𝚃𝙴 & 𝙾𝙿𝙴𝙽 `𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝.𝚌𝚘𝚗𝚏` :</sub>**
 
 ```bash
-nano /etc/wpa_supplicant/wpa_supplicant.conf
+𝚗𝚊𝚗𝚘 /𝚎𝚝𝚌/𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝/𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝.𝚌𝚘𝚗𝚏
 ```
 
-ADD THIS LINE IN CONFIGURATION FILE :
+**<sub>𝙰𝙳𝙳 𝚃𝙷𝙸𝚂 𝙻𝙸𝙽𝙴 𝙸𝙽 𝙲𝙾𝙽𝙵𝙸𝙶𝚄𝚁𝙰𝚃𝙸𝙾𝙽 𝙵𝙸𝙻𝙴 :</sub>**
 
 ```bash
-network={
-	ssid="NETWORK-NAME"
-    key_mgmt=NONE
-    wep_key0="PASSPHRASE"  
-    wep_tx_keyidx=0
+𝚗𝚎𝚝𝚠𝚘𝚛𝚔={ 	
+	𝚜𝚜𝚒𝚍="𝙽𝙴𝚃𝚆𝙾𝚁𝙺-𝙽𝙰𝙼𝙴"     
+	𝚔𝚎𝚢_𝚖𝚐𝚖𝚝=𝙽𝙾𝙽𝙴     
+	𝚠𝚎𝚙_𝚔𝚎𝚢𝟶="𝙿𝙰𝚂𝚂𝙿𝙷𝚁𝙰𝚂𝙴"       
+	𝚠𝚎𝚙_𝚝𝚡_𝚔𝚎𝚢𝚒𝚍𝚡=𝟶 
 }
 ```
 
-CONNECT TO YOUR NETWORK :
+**<sub>𝙲𝙾𝙽𝙽𝙴𝙲𝚃 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙽𝙴𝚃𝚆𝙾𝚁𝙺 :</sub>**
 
 ```bash
-wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
+𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝 -𝚌 /𝚎𝚝𝚌/𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝/𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝.𝚌𝚘𝚗𝚏 -𝚒 𝚠𝚕𝚊𝚗𝟶
 ```
 
-PING A WEBSITE TO MAKE SURE WE ARE ONLINE :
+**<sub>𝙿𝙸𝙽𝙶 𝙰 𝚆𝙴𝙱𝚂𝙸𝚃𝙴 𝚃𝙾 𝙼𝙰𝙺𝙴 𝚂𝚄𝚁𝙴 𝚆𝙴 𝙰𝚁𝙴 𝙾𝙽𝙻𝙸𝙽𝙴 :</sub>**
 
 ```bash
-ping -c 3 1.1.1.1
+𝚙𝚒𝚗𝚐 -𝚌 𝟹 𝟷.𝟷.𝟷.𝟷
 ``` 
 
-IF YOU RECEIVE ERROR LIKE `UNKNOWN HOST` OR `NETWORK IS NOT AVAILABLE` , MEANS YOU ARE NOT ONLINE YET . REVIEW YOUR NETWORK CONFIGURATION AND REDO THE ABOVE STEPS .
+**<sub>𝙸𝙵 𝚈𝙾𝚄 𝚁𝙴𝙲𝙴𝙸𝚅𝙴 𝙴𝚁𝚁𝙾𝚁 𝙻𝙸𝙺𝙴 `𝚄𝙽𝙺𝙽𝙾𝚆𝙽 𝙷𝙾𝚂𝚃` 𝙾𝚁 `𝙽𝙴𝚃𝚆𝙾𝚁𝙺 𝙸𝚂 𝙽𝙾𝚃 𝙰𝚅𝙰𝙸𝙻𝙰𝙱𝙻𝙴` , 𝙼𝙴𝙰𝙽𝚂 𝚈𝙾𝚄 𝙰𝚁𝙴 𝙽𝙾𝚃 𝙾𝙽𝙻𝙸𝙽𝙴 𝚈𝙴𝚃 . 𝚁𝙴𝚅𝙸𝙴𝚆 𝚈𝙾𝚄𝚁 𝙽𝙴𝚃𝚆𝙾𝚁𝙺 𝙲𝙾𝙽𝙵𝙸𝙶𝚄𝚁𝙰𝚃𝙸𝙾𝙽 𝙰𝙽𝙳 𝚁𝙴𝙳𝙾 𝚃𝙷𝙴 𝙰𝙱𝙾𝚅𝙴 𝚂𝚃𝙴𝙿𝚂 .</sub>**
 
 ## Update The System Clock :
 
