@@ -113,17 +113,17 @@ rfkill unblock all
 
 > **<sub>𝙽𝙾𝚃𝙴 : 𝚆𝙸𝚁𝙴𝙳 𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙸𝙾𝙽 𝙸𝚂 𝙿𝚁𝙴-𝙲𝙾𝙽𝙵𝙸𝙶𝚄𝚁𝙴𝙳 𝙰𝙽𝙳 𝙴𝙽𝙰𝙱𝙻𝙴𝙳 𝙱𝚈 𝙳𝙴𝙵𝙰𝚄𝙻𝚃 .</sub>**
 
-**<sub>𝙸𝙽 𝙲𝙰𝚂𝙴 , 𝙸𝙵 𝚃𝙷𝙴 𝚆𝙸𝚁𝙴𝙳 𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙸𝙾𝙽 𝙸𝚂 𝙽𝙾𝚃 𝙴𝙽𝙰𝙱𝙻𝙴𝙳 , 𝚈𝙾𝚄 𝙲𝙰𝙽 𝙴𝙽𝙰𝙱𝙻𝙴 𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙸𝙾𝙽 𝚄𝚂𝙸𝙽𝙶 :</sub>**
+**<sub>𝙸𝙽 𝙲𝙰𝚂𝙴 , 𝙸𝙵 𝚃𝙷𝙴 𝚆𝙸𝚁𝙴𝙳 𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙸𝙾𝙽 𝙸𝚂 𝙽𝙾𝚃 𝚆𝙾𝚁𝙺𝙸𝙽𝙶 , 𝚈𝙾𝚄 𝙲𝙰𝙽 𝙴𝙽𝙰𝙱𝙻𝙴 𝚃𝙷𝙴 𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙸𝙾𝙽 𝚄𝚂𝙸𝙽𝙶 :</sub>**
 
 ```bash
 systemctl start dhcpcd@enp7s0
 ```
 
-### 𝖂𝖎𝖗𝖊𝖑𝖊𝖘𝖘 𝕮𝖔𝖓𝖓𝖊𝖈𝖙𝖎𝖔𝖓 - ( 𝕽𝖊𝖈𝖔𝖒𝖒𝖊𝖓𝖉𝖊𝖉 𝖎𝖜𝖉 ) :
+### 𝖂𝖎𝖗𝖊𝖑𝖊𝖘𝖘 𝕮𝖔𝖓𝖓𝖊𝖈𝖙𝖎𝖔𝖓 - ( 𝕽𝖊𝖈𝖔𝖒𝖒𝖊𝖓𝖉𝖊𝖉 𝖎𝖜𝖉 ) 
 
-**<sub>𝙸𝙵 𝚈𝙾𝚄 𝙷𝙰𝚅𝙴 𝙻𝙰𝙿𝚃𝙾𝙿 𝙾𝚁 𝚆𝙸𝚁𝙴𝙻𝙴𝚂𝚂 𝙰𝙳𝙰𝙿𝚃𝙴𝚁 , 𝚈𝙾𝚄 𝙲𝙰𝙽 𝙲𝙾𝙽𝙽𝙴𝙲𝚃 𝚃𝙾 𝚆𝙸𝚁𝙴𝙻𝙴𝚂𝚂 𝙰𝙲𝙲𝙴𝚂𝚂 𝙿𝙾𝙸𝙽𝚃 𝚄𝚂𝙸𝙽𝙶 `𝚒𝚠𝚌𝚝𝚕` 𝙲𝙾𝙼𝙼𝙰𝙽𝙳 𝙵𝚁𝙾𝙼 `𝚒𝚠𝚍` .</sub>**
+**<sub>𝙸𝙵 𝚈𝙾𝚄 𝙷𝙰𝚅𝙴 𝙻𝙰𝙿𝚃𝙾𝙿 𝙾𝚁 𝚆𝙸𝚁𝙴𝙻𝙴𝚂𝚂 𝙰𝙳𝙰𝙿𝚃𝙴𝚁 , 𝚈𝙾𝚄 𝙲𝙰𝙽 𝙲𝙾𝙽𝙽𝙴𝙲𝚃 𝚃𝙾 𝚆𝙸𝚁𝙴𝙻𝙴𝚂𝚂 𝙰𝙲𝙲𝙴𝚂𝚂 𝙿𝙾𝙸𝙽𝚃 𝚄𝚂𝙸𝙽𝙶 `𝙸𝚆𝙲𝚃𝙻` 𝙲𝙾𝙼𝙼𝙰𝙽𝙳 𝙵𝚁𝙾𝙼 `𝙸𝚆𝙳` .</sub>**
 
-> **<sub>𝙽𝙾𝚃𝙴 : `𝚒𝚠𝚍` 𝙸𝚂 𝙴𝙽𝙰𝙱𝙻𝙴𝙳 𝙱𝚈 𝙳𝙴𝙵𝙰𝚄𝙻𝚃 .</sub>**
+> **<sub>𝙽𝙾𝚃𝙴 : `𝙸𝚆𝙳` 𝙸𝚂 𝙴𝙽𝙰𝙱𝙻𝙴𝙳 𝙱𝚈 𝙳𝙴𝙵𝙰𝚄𝙻𝚃 .</sub>**
 
 **<sub>𝙸𝙽 𝙲𝙰𝚂𝙴 , 𝙸𝙵 𝚃𝙷𝙸𝚂 𝙸𝚂 𝙽𝙾𝚃 𝙴𝙽𝙰𝙱𝙻𝙴𝙳 , 𝚈𝙾𝚄 𝙲𝙰𝙽 𝙴𝙽𝙰𝙱𝙻𝙴 𝙸𝚃 𝚄𝚂𝙸𝙽𝙶 :</sub>**
 
@@ -165,13 +165,13 @@ ping -c 3 1.1.1.1
 
 **<sub>𝙸𝙵 𝚈𝙾𝚄 𝚁𝙴𝙲𝙴𝙸𝚅𝙴 𝙴𝚁𝚁𝙾𝚁 𝙻𝙸𝙺𝙴 `𝚄𝙽𝙺𝙽𝙾𝚆𝙽 𝙷𝙾𝚂𝚃` 𝙾𝚁 `𝙽𝙴𝚃𝚆𝙾𝚁𝙺 𝙸𝚂 𝙽𝙾𝚃 𝙰𝚅𝙰𝙸𝙻𝙰𝙱𝙻𝙴` , 𝙼𝙴𝙰𝙽𝚂 𝚈𝙾𝚄 𝙰𝚁𝙴 𝙽𝙾𝚃 𝙾𝙽𝙻𝙸𝙽𝙴 𝚈𝙴𝚃 . 𝚁𝙴𝚅𝙸𝙴𝚆 𝚈𝙾𝚄𝚁 𝙽𝙴𝚃𝚆𝙾𝚁𝙺 𝙲𝙾𝙽𝙵𝙸𝙶𝚄𝚁𝙰𝚃𝙸𝙾𝙽 𝙰𝙽𝙳 𝚁𝙴𝙳𝙾 𝚃𝙷𝙴 𝙰𝙱𝙾𝚅𝙴 𝚂𝚃𝙴𝙿𝚂 .</sub>**
 
-### 𝖂𝖎𝖗𝖊𝖑𝖊𝖘𝖘 𝕮𝖔𝖓𝖓𝖊𝖈𝖙𝖎𝖔𝖓 - ( 𝖜𝖕𝖆_𝖘𝖚𝖕𝖕𝖑𝖎𝖈𝖆𝖓𝖙 ) :
+### 𝖂𝖎𝖗𝖊𝖑𝖊𝖘𝖘 𝕮𝖔𝖓𝖓𝖊𝖈𝖙𝖎𝖔𝖓 - ( 𝖜𝖕𝖆_𝖘𝖚𝖕𝖕𝖑𝖎𝖈𝖆𝖓𝖙 ) 
 
-**<sub>𝙸𝙵 𝚈𝙾𝚄 𝙷𝙰𝚅𝙴 𝙻𝙰𝙿𝚃𝙾𝙿 𝙾𝚁 𝚆𝙸𝚁𝙴𝙻𝙴𝚂𝚂 𝙰𝙳𝙰𝙿𝚃𝙴𝚁 , 𝚈𝙾𝚄 𝙲𝙰𝙽 𝙲𝙾𝙽𝙽𝙴𝙲𝚃 𝚃𝙾 𝚆𝙸𝚁𝙴𝙻𝙴𝚂𝚂 𝙰𝙲𝙲𝙴𝚂𝚂 𝙿𝙾𝙸𝙽𝚃 𝚄𝚂𝙸𝙽𝙶 `𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝` .</sub>**
+**<sub>𝙸𝙵 𝚈𝙾𝚄 𝙷𝙰𝚅𝙴 𝙻𝙰𝙿𝚃𝙾𝙿 𝙾𝚁 𝚆𝙸𝚁𝙴𝙻𝙴𝚂𝚂 𝙰𝙳𝙰𝙿𝚃𝙴𝚁 , 𝚈𝙾𝚄 𝙲𝙰𝙽 𝙲𝙾𝙽𝙽𝙴𝙲𝚃 𝚃𝙾 𝚆𝙸𝚁𝙴𝙻𝙴𝚂𝚂 𝙰𝙲𝙲𝙴𝚂𝚂 𝙿𝙾𝙸𝙽𝚃 𝚄𝚂𝙸𝙽𝙶 `𝚆𝙿𝙰_𝚂𝚄𝙿𝙿𝙻𝙸𝙲𝙰𝙽𝚃` .</sub>**
 
-> **<sub>𝙽𝙾𝚃𝙴 : `𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝` 𝙸𝚂 𝙴𝙽𝙰𝙱𝙻𝙴𝙳 𝙱𝚈 𝙳𝙴𝙵𝙰𝚄𝙻𝚃 .**
+> **<sub>𝙽𝙾𝚃𝙴 : `𝚆𝙿𝙰_𝚂𝚄𝙿𝙿𝙻𝙸𝙲𝙰𝙽𝚃` 𝙸𝚂 𝙴𝙽𝙰𝙱𝙻𝙴𝙳 𝙱𝚈 𝙳𝙴𝙵𝙰𝚄𝙻𝚃 .**
 
-**<sub>𝙸𝙽 𝙲𝙰𝚂𝙴 , 𝙸𝙵 𝚈𝙾𝚄 𝚁𝙴𝙲𝙴𝙸𝚅𝙴 𝙴𝚁𝚁𝙾𝚁 , 𝚂𝚃𝙰𝚁𝚃 `𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝` 𝚄𝚂𝙸𝙽𝙶 :</sub>**
+**<sub>𝙸𝙽 𝙲𝙰𝚂𝙴 , 𝙸𝙵 𝚈𝙾𝚄 𝚁𝙴𝙲𝙴𝙸𝚅𝙴 𝙴𝚁𝚁𝙾𝚁 , 𝚂𝚃𝙰𝚁𝚃 `𝚆𝙿𝙰_𝚂𝚄𝙿𝙿𝙻𝙸𝙲𝙰𝙽𝚃` 𝚄𝚂𝙸𝙽𝙶 :</sub>**
 
 ```bash
 systemctl start wpa_supplicant
@@ -183,9 +183,9 @@ systemctl start wpa_supplicant
 iwlist wlan0 scan | grep ESSID
 ```
 
-#### 𝕮𝖔𝖓𝖓𝖊𝖈𝖙 𝕿𝖔 𝕬 𝖁𝖎𝖘𝖎𝖇𝖑𝖊 𝕹𝖊𝖙𝖜𝖔𝖗𝖐 :
+#### 𝕮𝖔𝖓𝖓𝖊𝖈𝖙 𝕿𝖔 𝕬 𝖁𝖎𝖘𝖎𝖇𝖑𝖊 𝕹𝖊𝖙𝖜𝖔𝖗𝖐 
 
-**<sub>𝙲𝚁𝙴𝙰𝚃𝙴 `𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝.𝚌𝚘𝚗𝚏` 𝚄𝚂𝙸𝙽𝙶 𝙾𝙽𝙴 𝙻𝙸𝙽𝙴 𝙲𝙾𝙼𝙼𝙰𝙽𝙳 :</sub>**
+**<sub>𝙲𝚁𝙴𝙰𝚃𝙴 `𝚆𝙿𝙰_𝚂𝚄𝙿𝙿𝙻𝙸𝙲𝙰𝙽𝚃.𝙲𝙾𝙽𝙵` 𝚄𝚂𝙸𝙽𝙶 𝙾𝙽𝙴 𝙻𝙸𝙽𝙴 𝙲𝙾𝙼𝙼𝙰𝙽𝙳 :</sub>**
 
 ```bash
 wpa_passphrase "NETWORK-NAME" "PASSPHRASE" | tee /etc/wpa_supplicant/wpa_supplicant.conf
@@ -197,11 +197,11 @@ wpa_passphrase "NETWORK-NAME" "PASSPHRASE" | tee /etc/wpa_supplicant/wpa_supplic
 wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 ```
 
-<h3 align=center>OR</h3>
+<h3 align=center>O̳̿͟͞R̳̿͟͞</h3>
 
-#### 𝕮𝖔𝖓𝖓𝖊𝖈𝖙 𝕿𝖔 𝕬 𝕳𝖎𝖉𝖉𝖊𝖓 𝕹𝖊𝖙𝖜𝖔𝖗𝖐 :
+#### 𝕮𝖔𝖓𝖓𝖊𝖈𝖙 𝕿𝖔 𝕬 𝕳𝖎𝖉𝖉𝖊𝖓 𝕹𝖊𝖙𝖜𝖔𝖗𝖐 
 
-**<sub>𝙲𝚁𝙴𝙰𝚃𝙴 & 𝙾𝙿𝙴𝙽 `𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝.𝚌𝚘𝚗𝚏` :</sub>**
+**<sub>𝙲𝚁𝙴𝙰𝚃𝙴 & 𝙾𝙿𝙴𝙽 `𝚆𝙿𝙰_𝚂𝚄𝙿𝙿𝙻𝙸𝙲𝙰𝙽𝚃.𝙲𝙾𝙽𝙵` :</sub>**
 
 ```bash
 nano /etc/wpa_supplicant/wpa_supplicant.conf
@@ -223,11 +223,11 @@ network={
 wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 ```
 
-<h3 align=center>OR</h3>
+<h3 align=center>O̳̿͟͞R̳̿͟͞</h3>
 
-#### 𝕮𝖔𝖓𝖓𝖊𝖈𝖙 𝕿𝖔 𝕬 𝕴𝖓-𝕾𝖊𝖈𝖚𝖗𝖊 𝕹𝖊𝖙𝖜𝖔𝖗𝖐 :
+#### 𝕮𝖔𝖓𝖓𝖊𝖈𝖙 𝕿𝖔 𝕬 𝕴𝖓-𝕾𝖊𝖈𝖚𝖗𝖊 𝕹𝖊𝖙𝖜𝖔𝖗𝖐 
 
-**<sub>𝙲𝚁𝙴𝙰𝚃𝙴 & 𝙾𝙿𝙴𝙽 `𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝.𝚌𝚘𝚗𝚏` :</sub>**
+**<sub>𝙲𝚁𝙴𝙰𝚃𝙴 & 𝙾𝙿𝙴𝙽 `𝚆𝙿𝙰_𝚂𝚄𝙿𝙿𝙻𝙸𝙲𝙰𝙽𝚃.𝙲𝙾𝙽𝙵` :</sub>**
 
 ```bash
 nano /etc/wpa_supplicant/wpa_supplicant.conf
@@ -249,11 +249,11 @@ network={
 wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 ```
 
-<h3 align=center>OR</h3>
+<h3 align=center>O̳̿͟͞R̳̿͟͞</h3>
 
-##### 𝕮𝖔𝖓𝖓𝖊𝖈𝖙 𝕿𝖔 𝕬 𝕹𝖊𝖙𝖜𝖔𝖗𝖐 𝖁𝖎𝖆 𝖂𝕰𝕻-𝕬𝖚𝖙𝖍𝖊𝖓𝖙𝖎𝖈𝖆𝖙𝖎𝖔𝖓 𝕸𝖔𝖉𝖊 :
+##### 𝕮𝖔𝖓𝖓𝖊𝖈𝖙 𝕿𝖔 𝕬 𝕹𝖊𝖙𝖜𝖔𝖗𝖐 𝖁𝖎𝖆 𝖂𝕰𝕻-𝕬𝖚𝖙𝖍𝖊𝖓𝖙𝖎𝖈𝖆𝖙𝖎𝖔𝖓 𝕸𝖔𝖉𝖊 
 
-**<sub>𝙲𝚁𝙴𝙰𝚃𝙴 & 𝙾𝙿𝙴𝙽 `𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝.𝚌𝚘𝚗𝚏` :</sub>**
+**<sub>𝙲𝚁𝙴𝙰𝚃𝙴 & 𝙾𝙿𝙴𝙽 `𝚆𝙿𝙰_𝚂𝚄𝙿𝙿𝙻𝙸𝙲𝙰𝙽𝚃.𝙲𝙾𝙽𝙵` :</sub>**
 
 ```bash
 nano /etc/wpa_supplicant/wpa_supplicant.conf
@@ -284,101 +284,101 @@ ping -c 3 1.1.1.1
 
 **<sub>𝙸𝙵 𝚈𝙾𝚄 𝚁𝙴𝙲𝙴𝙸𝚅𝙴 𝙴𝚁𝚁𝙾𝚁 𝙻𝙸𝙺𝙴 `𝚄𝙽𝙺𝙽𝙾𝚆𝙽 𝙷𝙾𝚂𝚃` 𝙾𝚁 `𝙽𝙴𝚃𝚆𝙾𝚁𝙺 𝙸𝚂 𝙽𝙾𝚃 𝙰𝚅𝙰𝙸𝙻𝙰𝙱𝙻𝙴` , 𝙼𝙴𝙰𝙽𝚂 𝚈𝙾𝚄 𝙰𝚁𝙴 𝙽𝙾𝚃 𝙾𝙽𝙻𝙸𝙽𝙴 𝚈𝙴𝚃 . 𝚁𝙴𝚅𝙸𝙴𝚆 𝚈𝙾𝚄𝚁 𝙽𝙴𝚃𝚆𝙾𝚁𝙺 𝙲𝙾𝙽𝙵𝙸𝙶𝚄𝚁𝙰𝚃𝙸𝙾𝙽 𝙰𝙽𝙳 𝚁𝙴𝙳𝙾 𝚃𝙷𝙴 𝙰𝙱𝙾𝚅𝙴 𝚂𝚃𝙴𝙿𝚂 .</sub>**
 
-## Update The System Clock :
+## 𝖀𝖕𝖉𝖆𝖙𝖊 𝕿𝖍𝖊 𝕾𝖞𝖘𝖙𝖊𝖒 𝕮𝖑𝖔𝖈𝖐
 
-TO ENSURE THAT CLOCK IS ACCURATE :
+**<sub>𝚃𝙾 𝙴𝙽𝚂𝚄𝚁𝙴 𝚃𝙷𝙰𝚃 𝙲𝙻𝙾𝙲𝙺 𝙸𝚂 𝙰𝙲𝙲𝚄𝚁𝙰𝚃𝙴 :</sub>**
 
 ```bash
 timedatectl set-ntp true
 ```
 
-TO CHECK THE SERVICE STATUS :
+**<sub>𝚃𝙾 𝙲𝙷𝙴𝙲𝙺 𝚃𝙷𝙴 𝚂𝙴𝚁𝚅𝙸𝙲𝙴 𝚂𝚃𝙰𝚃𝚄𝚂 :</sub>**
 
 ```bash
 timedatectl status
 ```
 
-## Partition The Disks :
+## 𝕻𝖆𝖗𝖙𝖎𝖙𝖎𝖔𝖓 𝕿𝖍𝖊 𝕯𝖎𝖘𝖐𝖘 
 
-WHEN THE DISKS ARE RECOGNIZED BY THE LIVE ENVIRONMENT , DISKS ARE ASSIGNED TO A BLOCK DEVICE SUCH AS `/dev/sda` , `/dev/nvme0n1` OR `/dev/mmcblk0` . 
+𝚆𝙷𝙴𝙽 𝚃𝙷𝙴 𝙳𝙸𝚂𝙺𝚂 𝙰𝚁𝙴 𝚁𝙴𝙲𝙾𝙶𝙽𝙸𝚉𝙴𝙳 𝙱𝚈 𝚃𝙷𝙴 𝙻𝙸𝚅𝙴 𝙴𝙽𝚅𝙸𝚁𝙾𝙽𝙼𝙴𝙽𝚃 , 𝙳𝙸𝚂𝙺𝚂 𝙰𝚁𝙴 𝙰𝚂𝚂𝙸𝙶𝙽𝙴𝙳 𝚃𝙾 𝙰 𝙱𝙻𝙾𝙲𝙺 𝙳𝙴𝚅𝙸𝙲𝙴 𝚂𝚄𝙲𝙷 𝙰𝚂 `/𝙳𝙴𝚅/𝚂𝙳𝙰` , `/𝙳𝙴𝚅/𝙽𝚅𝙼𝙴𝟶𝙽𝟷` 𝙾𝚁 `/𝙳𝙴𝚅/𝙼𝙼𝙲𝙱𝙻𝙺𝟶` .
 
-TO IDENTIFY THESE DEVICES :
+𝚃𝙾 𝙸𝙳𝙴𝙽𝚃𝙸𝙵𝚈 𝚃𝙷𝙴𝚂𝙴 𝙳𝙴𝚅𝙸𝙲𝙴𝚂 :
 
 ```bash
 lsblk
 ```
 
-> **NOTE : RESULTS ENDING IN `rom` , `loop` OR `airoot` MAY BE IGNORED .**
+> **𝙽𝙾𝚃𝙴 : 𝚁𝙴𝚂𝚄𝙻𝚃𝚂 𝙴𝙽𝙳𝙸𝙽𝙶 𝙸𝙽 `𝚁𝙾𝙼` , `𝙻𝙾𝙾𝙿` 𝙾𝚁 `𝙰𝙸𝚁𝙾𝙾𝚃` 𝙼𝙰𝚈 𝙱𝙴 𝙸𝙶𝙽𝙾𝚁𝙴𝙳 .**
 
-LET’S CLEAN OUR DRIVE TO CREATE NEW PARTITIONS TABLE FOR OUR INSTALLATION . IN THIS GUIDE , WE WILL USE `/DEV/SDA` AS OUR INSTALLATION DISK .
+𝙻𝙴𝚃’𝚂 𝙲𝙻𝙴𝙰𝙽 𝙾𝚄𝚁 𝙳𝚁𝙸𝚅𝙴 𝚃𝙾 𝙲𝚁𝙴𝙰𝚃𝙴 𝙽𝙴𝚆 𝙿𝙰𝚁𝚃𝙸𝚃𝙸𝙾𝙽𝚂 𝚃𝙰𝙱𝙻𝙴 𝙵𝙾𝚁 𝙾𝚄𝚁 𝙸𝙽𝚂𝚃𝙰𝙻𝙻𝙰𝚃𝙸𝙾𝙽 . 𝙸𝙽 𝚃𝙷𝙸𝚂 𝙶𝚄𝙸𝙳𝙴 , 𝚆𝙴 𝚆𝙸𝙻𝙻 𝚄𝚂𝙴 `/𝙳𝙴𝚅/𝚂𝙳𝙰` 𝙰𝚂 𝙾𝚄𝚁 𝙸𝙽𝚂𝚃𝙰𝙻𝙻𝙰𝚃𝙸𝙾𝙽 𝙳𝙸𝚂𝙺 .
 
 ```bash
 fdisk /dev/sda
 ```
 
-+ Press <kbd>**Return**</kbd> To Open **dev/sda** In **fdisk**. 
+**<sub>✔ 𝙿𝚁𝙴𝚂𝚂 <kbd>𝚁𝚎𝚝𝚞𝚛𝚗</kbd> 𝚃𝙾 𝙾𝙿𝙴𝙽 `𝙳𝙴𝚅/𝚂𝙳𝙰` 𝙸𝙽 `𝙵𝙳𝙸𝚂𝙺` .</sub>**
 
-+ Press <kbd>**p**</kbd> To Show Current Partition. Now We Should See Our Drive Showing The **Partition Number, Partition Size,** And **Partition Name.**
++ 𝙿𝚁𝙴𝚂𝚂 <kbd>**𝚙**</kbd> 𝚃𝙾 𝚂𝙷𝙾𝚆 𝙲𝚄𝚁𝚁𝙴𝙽𝚃 𝙿𝙰𝚁𝚃𝙸𝚃𝙸𝙾𝙽. 𝙽𝙾𝚆 𝚆𝙴 𝚂𝙷𝙾𝚄𝙻𝙳 𝚂𝙴𝙴 𝙾𝚄𝚁 𝙳𝚁𝙸𝚅𝙴 𝚂𝙷𝙾𝚆𝙸𝙽𝙶 𝚃𝙷𝙴 `𝙿𝙰𝚁𝚃𝙸𝚃𝙸𝙾𝙽 𝙽𝚄𝙼𝙱𝙴𝚁` , `𝙿𝙰𝚁𝚃𝙸𝚃𝙸𝙾𝙽 𝚂𝙸𝚉𝙴` , 𝙰𝙽𝙳 `𝙿𝙰𝚁𝚃𝙸𝚃𝙸𝙾𝙽 𝙽𝙰𝙼𝙴` .
 
-+ Press <kbd>**g**</kbd> To **Format Entire Drive** And Create An Empty **GPT Partition Table.**
++ 𝙿𝚁𝙴𝚂𝚂 <kbd>**g**</kbd> To **Format Entire Drive** And Create An Empty **GPT Partition Table.**
 
-> **Note :** Press <kbd>**d**</kbd> To Delete A Single Partition. 
+> **Note :** 𝙿𝚁𝙴𝚂𝚂 <kbd>**d**</kbd> To Delete A Single Partition. 
 
 ### Create The Boot Partition :
 
-+ Press <kbd>**n**</kbd> To **Create New Partition.** You Will Be Prompted To Choose A Partition Number.
++ 𝙿𝚁𝙴𝚂𝚂 <kbd>**n**</kbd> To **Create New Partition.** You Will Be Prompted To Choose A Partition Number.
 
-+ Press <kbd>**1**</kbd> To **Select Partition Number 1.**
++ 𝙿𝚁𝙴𝚂𝚂 <kbd>**1**</kbd> To **Select Partition Number 1.**
 
-+ Press <kbd>**Return**</kbd> To Continue With The **Default Block Size For First Sector.**
++ 𝙿𝚁𝙴𝚂𝚂 <kbd>**Return**</kbd> To Continue With The **Default Block Size For First Sector.**
 
-+ Enter <kbd>**+512M**</kbd> In **The Last Sector.** And Press <kbd>**Return**</kbd> To Create **EFI Partition With 512 Mib.**
++ Enter <kbd>**+512M**</kbd> In **The Last Sector.** And 𝙿𝚁𝙴𝚂𝚂 <kbd>**Return**</kbd> To Create **EFI Partition With 512 Mib.**
 
-+ Press <kbd>**t**</kbd> To **Change Partition Type** Of The EFI Partition.
++ 𝙿𝚁𝙴𝚂𝚂 <kbd>**t**</kbd> To **Change Partition Type** Of The EFI Partition.
 
 + Enter <kbd>**1**</kbd> For **EFI System.** ( Default is Linux System )
 
 ### Create The Swap Partition :
 
-+ Press <kbd>**n**</kbd> To **Create New Partition.** You Will Be Prompted To Choose A Partition Number.
++ 𝙿𝚁𝙴𝚂𝚂 <kbd>**n**</kbd> To **Create New Partition.** You Will Be Prompted To Choose A Partition Number.
 
-+ Press <kbd>**2**</kbd> To **Select Partition Number 2.**
++ 𝙿𝚁𝙴𝚂𝚂 <kbd>**2**</kbd> To **Select Partition Number 2.**
 
-+ Press <kbd>**Return**</kbd> To Continue With The **Default Block Size For First Sector.**
++ 𝙿𝚁𝙴𝚂𝚂 <kbd>**Return**</kbd> To Continue With The **Default Block Size For First Sector.**
 
-+ Enter <kbd>**+8G**</kbd> In **The Last Sector.** And Press <kbd>**Return**</kbd> To Create **Swap Partition With 8 Gib.**
++ Enter <kbd>**+8G**</kbd> In **The Last Sector.** And 𝙿𝚁𝙴𝚂𝚂 <kbd>**Return**</kbd> To Create **Swap Partition With 8 Gib.**
 
-+ Press <kbd>**t**</kbd> To **Change Partition Type** Of The Swap Partition.
++ 𝙿𝚁𝙴𝚂𝚂 <kbd>**t**</kbd> To **Change Partition Type** Of The Swap Partition.
 
 + Enter <kbd>**19**</kbd> For **Linux Swap.** ( Default is Linux System )
 
 ### Create The Root Partition :
 
-+ Press <kbd>**n**</kbd> To **Create New Partition.** You Will Be Prompted To Choose A Partition Number.
++ 𝙿𝚁𝙴𝚂𝚂 <kbd>**n**</kbd> To **Create New Partition.** You Will Be Prompted To Choose A Partition Number.
 
-+ Press <kbd>**3**</kbd> To **Select Partition Number 3.**
++ 𝙿𝚁𝙴𝚂𝚂 <kbd>**3**</kbd> To **Select Partition Number 3.**
 
-+ Press <kbd>**Return**</kbd> To Continue With The **Default Block Size For First Sector.**
++ 𝙿𝚁𝙴𝚂𝚂 <kbd>**Return**</kbd> To Continue With The **Default Block Size For First Sector.**
 
-+ Enter <kbd>**+30G**</kbd> In **The Last Sector.** And Press <kbd>**Return**</kbd> To Create **Root Partition With 30 Gib.**
++ Enter <kbd>**+30G**</kbd> In **The Last Sector.** And 𝙿𝚁𝙴𝚂𝚂 <kbd>**Return**</kbd> To Create **Root Partition With 30 Gib.**
 
 > **Note :** No Need To Change Partition Type. **Default is Linux System.**
 
 ### Create The Home Partition :
 
-+ Press <kbd>**n**</kbd> To **Create New Partition.** You Will Be Prompted To Choose A Partition Number.
++ 𝙿𝚁𝙴𝚂𝚂 <kbd>**n**</kbd> To **Create New Partition.** You Will Be Prompted To Choose A Partition Number.
 
-+ Press <kbd>**4**</kbd> To **Select Partition Number 4.**
++ 𝙿𝚁𝙴𝚂𝚂 <kbd>**4**</kbd> To **Select Partition Number 4.**
 
-+ Press <kbd>**Return**</kbd> To Continue With The **Default Block Size For First Sector.**
++ 𝙿𝚁𝙴𝚂𝚂 <kbd>**Return**</kbd> To Continue With The **Default Block Size For First Sector.**
 
-+ Press <kbd>**Return**</kbd> In **The Last Sector** To Create **Root Partition Of Remaining Space.**
++ 𝙿𝚁𝙴𝚂𝚂 <kbd>**Return**</kbd> In **The Last Sector** To Create **Root Partition Of Remaining Space.**
 
 > **Note :** No Need To Change Partition Type. **Default is Linux System.**
 
-+ Press <kbd>**p**</kbd> To Print The Newly Created Disk Partitions.
++ 𝙿𝚁𝙴𝚂𝚂 <kbd>**p**</kbd> To Print The Newly Created Disk Partitions.
 
-+ Press <kbd>**w**</kbd> To **Write And Quit** From **fdisk** Command.
++ 𝙿𝚁𝙴𝚂𝚂 <kbd>**w**</kbd> To **Write And Quit** From **fdisk** Command.
 
 ## Verifying The Partitions :
 
