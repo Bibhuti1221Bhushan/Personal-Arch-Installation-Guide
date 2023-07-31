@@ -212,8 +212,8 @@ nano /etc/wpa_supplicant/wpa_supplicant.conf
 ```bash
 network={
 	ssid="NETWORK-NAME"
-    scan_ssid=1
-    psk="PASSPHRASE"
+	scan_ssid=1
+	psk="PASSPHRASE"
 }
 ```
 
@@ -238,8 +238,8 @@ nano /etc/wpa_supplicant/wpa_supplicant.conf
 ```bash
 network={
 	ssid="NETWORK-NAME"
-    key_mgmt=NONE
-    priority=100
+	key_mgmt=NONE
+	priority=100
 }
 ```
 
@@ -264,9 +264,9 @@ nano /etc/wpa_supplicant/wpa_supplicant.conf
 ```bash
 network={
 	ssid="NETWORK-NAME"
-    key_mgmt=NONE
-    wep_key0="PASSPHRASE"  
-    wep_tx_keyidx=0
+	key_mgmt=NONE
+	wep_key0="PASSPHRASE"  
+	wep_tx_keyidx=0
 }
 ```
 
