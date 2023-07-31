@@ -41,7 +41,7 @@ ls /usr/share/kbd/keymaps/**/*.map.gz
 **<sub>𝚃𝙾 𝙼𝙾𝙳𝙸𝙵𝚈 𝚃𝙷𝙴 𝙺𝙴𝚈𝙱𝙾𝙰𝚁𝙳 𝙻𝙰𝚈𝙾𝚄𝚃 , 𝙾𝙼𝙸𝚃𝚃𝙸𝙽𝙶 𝙿𝙰𝚃𝙷 𝙰𝙽𝙳 𝙵𝙸𝙻𝙴 𝙴𝚇𝚃𝙴𝙽𝚂𝙸𝙾𝙽 . 𝙵𝙾𝚁 𝙴𝚇𝙰𝙼𝙿𝙻𝙴 , 𝚃𝙾 𝚂𝙴𝚃 `𝚄𝚂` 𝙺𝙴𝚈𝙱𝙾𝙰𝚁𝙳 𝙻𝙰𝚈𝙾𝚄𝚃 :</sub>**
 
 ```bash
-𝚕𝚘𝚊𝚍𝚔𝚎𝚢𝚜 𝚞𝚜
+loadkeys us
 ```
 
 ## 𝕾𝖊𝖙 𝕮𝖔𝖓𝖘𝖔𝖑𝖊 𝕱𝖔𝖓𝖙
@@ -49,13 +49,13 @@ ls /usr/share/kbd/keymaps/**/*.map.gz
 **<sub>𝙼𝙾𝚁𝙴 𝙲𝙾𝙽𝚂𝙾𝙻𝙴 𝙵𝙾𝙽𝚃𝚂 𝙲𝙰𝙽 𝙱𝙴 𝙻𝙸𝚂𝚃𝙴𝙳 𝚆𝙸𝚃𝙷 :</sub>**
 
 ```bash
-𝚕𝚜 /𝚞𝚜𝚛/𝚜𝚑𝚊𝚛𝚎/𝚔𝚋𝚍/𝚌𝚘𝚗𝚜𝚘𝚕𝚎𝚏𝚘𝚗𝚝𝚜/*.𝚐𝚣
+ls /usr/share/kbd/consolefonts/*.gz
 ```
 
 **<sub>𝙲𝙾𝙽𝚂𝙾𝙻𝙴 𝙵𝙾𝙽𝚃𝚂 𝙲𝙰𝙽 𝙱𝙴 𝚂𝙴𝚃 𝚆𝙸𝚃𝙷 `𝚜𝚎𝚝𝚏𝚘𝚗𝚝` 𝙲𝙾𝙼𝙼𝙰𝙽𝙳 .  𝙵𝙾𝚁 𝙴𝚇𝙰𝙼𝙿𝙻𝙴 , 𝚃𝙾 𝚄𝚂𝙴 𝙾𝙽𝙴 𝙾𝙵 𝚃𝙷𝙴 𝙵𝙾𝙽𝚃 :</sub>**
 
 ```bash
-𝚜𝚎𝚝𝚏𝚘𝚗𝚝 𝚍𝚎𝚏𝚊𝚞𝚕𝚝𝟾𝚡𝟷𝟼
+setfont default8x16
 ```
 
 ## 𝖁𝖊𝖗𝖎𝖋𝖞 𝕿𝖍𝖊 𝕭𝖔𝖔𝖙 𝕸𝖔𝖉𝖊
@@ -63,7 +63,7 @@ ls /usr/share/kbd/keymaps/**/*.map.gz
 **<sub>𝚃𝙾 𝚅𝙴𝚁𝙸𝙵𝚈 𝚃𝙷𝙴 𝙱𝙾𝙾𝚃 𝙼𝙾𝙳𝙴 , 𝙲𝙷𝙴𝙲𝙺 𝚃𝙷𝙴 𝚄𝙴𝙵𝙸 𝚆𝙸𝚃𝙽𝙴𝚂𝚂 :</sub>** 
 
 ```bash
-𝚌𝚊𝚝 /𝚜𝚢𝚜/𝚏𝚒𝚛𝚖𝚠𝚊𝚛𝚎/𝚎𝚏𝚒/𝚏𝚠_𝚙𝚕𝚊𝚝𝚏𝚘𝚛𝚖_𝚜𝚒𝚣𝚎
+cat /sys/firmware/efi/fw_platform_size
 ```
 
 **<sub>1. 𝙸𝙵 𝚃𝙷𝙴 𝙲𝙾𝙼𝙼𝙰𝙽𝙳 𝚁𝙴𝚃𝚄𝚁𝙽𝚂 𝟼𝟺 , 𝚃𝙷𝙴𝙽 𝚂𝚈𝚂𝚃𝙴𝙼 𝙸𝚂 𝙱𝙾𝙾𝚃𝙴𝙳 𝙸𝙽 `𝚄𝙴𝙵𝙸 𝙼𝙾𝙳𝙴` 𝙰𝙽𝙳 𝙷𝙰𝚂 𝙰 𝟼𝟺-𝙱𝙸𝚃 𝚇𝟼𝟺 𝚄𝙴𝙵𝙸 . 
@@ -79,18 +79,18 @@ ls /usr/share/kbd/keymaps/**/*.map.gz
 **<sub>𝚃𝙾 𝙴𝙽𝚂𝚄𝚁𝙴 𝚃𝙷𝙰𝚃 𝙽𝙴𝚃𝚆𝙾𝚁𝙺 𝙸𝙽𝚃𝙴𝚁𝙵𝙰𝙲𝙴 𝙸𝚂 𝙻𝙸𝚂𝚃𝙴𝙳 𝙰𝙽𝙳 𝙴𝙽𝙰𝙱𝙻𝙴𝙳 :</sub>**
 
 ```bash
-𝚒𝚙 𝚕𝚒𝚗𝚔
+ip link
 ```
 
 **<sub>𝙰𝙱𝙾𝚅𝙴 𝙲𝙾𝙼𝙼𝙰𝙽𝙳 𝙾𝚄𝚃𝙿𝚄𝚃 𝚆𝙸𝙻𝙻 𝙱𝙴 𝚂𝙾𝙼𝙴𝚃𝙷𝙸𝙽𝙶 𝙻𝙸𝙺𝙴 𝚃𝙷𝙸𝚂 :</sub>**
 
 ```bash
-1: 𝚕𝚘: <𝙻𝙾𝙾𝙿𝙱𝙰𝙲𝙺,𝚄𝙿,𝙻𝙾𝚆𝙴𝚁_𝚄𝙿> 𝚖𝚝𝚞 𝟼𝟻𝟻𝟹𝟼 𝚚𝚍𝚒𝚜𝚌 𝚗𝚘𝚚𝚞𝚎𝚞𝚎 𝚜𝚝𝚊𝚝𝚎 𝚄𝙽𝙺𝙽𝙾𝚆𝙽 𝚖𝚘𝚍𝚎 𝙳𝙴𝙵𝙰𝚄𝙻𝚃 𝚐𝚛𝚘𝚞𝚙 𝚍𝚎𝚏𝚊𝚞𝚕𝚝 𝚚𝚕𝚎𝚗 𝟷𝟶𝟶𝟶
-		𝚕𝚒𝚗𝚔/𝚕𝚘𝚘𝚙𝚋𝚊𝚌𝚔 𝟶𝟶:𝟶𝟶:𝟶𝟶:𝟶𝟶:𝟶𝟶:𝟶𝟶 𝚋𝚛𝚍 𝟶𝟶:𝟶𝟶:𝟶𝟶:𝟶𝟶:𝟶𝟶:𝟶𝟶
-2: 𝚎𝚗𝚙𝟽𝚜𝟶: <𝙽𝙾-𝙲𝙰𝚁𝚁𝙸𝙴𝚁,𝙱𝚁𝙾𝙰𝙳𝙲𝙰𝚂𝚃,𝙼𝚄𝙻𝚃𝙸𝙲𝙰𝚂𝚃,𝚄𝙿> 𝚖𝚝𝚞 𝟷𝟻𝟶𝟶 𝚚𝚍𝚒𝚜𝚌 𝚏𝚚_𝚌𝚘𝚍𝚎𝚕 𝚜𝚝𝚊𝚝𝚎 𝙳𝙾𝚆𝙽 𝚖𝚘𝚍𝚎 𝙳𝙴𝙵𝙰𝚄𝙻𝚃 𝚐𝚛𝚘𝚞𝚙 𝚍𝚎𝚏𝚊𝚞𝚕𝚝 𝚚𝚕𝚎𝚗 𝟷𝟶𝟶𝟶
-		𝚕𝚒𝚗𝚔/𝚎𝚝𝚑𝚎𝚛 𝟶𝟶:𝟶𝟶:𝟶𝟶:𝟶𝟶:𝟶𝟶:𝟶𝟶 𝚋𝚛𝚍 𝚏𝚏:𝚏𝚏:𝚏𝚏:𝚏𝚏:𝚏𝚏:𝚏𝚏
-3: 𝚠𝚕𝚊𝚗𝟶: <𝙱𝚁𝙾𝙰𝙳𝙲𝙰𝚂𝚃,𝙼𝚄𝙻𝚃𝙸𝙲𝙰𝚂𝚃,𝚄𝙿,𝙻𝙾𝚆𝙴𝚁_𝚄𝙿> 𝚖𝚝𝚞 𝟷𝟻𝟶𝟶 𝚚𝚍𝚒𝚜𝚌 𝚖𝚚 𝚜𝚝𝚊𝚝𝚎 𝚄𝙿 𝚖𝚘𝚍𝚎 𝙳𝙾𝚁𝙼𝙰𝙽𝚃 𝚐𝚛𝚘𝚞𝚙 𝚍𝚎𝚏𝚊𝚞𝚕𝚝 𝚚𝚕𝚎𝚗 𝟷𝟶𝟶𝟶
-		𝚕𝚒𝚗𝚔/𝚎𝚝𝚑𝚎𝚛 𝟶𝟶:𝟶𝟶:𝟶𝟶:𝟶𝟶:𝟶𝟶:𝟶𝟶 𝚋𝚛𝚍 𝚏𝚏:𝚏𝚏:𝚏𝚏:𝚏𝚏:𝚏𝚏:𝚏𝚏 𝚙𝚎𝚛𝚖𝚊𝚍𝚍𝚛 𝟶𝟶:𝟶𝟶:𝟶𝟶:𝟶𝟶:𝟶𝟶:𝟶𝟶
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+		link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+2: enp7s0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc fq_codel state DOWN mode DEFAULT group default qlen 1000
+		link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
+3: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DORMANT group default qlen 1000
+		link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff permaddr 00:00:00:00:00:00
 ```
 
 > **<sub>`𝚕𝚘` 𝙸𝚂 𝚃𝙷𝙴 𝙻𝙾𝙾𝙿-𝙱𝙰𝙲𝙺 𝙸𝙽𝚃𝙴𝚁𝙵𝙰𝙲𝙴 ( 𝙻𝙾𝙲𝙰𝙻 𝚂𝙴𝚁𝚅𝙴𝚁 )</sub>**<br>
@@ -100,13 +100,13 @@ ls /usr/share/kbd/keymaps/**/*.map.gz
 **<sub>𝙵𝙾𝚁 `𝚆𝙸𝚁𝙴𝙻𝙴𝚂𝚂 𝙰𝙽𝙳 𝚆𝚆𝙰𝙽` , 𝙼𝙰𝙺𝙴 𝚂𝚄𝚁𝙴 𝚃𝙷𝙴 𝙲𝙰𝚁𝙳 𝙸𝚂 𝙽𝙾𝚃 𝙱𝙻𝙾𝙲𝙺𝙴𝙳 :</sub>**
 
 ```bash
-𝚛𝚏𝚔𝚒𝚕𝚕
+rfkill
 ```
 
 **<sub>𝙸𝙵 𝚃𝙷𝙴 𝙲𝙰𝚁𝙳 𝙸𝚂 𝙱𝙻𝙾𝙲𝙺𝙴𝙳 , 𝚄𝙽𝙱𝙻𝙾𝙲𝙺 𝚄𝚂𝙸𝙽𝙶 :</sub>**
 
 ```bash
-𝚛𝚏𝚔𝚒𝚕𝚕 𝚞𝚗𝚋𝚕𝚘𝚌𝚔 𝚊𝚕𝚕
+rfkill unblock all
 ```
 
 ### 𝖂𝖎𝖗𝖊𝖉 𝕮𝖔𝖓𝖓𝖊𝖈𝖙𝖎𝖔𝖓
@@ -116,7 +116,7 @@ ls /usr/share/kbd/keymaps/**/*.map.gz
 **<sub>𝙸𝙽 𝙲𝙰𝚂𝙴 , 𝙸𝙵 𝚃𝙷𝙴 𝚆𝙸𝚁𝙴𝙳 𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙸𝙾𝙽 𝙸𝚂 𝙽𝙾𝚃 𝙴𝙽𝙰𝙱𝙻𝙴𝙳 , 𝚈𝙾𝚄 𝙲𝙰𝙽 𝙴𝙽𝙰𝙱𝙻𝙴 𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙸𝙾𝙽 𝚄𝚂𝙸𝙽𝙶 :</sub>**
 
 ```bash
-𝚜𝚢𝚜𝚝𝚎𝚖𝚌𝚝𝚕 𝚜𝚝𝚊𝚛𝚝 𝚍𝚑𝚌𝚙𝚌𝚍@𝚎𝚗𝚙𝟽𝚜𝟶
+systemctl start dhcpcd@enp7s0
 ```
 
 ### 𝖂𝖎𝖗𝖊𝖑𝖊𝖘𝖘 𝕮𝖔𝖓𝖓𝖊𝖈𝖙𝖎𝖔𝖓 - ( 𝕽𝖊𝖈𝖔𝖒𝖒𝖊𝖓𝖉𝖊𝖉 𝖎𝖜𝖉 ) :
@@ -128,25 +128,25 @@ ls /usr/share/kbd/keymaps/**/*.map.gz
 **<sub>𝙸𝙽 𝙲𝙰𝚂𝙴 , 𝙸𝙵 𝚃𝙷𝙸𝚂 𝙸𝚂 𝙽𝙾𝚃 𝙴𝙽𝙰𝙱𝙻𝙴𝙳 , 𝚈𝙾𝚄 𝙲𝙰𝙽 𝙴𝙽𝙰𝙱𝙻𝙴 𝙸𝚃 𝚄𝚂𝙸𝙽𝙶 :</sub>**
 
 ```bash
-𝚜𝚢𝚜𝚝𝚎𝚖𝚌𝚝𝚕 𝚎𝚗𝚊𝚋𝚕𝚎 𝚒𝚠𝚍
+systemctl enable iwd
 ```
 
 **<sub>𝚂𝙲𝙰𝙽 𝙵𝙾𝚁 𝙽𝙴𝚃𝚆𝙾𝚁𝙺 :</sub>**
 
 ```bash
-𝚒𝚠𝚌𝚝𝚕 𝚜𝚝𝚊𝚝𝚒𝚘𝚗 𝚠𝚕𝚊𝚗𝟶 𝚜𝚌𝚊𝚗
+iwctl station wlan0 scan
 ```
 
 **<sub>𝙶𝙴𝚃 𝚃𝙷𝙴 𝙻𝙸𝚂𝚃 𝙾𝙵 𝚂𝙲𝙰𝙽𝙽𝙴𝙳 𝙽𝙴𝚃𝚆𝙾𝚁𝙺 :</sub>**
 
 ```bash
-𝚒𝚠𝚌𝚝𝚕 𝚜𝚝𝚊𝚝𝚒𝚘𝚗 𝚠𝚕𝚊𝚗𝟶 𝚐𝚎𝚝-𝚗𝚎𝚝𝚠𝚘𝚛𝚔𝚜
+iwctl station wlan0 get-networks
 ```
 
 **<sub>𝙲𝙾𝙽𝙽𝙴𝙲𝚃 𝚃𝙾 𝚈𝙾𝚄𝚁 𝚅𝙸𝚂𝙸𝙱𝙻𝙴 𝙽𝙴𝚃𝚆𝙾𝚁𝙺 :</sub>**
 
 ```bash
-𝚒𝚠𝚌𝚝𝚕 -𝙿 "𝙿𝙰𝚂𝚂𝙿𝙷𝚁𝙰𝚂𝙴" 𝚜𝚝𝚊𝚝𝚒𝚘𝚗 𝚠𝚕𝚊𝚗𝟶 𝚌𝚘𝚗𝚗𝚎𝚌𝚝 "𝙽𝙴𝚃𝚆𝙾𝚁𝙺-𝙽𝙰𝙼𝙴"
+iwctl -P "PASSPHRASE" station wlan0 connect "NETWORK-NAME"
 ```
 
 <h3 align=center>O̳̿͟͞R̳̿͟͞</h3>
@@ -154,13 +154,13 @@ ls /usr/share/kbd/keymaps/**/*.map.gz
 **<sub>𝙲𝙾𝙽𝙽𝙴𝙲𝚃 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙷𝙸𝙳𝙳𝙴𝙽 𝙽𝙴𝚃𝚆𝙾𝚁𝙺 :</sub>**
 
 ```bash
-𝚒𝚠𝚌𝚝𝚕 -𝙿 "𝙿𝙰𝚂𝚂𝙿𝙷𝚁𝙰𝚂𝙴" 𝚜𝚝𝚊𝚝𝚒𝚘𝚗 𝚠𝚕𝚊𝚗𝟶 𝚌𝚘𝚗𝚗𝚎𝚌𝚝-𝚑𝚒𝚍𝚍𝚎𝚗 "𝙽𝙴𝚃𝚆𝙾𝚁𝙺-𝙽𝙰𝙼𝙴"
+iwctl -P "PASSPHRASE" station wlan0 connect-hidden "NETWORK-NAME"
 ```
 
 **<sub>𝙿𝙸𝙽𝙶 𝙰 𝚆𝙴𝙱𝚂𝙸𝚃𝙴 𝚃𝙾 𝙼𝙰𝙺𝙴 𝚂𝚄𝚁𝙴 𝚆𝙴 𝙰𝚁𝙴 𝙾𝙽𝙻𝙸𝙽𝙴 :</sub>**
 
 ```bash
-𝚙𝚒𝚗𝚐 -𝚌 𝟹 𝟷.𝟷.𝟷.𝟷
+ping -c 3 1.1.1.1
 ``` 
 
 **<sub>𝙸𝙵 𝚈𝙾𝚄 𝚁𝙴𝙲𝙴𝙸𝚅𝙴 𝙴𝚁𝚁𝙾𝚁 𝙻𝙸𝙺𝙴 `𝚄𝙽𝙺𝙽𝙾𝚆𝙽 𝙷𝙾𝚂𝚃` 𝙾𝚁 `𝙽𝙴𝚃𝚆𝙾𝚁𝙺 𝙸𝚂 𝙽𝙾𝚃 𝙰𝚅𝙰𝙸𝙻𝙰𝙱𝙻𝙴` , 𝙼𝙴𝙰𝙽𝚂 𝚈𝙾𝚄 𝙰𝚁𝙴 𝙽𝙾𝚃 𝙾𝙽𝙻𝙸𝙽𝙴 𝚈𝙴𝚃 . 𝚁𝙴𝚅𝙸𝙴𝚆 𝚈𝙾𝚄𝚁 𝙽𝙴𝚃𝚆𝙾𝚁𝙺 𝙲𝙾𝙽𝙵𝙸𝙶𝚄𝚁𝙰𝚃𝙸𝙾𝙽 𝙰𝙽𝙳 𝚁𝙴𝙳𝙾 𝚃𝙷𝙴 𝙰𝙱𝙾𝚅𝙴 𝚂𝚃𝙴𝙿𝚂 .</sub>**
@@ -174,13 +174,13 @@ ls /usr/share/kbd/keymaps/**/*.map.gz
 **<sub>𝙸𝙽 𝙲𝙰𝚂𝙴 , 𝙸𝙵 𝚈𝙾𝚄 𝚁𝙴𝙲𝙴𝙸𝚅𝙴 𝙴𝚁𝚁𝙾𝚁 , 𝚂𝚃𝙰𝚁𝚃 `𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝` 𝚄𝚂𝙸𝙽𝙶 :</sub>**
 
 ```bash
-𝚜𝚢𝚜𝚝𝚎𝚖𝚌𝚝𝚕 𝚜𝚝𝚊𝚛𝚝 𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝
+systemctl start wpa_supplicant
 ```
 
 **<sub>𝙶𝙴𝚃 𝚃𝙷𝙴 𝙻𝙸𝚂𝚃 𝙾𝙵 𝚂𝙲𝙰𝙽𝙽𝙴𝙳 𝙽𝙴𝚃𝚆𝙾𝚁𝙺 :</sub>**
 
 ```bash
-𝚒𝚠𝚕𝚒𝚜𝚝 𝚠𝚕𝚊𝚗𝟶 𝚜𝚌𝚊𝚗 | 𝚐𝚛𝚎𝚙 𝙴𝚂𝚂𝙸𝙳
+iwlist wlan0 scan | grep ESSID
 ```
 
 #### 𝕮𝖔𝖓𝖓𝖊𝖈𝖙 𝕿𝖔 𝕬 𝖁𝖎𝖘𝖎𝖇𝖑𝖊 𝕹𝖊𝖙𝖜𝖔𝖗𝖐 :
@@ -188,7 +188,7 @@ ls /usr/share/kbd/keymaps/**/*.map.gz
 **<sub>𝙲𝚁𝙴𝙰𝚃𝙴 `𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝.𝚌𝚘𝚗𝚏` 𝚄𝚂𝙸𝙽𝙶 𝙾𝙽𝙴 𝙻𝙸𝙽𝙴 𝙲𝙾𝙼𝙼𝙰𝙽𝙳 :</sub>**
 
 ```bash
-𝚠𝚙𝚊_𝚙𝚊𝚜𝚜𝚙𝚑𝚛𝚊𝚜𝚎 "𝙽𝙴𝚃𝚆𝙾𝚁𝙺-𝙽𝙰𝙼𝙴" "𝙿𝙰𝚂𝚂𝙿𝙷𝚁𝙰𝚂𝙴" | 𝚝𝚎𝚎 /𝚎𝚝𝚌/𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝/𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝.𝚌𝚘𝚗𝚏
+wpa_passphrase "NETWORK-NAME" "PASSPHRASE" | tee /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
 **<sub>𝙲𝙾𝙽𝙽𝙴𝙲𝚃 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙽𝙴𝚃𝚆𝙾𝚁𝙺 :</sub>**
@@ -204,23 +204,23 @@ wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 **<sub>𝙲𝚁𝙴𝙰𝚃𝙴 & 𝙾𝙿𝙴𝙽 `𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝.𝚌𝚘𝚗𝚏` :</sub>**
 
 ```bash
-𝚗𝚊𝚗𝚘 /𝚎𝚝𝚌/𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝/𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝.𝚌𝚘𝚗𝚏
+nano /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
 **<sub>𝙰𝙳𝙳 𝚃𝙷𝙸𝚂 𝙻𝙸𝙽𝙴 𝙸𝙽 𝙲𝙾𝙽𝙵𝙸𝙶𝚄𝚁𝙰𝚃𝙸𝙾𝙽 𝙵𝙸𝙻𝙴 :</sub>**
 
 ```bash
-𝚗𝚎𝚝𝚠𝚘𝚛𝚔={ 	
-	𝚜𝚜𝚒𝚍="𝙽𝙴𝚃𝚆𝙾𝚁𝙺-𝙽𝙰𝙼𝙴"     
-	𝚜𝚌𝚊𝚗_𝚜𝚜𝚒𝚍=𝟷     
-	𝚙𝚜𝚔="𝙿𝙰𝚂𝚂𝙿𝙷𝚁𝙰𝚂𝙴" 
+network={
+	ssid="NETWORK-NAME"
+    scan_ssid=1
+    psk="PASSPHRASE"
 }
 ```
 
 **<sub>𝙲𝙾𝙽𝙽𝙴𝙲𝚃 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙽𝙴𝚃𝚆𝙾𝚁𝙺 :</sub>**
 
 ```bash
-𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝 -𝚌 /𝚎𝚝𝚌/𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝/𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝.𝚌𝚘𝚗𝚏 -𝚒 𝚠𝚕𝚊𝚗𝟶
+wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 ```
 
 <h3 align=center>OR</h3>
@@ -230,23 +230,23 @@ wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 **<sub>𝙲𝚁𝙴𝙰𝚃𝙴 & 𝙾𝙿𝙴𝙽 `𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝.𝚌𝚘𝚗𝚏` :</sub>**
 
 ```bash
-𝚗𝚊𝚗𝚘 /𝚎𝚝𝚌/𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝/𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝.𝚌𝚘𝚗𝚏
+nano /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
 **<sub>𝙰𝙳𝙳 𝚃𝙷𝙸𝚂 𝙻𝙸𝙽𝙴 𝙸𝙽 𝙲𝙾𝙽𝙵𝙸𝙶𝚄𝚁𝙰𝚃𝙸𝙾𝙽 𝙵𝙸𝙻𝙴 :</sub>**
 
 ```bash
-𝚗𝚎𝚝𝚠𝚘𝚛𝚔={ 	
-	𝚜𝚜𝚒𝚍="𝙽𝙴𝚃𝚆𝙾𝚁𝙺-𝙽𝙰𝙼𝙴"     
-	𝚔𝚎𝚢_𝚖𝚐𝚖𝚝=𝙽𝙾𝙽𝙴     
-	𝚙𝚛𝚒𝚘𝚛𝚒𝚝𝚢=𝟷𝟶𝟶 
+network={
+	ssid="NETWORK-NAME"
+    key_mgmt=NONE
+    priority=100
 }
 ```
 
 **<sub>𝙲𝙾𝙽𝙽𝙴𝙲𝚃 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙽𝙴𝚃𝚆𝙾𝚁𝙺 :</sub>**
 
 ```bash
-𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝 -𝚌 /𝚎𝚝𝚌/𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝/𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝.𝚌𝚘𝚗𝚏 -𝚒 𝚠𝚕𝚊𝚗𝟶
+wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 ```
 
 <h3 align=center>OR</h3>
@@ -256,30 +256,30 @@ wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 **<sub>𝙲𝚁𝙴𝙰𝚃𝙴 & 𝙾𝙿𝙴𝙽 `𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝.𝚌𝚘𝚗𝚏` :</sub>**
 
 ```bash
-𝚗𝚊𝚗𝚘 /𝚎𝚝𝚌/𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝/𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝.𝚌𝚘𝚗𝚏
+nano /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
 **<sub>𝙰𝙳𝙳 𝚃𝙷𝙸𝚂 𝙻𝙸𝙽𝙴 𝙸𝙽 𝙲𝙾𝙽𝙵𝙸𝙶𝚄𝚁𝙰𝚃𝙸𝙾𝙽 𝙵𝙸𝙻𝙴 :</sub>**
 
 ```bash
-𝚗𝚎𝚝𝚠𝚘𝚛𝚔={ 	
-	𝚜𝚜𝚒𝚍="𝙽𝙴𝚃𝚆𝙾𝚁𝙺-𝙽𝙰𝙼𝙴"     
-	𝚔𝚎𝚢_𝚖𝚐𝚖𝚝=𝙽𝙾𝙽𝙴     
-	𝚠𝚎𝚙_𝚔𝚎𝚢𝟶="𝙿𝙰𝚂𝚂𝙿𝙷𝚁𝙰𝚂𝙴"       
-	𝚠𝚎𝚙_𝚝𝚡_𝚔𝚎𝚢𝚒𝚍𝚡=𝟶 
+network={
+	ssid="NETWORK-NAME"
+    key_mgmt=NONE
+    wep_key0="PASSPHRASE"  
+    wep_tx_keyidx=0
 }
 ```
 
 **<sub>𝙲𝙾𝙽𝙽𝙴𝙲𝚃 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙽𝙴𝚃𝚆𝙾𝚁𝙺 :</sub>**
 
 ```bash
-𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝 -𝚌 /𝚎𝚝𝚌/𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝/𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝.𝚌𝚘𝚗𝚏 -𝚒 𝚠𝚕𝚊𝚗𝟶
+wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 ```
 
 **<sub>𝙿𝙸𝙽𝙶 𝙰 𝚆𝙴𝙱𝚂𝙸𝚃𝙴 𝚃𝙾 𝙼𝙰𝙺𝙴 𝚂𝚄𝚁𝙴 𝚆𝙴 𝙰𝚁𝙴 𝙾𝙽𝙻𝙸𝙽𝙴 :</sub>**
 
 ```bash
-𝚙𝚒𝚗𝚐 -𝚌 𝟹 𝟷.𝟷.𝟷.𝟷
+ping -c 3 1.1.1.1
 ``` 
 
 **<sub>𝙸𝙵 𝚈𝙾𝚄 𝚁𝙴𝙲𝙴𝙸𝚅𝙴 𝙴𝚁𝚁𝙾𝚁 𝙻𝙸𝙺𝙴 `𝚄𝙽𝙺𝙽𝙾𝚆𝙽 𝙷𝙾𝚂𝚃` 𝙾𝚁 `𝙽𝙴𝚃𝚆𝙾𝚁𝙺 𝙸𝚂 𝙽𝙾𝚃 𝙰𝚅𝙰𝙸𝙻𝙰𝙱𝙻𝙴` , 𝙼𝙴𝙰𝙽𝚂 𝚈𝙾𝚄 𝙰𝚁𝙴 𝙽𝙾𝚃 𝙾𝙽𝙻𝙸𝙽𝙴 𝚈𝙴𝚃 . 𝚁𝙴𝚅𝙸𝙴𝚆 𝚈𝙾𝚄𝚁 𝙽𝙴𝚃𝚆𝙾𝚁𝙺 𝙲𝙾𝙽𝙵𝙸𝙶𝚄𝚁𝙰𝚃𝙸𝙾𝙽 𝙰𝙽𝙳 𝚁𝙴𝙳𝙾 𝚃𝙷𝙴 𝙰𝙱𝙾𝚅𝙴 𝚂𝚃𝙴𝙿𝚂 .</sub>**
