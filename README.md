@@ -34,13 +34,13 @@
 
 **<sub>𝙼𝙾𝚁𝙴 𝙺𝙴𝚈𝙱𝙾𝙰𝚁𝙳 𝙻𝙰𝚈𝙾𝚄𝚃 𝙲𝙰𝙽 𝙱𝙴 𝙻𝙸𝚂𝚃𝙴𝙳 𝚆𝙸𝚃𝙷 :</sub>**
 
-```shell
+```bash
 ls /usr/share/kbd/keymaps/**/*.map.gz
 ```
 
 **<sub>𝚃𝙾 𝙼𝙾𝙳𝙸𝙵𝚈 𝚃𝙷𝙴 𝙺𝙴𝚈𝙱𝙾𝙰𝚁𝙳 𝙻𝙰𝚈𝙾𝚄𝚃 , 𝙾𝙼𝙸𝚃𝚃𝙸𝙽𝙶 𝙿𝙰𝚃𝙷 𝙰𝙽𝙳 𝙵𝙸𝙻𝙴 𝙴𝚇𝚃𝙴𝙽𝚂𝙸𝙾𝙽 . 𝙵𝙾𝚁 𝙴𝚇𝙰𝙼𝙿𝙻𝙴 , 𝚃𝙾 𝚂𝙴𝚃 `𝚄𝚂` 𝙺𝙴𝚈𝙱𝙾𝙰𝚁𝙳 𝙻𝙰𝚈𝙾𝚄𝚃 :</sub>**
 
-```shell
+```bash
 loadkeys us
 ```
 
@@ -48,13 +48,13 @@ loadkeys us
 
 **<sub>𝙼𝙾𝚁𝙴 𝙲𝙾𝙽𝚂𝙾𝙻𝙴 𝙵𝙾𝙽𝚃𝚂 𝙲𝙰𝙽 𝙱𝙴 𝙻𝙸𝚂𝚃𝙴𝙳 𝚆𝙸𝚃𝙷 :</sub>**
 
-```shell
+```bash
 ls /usr/share/kbd/consolefonts/*.gz
 ```
 
 **<sub>𝙲𝙾𝙽𝚂𝙾𝙻𝙴 𝙵𝙾𝙽𝚃𝚂 𝙲𝙰𝙽 𝙱𝙴 𝚂𝙴𝚃 𝚆𝙸𝚃𝙷 `𝚂𝙴𝚃𝙵𝙾𝙽𝚃` 𝙲𝙾𝙼𝙼𝙰𝙽𝙳 .  𝙵𝙾𝚁 𝙴𝚇𝙰𝙼𝙿𝙻𝙴 , 𝚃𝙾 𝚄𝚂𝙴 𝙾𝙽𝙴 𝙾𝙵 𝚃𝙷𝙴 𝙵𝙾𝙽𝚃 :</sub>**
 
-```shell
+```bash
 setfont default8x16
 ```
 
@@ -62,7 +62,7 @@ setfont default8x16
 
 **<sub>𝚃𝙾 𝚅𝙴𝚁𝙸𝙵𝚈 𝚃𝙷𝙴 𝙱𝙾𝙾𝚃 𝙼𝙾𝙳𝙴 , 𝙲𝙷𝙴𝙲𝙺 𝚃𝙷𝙴 𝚄𝙴𝙵𝙸 𝚆𝙸𝚃𝙽𝙴𝚂𝚂 :</sub>** 
 
-```shell
+```bash
 cat /sys/firmware/efi/fw_platform_size
 ```
 
@@ -78,13 +78,13 @@ cat /sys/firmware/efi/fw_platform_size
 
 **<sub>𝚃𝙾 𝙴𝙽𝚂𝚄𝚁𝙴 𝚃𝙷𝙰𝚃 𝙽𝙴𝚃𝚆𝙾𝚁𝙺 𝙸𝙽𝚃𝙴𝚁𝙵𝙰𝙲𝙴 𝙸𝚂 𝙻𝙸𝚂𝚃𝙴𝙳 𝙰𝙽𝙳 𝙴𝙽𝙰𝙱𝙻𝙴𝙳 :</sub>**
 
-```shell
+```bash
 ip link
 ```
 
 **<sub>𝙰𝙱𝙾𝚅𝙴 𝙲𝙾𝙼𝙼𝙰𝙽𝙳 𝙾𝚄𝚃𝙿𝚄𝚃 𝚆𝙸𝙻𝙻 𝙱𝙴 𝚂𝙾𝙼𝙴𝚃𝙷𝙸𝙽𝙶 𝙻𝙸𝙺𝙴 𝚃𝙷𝙸𝚂 :</sub>**
 
-```shell
+```bash
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
 		link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
 2: enp7s0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc fq_codel state DOWN mode DEFAULT group default qlen 1000
@@ -99,13 +99,13 @@ ip link
 
 **<sub>𝙵𝙾𝚁 `𝚆𝙸𝚁𝙴𝙻𝙴𝚂𝚂 𝙰𝙽𝙳 𝚆𝚆𝙰𝙽` , 𝙼𝙰𝙺𝙴 𝚂𝚄𝚁𝙴 𝚃𝙷𝙴 𝙲𝙰𝚁𝙳 𝙸𝚂 𝙽𝙾𝚃 𝙱𝙻𝙾𝙲𝙺𝙴𝙳 :</sub>**
 
-```shell
+```bash
 rfkill
 ```
 
 **<sub>𝙸𝙵 𝚃𝙷𝙴 𝙲𝙰𝚁𝙳 𝙸𝚂 𝙱𝙻𝙾𝙲𝙺𝙴𝙳 , 𝚄𝙽𝙱𝙻𝙾𝙲𝙺 𝚄𝚂𝙸𝙽𝙶 :</sub>**
 
-```shell
+```bash
 rfkill unblock all
 ```
 
@@ -115,7 +115,7 @@ rfkill unblock all
 
 **<sub>𝙸𝙽 𝙲𝙰𝚂𝙴 , 𝙸𝙵 𝚃𝙷𝙴 𝚆𝙸𝚁𝙴𝙳 𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙸𝙾𝙽 𝙸𝚂 𝙽𝙾𝚃 𝙴𝙽𝙰𝙱𝙻𝙴𝙳 , 𝚈𝙾𝚄 𝙲𝙰𝙽 𝙴𝙽𝙰𝙱𝙻𝙴 𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙸𝙾𝙽 𝚄𝚂𝙸𝙽𝙶 :</sub>**
 
-```shell
+```bash
 systemctl start dhcpcd@enp7s0
 ```
 
@@ -127,25 +127,25 @@ systemctl start dhcpcd@enp7s0
 
 **<sub>𝙸𝙽 𝙲𝙰𝚂𝙴 , 𝙸𝙵 𝚃𝙷𝙸𝚂 𝙸𝚂 𝙽𝙾𝚃 𝙴𝙽𝙰𝙱𝙻𝙴𝙳 , 𝚈𝙾𝚄 𝙲𝙰𝙽 𝙴𝙽𝙰𝙱𝙻𝙴 𝙸𝚃 𝚄𝚂𝙸𝙽𝙶 :</sub>**
 
-```shell
+```bash
 systemctl enable iwd
 ```
 
 **<sub>𝚂𝙲𝙰𝙽 𝙵𝙾𝚁 𝙽𝙴𝚃𝚆𝙾𝚁𝙺 :</sub>**
 
-```shell
+```bash
 iwctl station wlan0 scan
 ```
 
 **<sub>𝙶𝙴𝚃 𝚃𝙷𝙴 𝙻𝙸𝚂𝚃 𝙾𝙵 𝚂𝙲𝙰𝙽𝙽𝙴𝙳 𝙽𝙴𝚃𝚆𝙾𝚁𝙺 :</sub>**
 
-```shell
+```bash
 iwctl station wlan0 get-networks
 ```
 
 **<sub>𝙲𝙾𝙽𝙽𝙴𝙲𝚃 𝚃𝙾 𝚈𝙾𝚄𝚁 𝚅𝙸𝚂𝙸𝙱𝙻𝙴 𝙽𝙴𝚃𝚆𝙾𝚁𝙺 :</sub>**
 
-```shell
+```bash
 iwctl -P "PASSPHRASE" station wlan0 connect "NETWORK-NAME"
 ```
 
@@ -153,13 +153,13 @@ iwctl -P "PASSPHRASE" station wlan0 connect "NETWORK-NAME"
 
 **<sub>𝙲𝙾𝙽𝙽𝙴𝙲𝚃 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙷𝙸𝙳𝙳𝙴𝙽 𝙽𝙴𝚃𝚆𝙾𝚁𝙺 :</sub>**
 
-```shell
+```bash
 iwctl -P "PASSPHRASE" station wlan0 connect-hidden "NETWORK-NAME"
 ```
 
 **<sub>𝙿𝙸𝙽𝙶 𝙰 𝚆𝙴𝙱𝚂𝙸𝚃𝙴 𝚃𝙾 𝙼𝙰𝙺𝙴 𝚂𝚄𝚁𝙴 𝚆𝙴 𝙰𝚁𝙴 𝙾𝙽𝙻𝙸𝙽𝙴 :</sub>**
 
-```shell
+```bash
 ping -c 3 1.1.1.1
 ``` 
 
@@ -173,13 +173,13 @@ ping -c 3 1.1.1.1
 
 **<sub>𝙸𝙽 𝙲𝙰𝚂𝙴 , 𝙸𝙵 𝚈𝙾𝚄 𝚁𝙴𝙲𝙴𝙸𝚅𝙴 𝙴𝚁𝚁𝙾𝚁 , 𝚂𝚃𝙰𝚁𝚃 `𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝` 𝚄𝚂𝙸𝙽𝙶 :</sub>**
 
-```shell
+```bash
 systemctl start wpa_supplicant
 ```
 
 **<sub>𝙶𝙴𝚃 𝚃𝙷𝙴 𝙻𝙸𝚂𝚃 𝙾𝙵 𝚂𝙲𝙰𝙽𝙽𝙴𝙳 𝙽𝙴𝚃𝚆𝙾𝚁𝙺 :</sub>**
 
-```shell
+```bash
 iwlist wlan0 scan | grep ESSID
 ```
 
@@ -187,13 +187,13 @@ iwlist wlan0 scan | grep ESSID
 
 **<sub>𝙲𝚁𝙴𝙰𝚃𝙴 `𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝.𝚌𝚘𝚗𝚏` 𝚄𝚂𝙸𝙽𝙶 𝙾𝙽𝙴 𝙻𝙸𝙽𝙴 𝙲𝙾𝙼𝙼𝙰𝙽𝙳 :</sub>**
 
-```shell
+```bash
 wpa_passphrase "NETWORK-NAME" "PASSPHRASE" | tee /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
 **<sub>𝙲𝙾𝙽𝙽𝙴𝙲𝚃 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙽𝙴𝚃𝚆𝙾𝚁𝙺 :</sub>**
 
-```shell
+```bash
 wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 ```
 
@@ -203,13 +203,13 @@ wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 
 **<sub>𝙲𝚁𝙴𝙰𝚃𝙴 & 𝙾𝙿𝙴𝙽 `𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝.𝚌𝚘𝚗𝚏` :</sub>**
 
-```shell
+```bash
 nano /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
 **<sub>𝙰𝙳𝙳 𝚃𝙷𝙸𝚂 𝙻𝙸𝙽𝙴 𝙸𝙽 𝙲𝙾𝙽𝙵𝙸𝙶𝚄𝚁𝙰𝚃𝙸𝙾𝙽 𝙵𝙸𝙻𝙴 :</sub>**
 
-```shell
+```bash
 network={
 	ssid="NETWORK-NAME"
 	scan_ssid=1
@@ -219,7 +219,7 @@ network={
 
 **<sub>𝙲𝙾𝙽𝙽𝙴𝙲𝚃 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙽𝙴𝚃𝚆𝙾𝚁𝙺 :</sub>**
 
-```shell
+```bash
 wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 ```
 
@@ -229,13 +229,13 @@ wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 
 **<sub>𝙲𝚁𝙴𝙰𝚃𝙴 & 𝙾𝙿𝙴𝙽 `𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝.𝚌𝚘𝚗𝚏` :</sub>**
 
-```shell
+```bash
 nano /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
 **<sub>𝙰𝙳𝙳 𝚃𝙷𝙸𝚂 𝙻𝙸𝙽𝙴 𝙸𝙽 𝙲𝙾𝙽𝙵𝙸𝙶𝚄𝚁𝙰𝚃𝙸𝙾𝙽 𝙵𝙸𝙻𝙴 :</sub>**
 
-```shell
+```bash
 network={
 	ssid="NETWORK-NAME"
 	key_mgmt=NONE
@@ -245,7 +245,7 @@ network={
 
 **<sub>𝙲𝙾𝙽𝙽𝙴𝙲𝚃 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙽𝙴𝚃𝚆𝙾𝚁𝙺 :</sub>**
 
-```shell
+```bash
 wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 ```
 
@@ -255,13 +255,13 @@ wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 
 **<sub>𝙲𝚁𝙴𝙰𝚃𝙴 & 𝙾𝙿𝙴𝙽 `𝚠𝚙𝚊_𝚜𝚞𝚙𝚙𝚕𝚒𝚌𝚊𝚗𝚝.𝚌𝚘𝚗𝚏` :</sub>**
 
-```shell
+```bash
 nano /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
 **<sub>𝙰𝙳𝙳 𝚃𝙷𝙸𝚂 𝙻𝙸𝙽𝙴 𝙸𝙽 𝙲𝙾𝙽𝙵𝙸𝙶𝚄𝚁𝙰𝚃𝙸𝙾𝙽 𝙵𝙸𝙻𝙴 :</sub>**
 
-```shell
+```bash
 network={
 	ssid="NETWORK-NAME"
 	key_mgmt=NONE
@@ -272,13 +272,13 @@ network={
 
 **<sub>𝙲𝙾𝙽𝙽𝙴𝙲𝚃 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙽𝙴𝚃𝚆𝙾𝚁𝙺 :</sub>**
 
-```shell
+```bash
 wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0
 ```
 
 **<sub>𝙿𝙸𝙽𝙶 𝙰 𝚆𝙴𝙱𝚂𝙸𝚃𝙴 𝚃𝙾 𝙼𝙰𝙺𝙴 𝚂𝚄𝚁𝙴 𝚆𝙴 𝙰𝚁𝙴 𝙾𝙽𝙻𝙸𝙽𝙴 :</sub>**
 
-```shell
+```bash
 ping -c 3 1.1.1.1
 ``` 
 
@@ -288,13 +288,13 @@ ping -c 3 1.1.1.1
 
 TO ENSURE THAT CLOCK IS ACCURATE :
 
-```shell
+```bash
 timedatectl set-ntp true
 ```
 
 TO CHECK THE SERVICE STATUS :
 
-```shell
+```bash
 timedatectl status
 ```
 
@@ -304,7 +304,7 @@ WHEN THE DISKS ARE RECOGNIZED BY THE LIVE ENVIRONMENT , DISKS ARE ASSIGNED TO A 
 
 TO IDENTIFY THESE DEVICES :
 
-```shell
+```bash
 lsblk
 ```
 
@@ -312,7 +312,7 @@ lsblk
 
 LET’S CLEAN OUR DRIVE TO CREATE NEW PARTITIONS TABLE FOR OUR INSTALLATION . IN THIS GUIDE , WE WILL USE `/DEV/SDA` AS OUR INSTALLATION DISK .
 
-```shell
+```bash
 fdisk /dev/sda
 ```
 
@@ -384,7 +384,7 @@ fdisk /dev/sda
 
 Use **lsblk** Again To Check The Created Partitions. <u>**We? I Thought I'm Doing This Guide For Self Lol.**</u>
 
-```shell
+```bash
 lsblk
 ```
 
@@ -408,19 +408,19 @@ You Should See **Something Like This :**
 
 Format **/dev/sda1** Partition As Boot Partition In **FAT32**.
 
-```shell
+```bash
 mkfs.fat -F 32 -n EFI /dev/sda1
 ```
 
 Format **/dev/sda2** Partition As Swap Partition.
 
-```shell
+```bash
 mkswap -L SWAP /dev/sda2
 ```
 
 Format **/dev/sda3** And **/dev/sda4** Partition As **'Root'** And **'Home'** Partition In **EXT4**.
 
-```shell
+```bash
 mkfs.ext4 -L ARCH /dev/sda3
 mkfs.ext4 -L HOME /dev/sda4
 ```
@@ -429,25 +429,25 @@ mkfs.ext4 -L HOME /dev/sda4
 
 Mount The Root Partition **/dev/sda3** To **/mnt**.
 
-```shell
+```bash
 mount /dev/sda3 /mnt
 ```
 
 Create A **/boot/EFI** Directory For Boot Partition.
 
-```shell
+```bash
 mkdir -p /mnt/boot/EFI  
 ```
 
 Mount The Boot Partition **/dev/sda1/** To **/mnt/boot/EFI** Partition.
 
-```shell
+```bash
 mount /dev/sda1 /mnt/boot/EFI
 ```
 
 Create a **/home** Directory For Home Partition.
 
-```shell
+```bash
 mkdir /mnt/home  
 ```
 
@@ -459,7 +459,7 @@ mount /dev/sda1 /mnt/home
 
 Mount And Enable The Swap Partition.
 
-```shell
+```bash
 swapon /dev/sda2
 ```
 
@@ -469,7 +469,7 @@ swapon /dev/sda2
 
 Now Let’s Go Ahead And Install **Arch Linux Base , Linux Kernel , Linux Firmware** And **Other Needed Packages.**
 
-```shell
+```bash
 pacstrap -Ki /mnt base base-devel linux linux-firmware linux-headers intel-ucode
 ```
 
