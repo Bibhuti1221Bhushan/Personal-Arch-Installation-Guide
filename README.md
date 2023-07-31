@@ -318,9 +318,9 @@ fdisk /dev/sda
 
 **<sub>✔ 𝙿𝚁𝙴𝚂𝚂 <kbd>𝚁𝚎𝚝𝚞𝚛𝚗</kbd> 𝚃𝙾 𝙾𝙿𝙴𝙽 `𝙳𝙴𝚅/𝚂𝙳𝙰` 𝙸𝙽 `𝙵𝙳𝙸𝚂𝙺` .</sub>**
 
-**<sub>↠ 𝙿𝚁𝙴𝚂𝚂 <kbd>**𝚙**</kbd> 𝚃𝙾 𝚂𝙷𝙾𝚆 𝙲𝚄𝚁𝚁𝙴𝙽𝚃 𝙿𝙰𝚁𝚃𝙸𝚃𝙸𝙾𝙽. 𝙽𝙾𝚆 𝚆𝙴 𝚂𝙷𝙾𝚄𝙻𝙳 𝚂𝙴𝙴 𝙾𝚄𝚁 𝙳𝚁𝙸𝚅𝙴 𝚂𝙷𝙾𝚆𝙸𝙽𝙶 𝚃𝙷𝙴 `𝙿𝙰𝚁𝚃𝙸𝚃𝙸𝙾𝙽 𝙽𝚄𝙼𝙱𝙴𝚁` , `𝙿𝙰𝚁𝚃𝙸𝚃𝙸𝙾𝙽 𝚂𝙸𝚉𝙴` , 𝙰𝙽𝙳 `𝙿𝙰𝚁𝚃𝙸𝚃𝙸𝙾𝙽 𝙽𝙰𝙼𝙴` .</sub>**
+**<sub>✔ 𝙿𝚁𝙴𝚂𝚂 <kbd>**𝚙**</kbd> 𝚃𝙾 𝚂𝙷𝙾𝚆 𝙲𝚄𝚁𝚁𝙴𝙽𝚃 𝙿𝙰𝚁𝚃𝙸𝚃𝙸𝙾𝙽. 𝙽𝙾𝚆 𝚆𝙴 𝚂𝙷𝙾𝚄𝙻𝙳 𝚂𝙴𝙴 𝙾𝚄𝚁 𝙳𝚁𝙸𝚅𝙴 𝚂𝙷𝙾𝚆𝙸𝙽𝙶 𝚃𝙷𝙴 `𝙿𝙰𝚁𝚃𝙸𝚃𝙸𝙾𝙽 𝙽𝚄𝙼𝙱𝙴𝚁` , `𝙿𝙰𝚁𝚃𝙸𝚃𝙸𝙾𝙽 𝚂𝙸𝚉𝙴` , 𝙰𝙽𝙳 `𝙿𝙰𝚁𝚃𝙸𝚃𝙸𝙾𝙽 𝙽𝙰𝙼𝙴` .</sub>**
 
-+ 𝙿𝚁𝙴𝚂𝚂 <kbd>**g**</kbd> To **Format Entire Drive** And Create An Empty **GPT Partition Table.**
+**<sub>✔ 𝙿𝚁𝙴𝚂𝚂 <kbd>**g**</kbd> To **Format Entire Drive** And Create An Empty **GPT Partition Table.</sub>**
 
 > **Note :** 𝙿𝚁𝙴𝚂𝚂 <kbd>**d**</kbd> To Delete A Single Partition. 
 
